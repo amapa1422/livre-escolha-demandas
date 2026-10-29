@@ -1,0 +1,3 @@
+﻿{
+    "source":  "window.__qaErrors=[]; addEventListener(\u0027error\u0027,e=\u003ewindow.__qaErrors.push(e.message || (\u0027Recurso: \u0027+e.target.src)),true); addEventListener(\u0027unhandledrejection\u0027,e=\u003ewindow.__qaErrors.push(String(e.reason))); const qaError=console.error;console.error=(...args)=\u003e{window.__qaErrors.push(args.join(\u0027 \u0027));qaError(...args)};"
+}

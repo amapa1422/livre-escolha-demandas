@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR">
+  <meta charset="utf-8">
+  <title>QA isolado</title>
+  <body>
+    <pre id="result">Este roteiro substitui registros de teste. Execute somente em um perfil de navegador descartável, sem dados pessoais, acrescentando #isolated-profile ao endereço.</pre>
+    <script>
+      if (location.hash === '#isolated-profile') {
+        document.getElementById('result').textContent = 'Testes em andamento';
+        const script = document.createElement('script');
+        script.src = 'browser-tests.js';
+        document.body.append(script);
+      }
+    </script>
+  </body>
+</html>

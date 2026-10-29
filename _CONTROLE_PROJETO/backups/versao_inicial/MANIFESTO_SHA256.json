@@ -1,0 +1,148 @@
+{
+  "format_version": 1,
+  "backup_id": "versao_inicial",
+  "recorded_at": "2026-10-29T13:37:27-03:00",
+  "timezone": "America/Sao_Paulo",
+  "project_root": "C:/Users/felipe.lobato/Desktop/Demandas",
+  "description": "Snapshot inicial aprovado, anterior à implantação documental do controle. Arquivos copiados byte a byte; caminhos relativos à raiz Demandas.",
+  "scope": [
+    "demandas_otimizado (1).html",
+    "central-demandas/ (todos os arquivos existentes, inclusive ocultos)"
+  ],
+  "excluded": [
+    ".qa/ (evidências e ferramentas de teste; hashes preservados no inventário, sem cópia)",
+    "AGENTS.md e _CONTROLE_PROJETO/ (criados após o snapshot)",
+    "node_modules/",
+    ".git/",
+    "arquivos temporários",
+    "perfis de navegador",
+    "dados localStorage"
+  ],
+  "file_count": 7,
+  "total_bytes": 92385,
+  "files": [
+    {
+      "path": "demandas_otimizado (1).html",
+      "bytes": 36602,
+      "sha256": "663579A00D8835992F0881CD312E5EA82497F069217E2C79BE5CD0990F5BA63F"
+    },
+    {
+      "path": "central-demandas/.gitignore",
+      "bytes": 305,
+      "sha256": "263EE4CEAEF064FEDDFFAF98C1C962BE1D1C2AF304C383737CCF63D0A4943E9D"
+    },
+    {
+      "path": "central-demandas/index.html",
+      "bytes": 9398,
+      "sha256": "9D25E177C8E25051D8FED860783B8210F6135C1D1CEA10361403260012CB5DBA"
+    },
+    {
+      "path": "central-demandas/README.md",
+      "bytes": 6205,
+      "sha256": "659632E31B96ED9E9CD398BAC8EBF1848ECB57478EC728793CEAC5CA0218F327"
+    },
+    {
+      "path": "central-demandas/assets/images/.gitkeep",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "central-demandas/css/style.css",
+      "bytes": 19845,
+      "sha256": "EBB807D63ACF87BDD8F2E8B1F7AE0C2EFF121E8EF2539386003CC033450DD856"
+    },
+    {
+      "path": "central-demandas/js/app.js",
+      "bytes": 20030,
+      "sha256": "EFC9426499A100E07F29F6BF5D3E1C6B11F710E575F277F5F6266FBFC2648561"
+    }
+  ],
+  "existing_workspace_inventory": [
+    {
+      "path": "demandas_otimizado (1).html",
+      "bytes": 36602,
+      "sha256": "663579A00D8835992F0881CD312E5EA82497F069217E2C79BE5CD0990F5BA63F"
+    },
+    {
+      "path": ".qa/browser-tests.js",
+      "bytes": 16103,
+      "sha256": "B4E6419BF758B514A0E557FBA20216EEF282A10D2217F54BDA3D2F76E437FD13"
+    },
+    {
+      "path": ".qa/cdp.ps1",
+      "bytes": 2717,
+      "sha256": "3908EE49269A8D5C561B7B3DA8A7255CD46037CCDF4B3F05B338FC5BE3C2AD46"
+    },
+    {
+      "path": ".qa/chrome-results.json",
+      "bytes": 6306,
+      "sha256": "CB860A9856C79927A30DF739C1915FD980C02F0649F4489BFF2653668EC70D7C"
+    },
+    {
+      "path": ".qa/desktop.png",
+      "bytes": 115976,
+      "sha256": "03F740E85899BA94D021F5187C0A1C22D17AA1B6E9CC2E7C9EE355673CB0A41B"
+    },
+    {
+      "path": ".qa/edge-results.json",
+      "bytes": 6320,
+      "sha256": "7B54B753834626AE994DB0E6100A74BF93C38C1BF93B9CE87B72745D8F00A5F2"
+    },
+    {
+      "path": ".qa/instrument.json",
+      "bytes": 399,
+      "sha256": "D300D0CD722F0EDE2AC63832AA69E1CD120D2DA7C484A7D9BD1939D8C6EE6188"
+    },
+    {
+      "path": ".qa/mobile.png",
+      "bytes": 60896,
+      "sha256": "449011C9C25B666317DF49B9A73243BD75900CC0ADA265E6CA0E609FC952AA08"
+    },
+    {
+      "path": ".qa/opera-results.json",
+      "bytes": 6320,
+      "sha256": "EEF317746EB64ED8B744CB41FDFD16759795304B0B8E3A98F4DFE91985D74634"
+    },
+    {
+      "path": ".qa/RESULTADOS.md",
+      "bytes": 4627,
+      "sha256": "A568DC0465A23F2E02453AD71AF0BBB2826B5FEBE815DE008CE5B2B8352A0BB9"
+    },
+    {
+      "path": ".qa/runner.html",
+      "bytes": 609,
+      "sha256": "A3677DF95FAE39B768B6D3AE2346A626DDA0841975D5548FC9732573003901CA"
+    },
+    {
+      "path": "central-demandas/.gitignore",
+      "bytes": 305,
+      "sha256": "263EE4CEAEF064FEDDFFAF98C1C962BE1D1C2AF304C383737CCF63D0A4943E9D"
+    },
+    {
+      "path": "central-demandas/index.html",
+      "bytes": 9398,
+      "sha256": "9D25E177C8E25051D8FED860783B8210F6135C1D1CEA10361403260012CB5DBA"
+    },
+    {
+      "path": "central-demandas/README.md",
+      "bytes": 6205,
+      "sha256": "659632E31B96ED9E9CD398BAC8EBF1848ECB57478EC728793CEAC5CA0218F327"
+    },
+    {
+      "path": "central-demandas/assets/images/.gitkeep",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "central-demandas/css/style.css",
+      "bytes": 19845,
+      "sha256": "EBB807D63ACF87BDD8F2E8B1F7AE0C2EFF121E8EF2539386003CC033450DD856"
+    },
+    {
+      "path": "central-demandas/js/app.js",
+      "bytes": 20030,
+      "sha256": "EFC9426499A100E07F29F6BF5D3E1C6B11F710E575F277F5F6266FBFC2648561"
+    }
+  ],
+  "verification_at_copy": "Todos os 7 arquivos copiados tiveram SHA-256 conferido contra a fonte. A verificação final da tarefa deve também conferir os 17 arquivos do inventário original."
+}

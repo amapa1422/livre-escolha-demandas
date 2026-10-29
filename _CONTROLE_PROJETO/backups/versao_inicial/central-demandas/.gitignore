@@ -1,0 +1,19 @@
+# Arquivos locais do editor e do sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.bak
+
+# Dados e configurações privados, caso sejam adicionados no futuro
+.env
+.env.*
+!.env.example
+
+# Dependências/artefatos futuros (o projeto atual não utiliza build)
+node_modules/
+dist/
+coverage/

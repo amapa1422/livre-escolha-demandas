@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demandas | Livre Escolha</title>
+  <style>
+/* =====================================================================
+   LivreEscolha · Central de Demandas
+   Leve por design: sem blur, sem sombras animadas, sem animação contínua.
+   Seções: 1 Tokens · 2 Base · 3 Layout · 4 Menu lateral · 5 Topo e métricas
+           6 Filtros e abas · 7 Demandas · 8 Modais e formulários
+           9 Avisos · 10 Responsivo · 11 Movimento reduzido
+   ===================================================================== */
+
+/* 1 · TOKENS ------------------------------------------------------- */
+:root{
+  color-scheme:dark;
+
+  /* superfícies: cinzas neutros */
+  --bg:#0e1014;
+  --side:#0a0c0f;
+  --panel:#15181e;
+  --panel2:#1b1f26;
+  --panel3:#232832;
+  --line:#272c35;
+  --line2:#353b47;
+
+  /* texto */
+  --text:#f3f4f6;
+  --text2:#c6ccd4;
+  --muted:#9097a3;
+
+  /* marca: laranja só em ações e destaques */
+  --brand:#f58228;
+  --brand-hi:#ff9a4d;
+  --brand-ink:#1b0f05;
+  --brand-soft:#f5822824;
+  --brand-line:#f5822866;
+
+  /* status */
+  --amber:#f2c14e;  --amber-soft:#f2c14e1f;
+  --blue:#7db4ff;   --blue-soft:#7db4ff1f;
+  --green:#5fd7a1;  --green-soft:#5fd7a11f;
+  --red:#ff8c96;    --red-soft:#ff8c961f;
+
+  /* forma e movimento */
+  --r-sm:8px; --r-md:10px; --r-lg:14px; --r-xl:18px;
+  --side-w:244px;
+  --shadow:0 18px 48px #00000080;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --t:160ms;
+
+  --font:Inter,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* 2 · BASE --------------------------------------------------------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:400 .9375rem/1.5 var(--font);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:disabled{opacity:.45;cursor:not-allowed}
+::selection{background:#f5822855}
+::placeholder{color:#7b828e;opacity:1}
+:focus-visible{outline:2px solid var(--brand-hi);outline-offset:2px}
+*{scrollbar-width:thin;scrollbar-color:#3a404b transparent}
+
+/* 3 · LAYOUT ------------------------------------------------------- */
+.app{
+  display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);
+  min-height:100vh;min-height:100dvh;
+  transition:grid-template-columns 200ms var(--ease);
+}
+body.sidebar-closed .app{grid-template-columns:0 minmax(0,1fr)}
+
+.main{
+  width:100%;max-width:1240px;min-width:0;margin-inline:auto;
+  padding:clamp(22px,3vw,40px) clamp(20px,3.4vw,48px) 48px;
+  transition:padding-left 200ms var(--ease);
+}
+body.sidebar-closed .main{padding-left:max(64px,3.4vw)}
+
+/* 4 · MENU LATERAL ------------------------------------------------- */
+aside{
+  position:sticky;top:0;align-self:start;
+  height:100vh;height:100dvh;overflow:hidden auto;
+  display:flex;flex-direction:column;gap:24px;
+  padding:22px 14px;
+  background:var(--side);border-right:1px solid var(--line);
+  transition:padding 200ms var(--ease),visibility 0s;
+}
+aside>*{min-width:calc(var(--side-w) - 28px)}
+body.sidebar-closed aside{
+  padding-inline:0;border-right-width:0;overflow:hidden;visibility:hidden;
+  transition:padding 200ms var(--ease),visibility 0s 200ms;
+}
+
+.brand{display:flex;align-items:center;gap:11px;padding:0 8px}
+.brand-icon{
+  flex:none;display:grid;place-items:center;width:36px;height:36px;
+  border-radius:10px;background:var(--brand);color:var(--brand-ink);
+  font-size:.8125rem;font-weight:800;letter-spacing:-.02em;
+}
+.brand strong{display:block;font-size:1.0625rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.brand small{display:block;margin-top:1px;color:var(--muted);font-size:.75rem;text-transform:lowercase}
+.brand small::first-letter{text-transform:uppercase}
+
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav-label{margin:0 0 8px;padding:0 12px;color:var(--muted);font-size:.75rem;font-weight:600}
+.nav-item{
+  position:relative;display:flex;align-items:center;gap:12px;width:100%;
+  padding:10px 12px;border:0;border-radius:var(--r-md);
+  background:none;color:var(--text2);
+  font-size:.875rem;font-weight:600;text-align:left;
+  transition:background-color var(--t),color var(--t);
+}
+.nav-item:hover{background:var(--panel2);color:var(--text)}
+.nav-item.active{background:var(--brand-soft);color:var(--brand-hi)}
+.nav-item.active::before{
+  content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;
+  border-radius:0 3px 3px 0;background:var(--brand);
+}
+.nav-item .symbol{width:20px;text-align:center;font-size:1rem}
+
+.side-bottom{
+  margin-top:auto;padding:14px;
+  border:1px solid var(--line);border-radius:var(--r-lg);background:var(--panel);
+}
+.side-bottom strong{display:flex;align-items:center}
+.side-bottom p{margin:8px 0 0;color:var(--muted);font-size:.75rem;line-height:1.55}
+.online-dot{
+  flex:none;width:8px;height:8px;margin-right:9px;border-radius:50%;
+  background:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);
+}
+
+/* botão que recolhe o menu: fica na borda da barra */
+.sidebar-toggle{
+  position:fixed;top:20px;left:calc(var(--side-w) - 14px);z-index:12;
+  display:grid;place-items:center;width:28px;height:28px;padding:0;
+  border:1px solid var(--line2);border-radius:50%;
+  background:var(--panel2);color:var(--muted);font-size:.6875rem;line-height:1;
+  transition:left 200ms var(--ease),background-color var(--t),color var(--t),border-color var(--t);
+}
+.sidebar-toggle:hover{background:var(--panel3);color:var(--brand-hi);border-color:var(--brand-line)}
+body.sidebar-closed .sidebar-toggle{left:14px}
+
+/* 5 · TOPO E MÉTRICAS ---------------------------------------------- */
+.top{
+  display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;
+  gap:16px 24px;margin-bottom:clamp(20px,2.6vw,28px);
+}
+.eyebrow{color:var(--muted);font-size:.8125rem;font-weight:600;text-transform:lowercase}
+.eyebrow::first-letter{text-transform:uppercase}
+.top h1{
+  margin:2px 0 0;line-height:1.1;font-weight:750;letter-spacing:-.03em;
+  font-size:clamp(1.625rem,1.2rem + 1.6vw,2.125rem);
+}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+
+.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:40px;padding:0 16px;
+  border:1px solid var(--line2);border-radius:var(--r-md);
+  background:var(--panel2);color:var(--text);
+  font-size:.875rem;font-weight:600;white-space:nowrap;
+  transition:background-color var(--t),border-color var(--t),color var(--t),transform 100ms;
+}
+.button:hover{background:var(--panel3);border-color:#474e5c}
+.button:active:not(:disabled){transform:scale(.98)}
+.button.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.button.primary:hover{background:var(--brand-hi);border-color:var(--brand-hi)}
+
+/* quatro números em uma faixa só (divisórias de 1px via gap) */
+.metrics{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
+  margin-bottom:clamp(24px,3vw,34px);
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;
+}
+.metric{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:14px 10px;
+  padding:clamp(14px,1.8vw,20px) clamp(14px,2vw,22px);
+  background:var(--panel);
+}
+.metric .label{grid-area:1/1;color:var(--muted);font-size:.8125rem;font-weight:500;line-height:1.3}
+.metric .glyph{
+  grid-area:1/2;display:grid;place-items:center;width:30px;height:30px;
+  border-radius:9px;background:var(--panel3);font-size:.9375rem;line-height:1;
+}
+.metric b{
+  grid-area:2/1/3/3;display:block;line-height:1;font-weight:700;letter-spacing:-.03em;
+  font-size:clamp(1.75rem,1.3rem + 1.6vw,2.375rem);font-variant-numeric:tabular-nums;
+}
+.metric:nth-child(1) .glyph{background:var(--brand-soft);color:var(--brand-hi)}
+.metric:nth-child(2) .glyph{background:var(--amber-soft);color:var(--amber)}
+.metric:nth-child(3) .glyph{background:var(--blue-soft);color:var(--blue)}
+.metric:nth-child(4) .glyph{background:var(--green-soft);color:var(--green)}
+
+/* 6 · FILTROS E ABAS ----------------------------------------------- */
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
+.section-head h2{margin:0;font-size:1.125rem;font-weight:700;letter-spacing:-.02em}
+.section-head p{margin:4px 0 0;color:var(--muted);font-size:.8125rem}
+#showing{
+  flex:none;padding:4px 11px;white-space:nowrap;
+  border:1px solid var(--line);border-radius:999px;background:var(--panel);
+}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.search{position:relative;flex:1 1 260px;min-width:0}
+.search input{width:100%;height:44px;padding:0 14px 0 40px}
+.search .magnify{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:var(--muted);font-size:1.0625rem;line-height:1;pointer-events:none;
+}
+.filter{width:auto;max-width:210px;height:44px;padding:0 38px 0 14px;font-size:.875rem}
+
+/* campos de texto e selects compartilham o mesmo visual */
+.search input,.filter,.field input,.field select,.field textarea{
+  border:1px solid var(--line2);border-radius:var(--r-md);
+  background-color:var(--bg);color:var(--text);
+  transition:border-color var(--t),box-shadow var(--t);
+}
+.search input:focus,.filter:focus,.field input:focus,.field select:focus,.field textarea:focus{
+  outline:0;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);
+}
+.filter,.field select{
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%239097a3' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px;
+}
+
+.tabs{
+  display:flex;gap:2px;width:fit-content;max-width:100%;margin-bottom:16px;padding:4px;
+  overflow-x:auto;scrollbar-width:none;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:none;padding:8px 14px;border:0;border-radius:9px;
+  background:none;color:var(--muted);
+  font-size:.8125rem;font-weight:600;white-space:nowrap;
+  transition:background-color var(--t),color var(--t);
+}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--brand-soft);color:var(--brand-hi)}
+
+/* 7 · DEMANDAS ----------------------------------------------------- */
+.board{display:grid;gap:10px}
+
+/* a faixa da borda esquerda mostra o status; cor padrão se :has() não existir */
+.ticket{
+  --rail:var(--line2);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;
+  padding:18px 20px 18px 24px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+  transition:background-color var(--t),border-color var(--t);
+  content-visibility:auto;contain-intrinsic-size:auto 140px;
+}
+.ticket::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--rail)}
+.ticket:has(.badge.pending){--rail:var(--amber)}
+.ticket:has(.badge.working){--rail:var(--blue)}
+.ticket:has(.badge.done){--rail:var(--green)}
+.ticket:hover{background:#181c23;border-color:#3a404c}
+
+.ticket-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
+.id{color:var(--muted);font-size:.75rem;font-weight:700;font-variant-numeric:tabular-nums}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:3px 10px;border-radius:999px;
+  font-size:.6875rem;font-weight:700;line-height:1.5;
+}
+.badge.pending::before,.badge.working::before,.badge.done::before{
+  content:"";width:6px;height:6px;border-radius:50%;background:currentColor;
+}
+.pending{color:var(--amber);background:var(--amber-soft)}
+.working{color:var(--blue);background:var(--blue-soft)}
+.done{color:var(--green);background:var(--green-soft)}
+.priority{color:var(--red);background:var(--red-soft)}
+
+.ticket h3{margin:0 0 6px;font-size:1rem;font-weight:700;letter-spacing:-.01em;line-height:1.35;overflow-wrap:anywhere}
+.ticket p{margin:0 0 14px;max-width:68ch;color:#aeb4bf;font-size:.875rem;line-height:1.55;overflow-wrap:anywhere}
+.details{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;color:var(--muted);font-size:.75rem}
+.details strong{color:var(--text2);font-weight:600}
+
+.ticket-actions{display:flex;flex-direction:column;justify-content:center;gap:8px;width:168px}
+.mini{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:36px;padding:0 12px;
+  border:1px solid var(--line2);border-radius:var(--r-md);
+  background:var(--panel2);color:var(--text);
+  font-size:.75rem;font-weight:700;white-space:nowrap;
+  transition:background-color var(--t),border-color var(--t),color var(--t),transform 100ms;
+}
+.mini:active:not(:disabled){transform:scale(.98)}
+.mini:not(.finish):not(.secondary){background:var(--brand-soft);border-color:var(--brand-line);color:var(--brand-hi)}
+.mini:not(.finish):not(.secondary):hover{background:#f5822838}
+.mini.finish{background:var(--green-soft);border-color:#5fd7a14d;color:var(--green)}
+.mini.finish:hover{background:#5fd7a133}
+.mini.secondary{background:none;border-color:var(--line);color:var(--muted)}
+.mini.secondary:hover{background:var(--panel2);border-color:var(--line2);color:var(--text)}
+
+.empty{
+  padding:clamp(36px,7vw,64px) 20px;text-align:center;
+  border:1px dashed var(--line2);border-radius:var(--r-lg);color:var(--muted);
+}
+.empty>div:first-child{opacity:.55}
+.empty h3{margin:10px 0 4px;color:var(--text);font-size:1rem}
+.empty p{margin:0;font-size:.875rem}
+
+.footer{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;
+  margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
+  color:#7b828e;font-size:.75rem;
+}
+
+/* 8 · MODAIS E FORMULÁRIOS ----------------------------------------- */
+.overlay{
+  position:fixed;inset:0;z-index:20;display:none;
+  align-items:center;justify-content:center;padding:16px;
+  background:#06080bb8;
+}
+.overlay.show{display:flex;animation:fade 140ms ease-out}
+.overlay.show .modal{animation:pop 200ms var(--ease)}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}}
+
+.modal{
+  width:min(560px,100%);max-height:92vh;max-height:92dvh;overflow:auto;
+  padding:clamp(18px,3vw,26px);
+  background:var(--panel);border:1px solid var(--line2);border-radius:var(--r-xl);
+  box-shadow:var(--shadow);
+}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}
+.modal-header h2{margin:0;font-size:1.25rem;font-weight:700;letter-spacing:-.02em}
+.modal-header p{margin:6px 0 0;color:var(--muted);font-size:.8125rem}
+.x{
+  flex:none;display:grid;place-items:center;width:32px;height:32px;padding:0 0 2px;
+  border:0;border-radius:var(--r-sm);background:var(--panel2);color:var(--muted);
+  font-size:1.25rem;line-height:1;
+  transition:background-color var(--t),color var(--t);
+}
+.x:hover{background:var(--panel3);color:var(--text)}
+
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;margin-bottom:14px}
+.field label{color:var(--text2);font-size:.8125rem;font-weight:600}
+.field input,.field select{width:100%;height:42px;padding:0 12px;font-size:.875rem}
+.field textarea{width:100%;min-height:96px;padding:10px 12px;font-size:.875rem;line-height:1.5;resize:vertical}
+.field select{padding-right:36px}
+.field input[type=file]{height:auto;padding:8px;color:var(--muted);font-size:.75rem}
+.field input[type=file]::file-selector-button{
+  margin-right:12px;padding:6px 12px;
+  border:1px solid var(--line2);border-radius:var(--r-sm);
+  background:var(--panel3);color:var(--text);font:inherit;font-weight:600;cursor:pointer;
+}
+.hint{margin:0 0 15px;color:var(--muted);font-size:.75rem;line-height:1.5}
+.form-foot{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin-top:8px}
+#removeDemand:hover{background:var(--red-soft);border-color:#ff8c9659}
+
+/* detalhes: rótulo apagado, valor em destaque */
+.detail-line{
+  margin:0;padding:11px 0;border-bottom:1px solid var(--line);
+  color:var(--text);font-size:.875rem;line-height:1.6;overflow-wrap:anywhere;
+}
+.detail-line b{margin-right:6px;color:var(--muted);font-weight:600}
+
+.image-preview-wrap{position:relative;display:inline-block;max-width:100%;margin-top:10px}
+.preview-image{display:block;max-width:100%;max-height:260px;border:1px solid var(--line2);border-radius:var(--r-md)}
+.zoomable{max-height:300px;object-fit:contain;cursor:zoom-in;transition:border-color var(--t)}
+.zoomable:hover{border-color:var(--brand)}
+.zoom-hint{
+  position:absolute;top:10px;right:10px;z-index:1;padding:7px 11px;
+  border:1px solid #ffffff33;border-radius:var(--r-sm);
+  background:#0a0c0fcc;color:#fff;font-size:.75rem;font-weight:700;cursor:zoom-in;
+}
+.zoom-overlay{z-index:60;flex-direction:column;gap:14px;padding:56px 20px 24px;background:#04060af2}
+.zoom-overlay img{width:auto;height:auto;max-width:95vw;max-height:84vh;object-fit:contain;border-radius:var(--r-sm);box-shadow:0 20px 60px #000c}
+.zoom-close{
+  position:absolute;top:14px;right:20px;padding:9px 15px;
+  border:1px solid var(--line2);border-radius:var(--r-md);
+  background:var(--panel2);color:#fff;font-weight:700;
+  transition:background-color var(--t);
+}
+.zoom-close:hover{background:var(--panel3)}
+
+/* 9 · AVISOS ------------------------------------------------------- */
+.notice{
+  position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;
+  display:none;max-width:min(380px,calc(100vw - 32px));padding:12px 16px 12px 18px;
+  border:1px solid var(--line2);border-left:3px solid var(--brand);border-radius:var(--r-md);
+  background:var(--panel3);color:var(--text);font-size:.875rem;box-shadow:var(--shadow);
+}
+.notice.show{display:block;animation:toast 200ms var(--ease)}
+@keyframes toast{from{opacity:0;transform:translateY(8px)}}
+
+/* 10 · RESPONSIVO -------------------------------------------------- */
+@media (max-width:900px){
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* celular: a barra vira um topo fixo só com a marca; as abas já filtram a lista */
+@media (max-width:680px){
+  .app,body.sidebar-closed .app{display:block}
+  aside,body.sidebar-closed aside{
+    position:sticky;top:0;z-index:10;height:auto;
+    flex-direction:row;align-items:center;
+    padding:10px 16px;overflow:visible;visibility:visible;
+    border-right-width:0;border-bottom:1px solid var(--line);
+  }
+  aside>*{min-width:0}
+  .nav,.side-bottom,.sidebar-toggle{display:none}
+  .main,body.sidebar-closed .main{padding:20px 16px 36px}
+
+  .top{flex-direction:column;align-items:flex-start}
+  .actions{width:100%}
+  .actions .button{flex:1}
+
+  .metric{gap:10px 8px;padding:14px}
+  .metric .glyph{width:26px;height:26px;font-size:.8125rem}
+
+  .toolbar{display:grid;grid-template-columns:1fr 1fr}
+  .search{grid-column:span 2}
+  .filter{width:100%;max-width:none}
+  .tabs{width:100%}
+
+  .ticket{grid-template-columns:1fr;padding:16px 16px 16px 20px}
+  .ticket-actions{flex-direction:row;width:auto}
+  .ticket-actions .mini{flex:1}
+
+  .overlay{padding:10px}
+  .form-grid{grid-template-columns:1fr}
+  .footer{flex-direction:column}
+}
+
+/* 11 · MOVIMENTO REDUZIDO ------------------------------------------ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <aside id="sidebar">
+    <div class="brand"><div class="brand-icon">LE</div><div><strong>LivreEscolha</strong><small>GESTÃO TELECOM</small></div></div>
+    <nav class="nav"><div class="nav-label">Espaço de trabalho</div><button class="nav-item active" onclick="setTab('todos')"><span class="symbol">▦</span><span>Painel geral</span></button><button class="nav-item" onclick="setTab('pendente')"><span class="symbol">◷</span><span>Pendentes</span></button><button class="nav-item" onclick="setTab('andamento')"><span class="symbol">↗</span><span>Em andamento</span></button><button class="nav-item" onclick="setTab('lancada')"><span class="symbol">✓</span><span>Lançadas</span></button></nav>
+    <div class="side-bottom"><strong style="font-size:12px"><span class="online-dot"></span>Modo demonstração</strong><p>As demandas ficam salvas neste navegador. Para acesso entre vários funcionários, será necessário conectar um banco de dados.</p></div>
+  </aside>
+  <button class="sidebar-toggle" id="toggleSidebar" aria-label="Recolher menu" title="Mostrar / ocultar menu" aria-expanded="true">❮</button>
+  <main class="main">
+    <header class="top"><div><div class="eyebrow">GESTÃO OPERACIONAL</div><h1>Demandas</h1></div><div class="actions"><button class="button" id="resetBtn" title="Restaurar os exemplos">↺ <span>Restaurar demo</span></button><button class="button primary" id="openModal">＋ Nova demanda</button></div></header>
+    <section class="metrics"><div class="metric"><span class="label">Total de demandas</span><span class="glyph" aria-label="Total">▦</span><b id="total">0</b></div><div class="metric"><span class="label">Aguardando responsável</span><span class="glyph" aria-label="Aguardando">⏳</span><b id="pending">0</b></div><div class="metric"><span class="label">Em andamento</span><span class="glyph" aria-label="Assumidas">👍</span><b id="working">0</b></div><div class="metric"><span class="label">Lançadas</span><span class="glyph" aria-label="Concluídas">✅</span><b id="done">0</b></div></section>
+    <section><div class="section-head"><div><h2>Fila de solicitações</h2><p>Acompanhe, assuma e finalize as demandas da equipe.</p></div><span id="showing" style="font-size:12px;color:var(--muted)"></span></div><div class="toolbar"><div class="search"><span class="magnify">⌕</span><input id="search" placeholder="Buscar por cliente, solicitação ou responsável..." /></div><select id="typeFilter" class="filter" aria-label="Filtrar tipo"><option value="">Todos os tipos</option><option>CANCELAMENTO</option><option>CONSULTA DE FIDELIDADE</option><option>TRANSFERÊNCIA DE TITULARIDADE</option><option>MUDANÇA</option></select><select id="sort" class="filter" aria-label="Ordenar"><option value="recent">Mais recentes</option><option value="old">Mais antigas</option><option value="priority">Prioridade alta</option></select></div><div class="tabs"><button class="tab active" data-tab="todos">Todas</button><button class="tab" data-tab="pendente">Pendentes</button><button class="tab" data-tab="andamento">Em andamento</button><button class="tab" data-tab="lancada">Lançadas</button></div><div id="board" class="board"></div></section>
+    <footer class="footer"><span>© 2026 Livre Escolha • Protótipo da Central de Demandas</span><span>Dados de demonstração • Salvos apenas neste navegador</span></footer>
+  </main>
+</div>
+<div class="overlay" id="createOverlay" role="dialog" aria-modal="true" aria-labelledby="createTitle"><div class="modal"><div class="modal-header"><div><h2 id="createTitle">Nova demanda</h2><p>Registre uma solicitação recebida no WhatsApp.</p></div><button class="x" data-close="createOverlay" aria-label="Fechar">×</button></div><form id="createForm"><div class="form-grid"><div class="field"><label for="client">Cliente / empresa *</label><input id="client" maxlength="100" required placeholder="Ex.: Empresa ABC" /></div><div class="field"><label for="category">Tipo de demanda *</label><select id="category" required><option value="">Selecione</option><option>CANCELAMENTO</option><option>CONSULTA DE FIDELIDADE</option><option>TRANSFERÊNCIA DE TITULARIDADE</option><option>MUDANÇA</option></select></div><div class="field"><label for="requester">Solicitado por *</label><input id="requester" maxlength="80" required placeholder="Nome de quem encaminhou" /></div><div class="field"><label for="urgency">Prioridade</label><select id="urgency"><option>Normal</option><option>Alta</option></select></div></div><div class="field"><label for="description">Descrição / observações</label><textarea id="description" maxlength="2500" placeholder="Ex.: Cliente solicita cancelamento da linha..." ></textarea></div><div class="field"><label for="attachment">Print da solicitação (opcional)</label><input type="file" id="attachment" accept="image/png,image/jpeg,image/webp"/><span class="hint">Imagens de até 1 MB. Para testes, o print é armazenado localmente no navegador.</span></div><div class="form-foot"><button type="button" class="button" data-close="createOverlay">Cancelar</button><button class="button primary" type="submit">Criar demanda</button></div></form></div></div>
+<div class="overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="modal"><div class="modal-header"><div><h2 id="detailTitle">Detalhes da demanda</h2><p id="detailId"></p></div><button class="x" data-close="detailOverlay" aria-label="Fechar">×</button></div><div id="detailContent"></div><div class="form-foot"><button class="button" data-close="detailOverlay">Fechar</button></div></div></div>
+<div class="overlay" id="assumeOverlay" role="dialog" aria-modal="true" aria-labelledby="assumeTitle"><div class="modal" style="max-width:430px"><div class="modal-header"><div><h2 id="assumeTitle">Assumir demanda 👍</h2><p>Identifique quem ficará responsável pelo caso.</p></div><button class="x" data-close="assumeOverlay" aria-label="Fechar">×</button></div><form id="assumeForm"><div class="field"><label for="agent">Nome do responsável *</label><select id="agent" required><option value="">Selecione o responsável</option><option>Felipe</option><option>Pedro</option><option>Vinícius</option><option>Kaique</option><option>Luíz</option></select></div><div class="form-foot"><button type="button" class="button" data-close="assumeOverlay">Cancelar</button><button type="submit" class="button primary">Confirmar</button></div></form></div></div>
+<div class="notice" id="notice" role="status"></div>
+<div class="overlay zoom-overlay" id="zoomOverlay" role="dialog" aria-modal="true" aria-label="Visualização ampliada do print"><button class="zoom-close" id="zoomClose" aria-label="Fechar ampliação">✕ Fechar</button><img id="zoomImage" alt="Print ampliado da solicitação" /></div>
+<script>
+(function(){
+  'use strict';
+  const KEY='livre_escolha_demandas_demo_v1';
+  const initial=[
+    {id:1045,client:'Empresa Horizonte',category:'CANCELAMENTO',requester:'Mariana',priority:'Alta',description:'Solicitação de cancelamento de uma linha móvel. Verificar possíveis encargos.',status:'pendente',assignee:'',created:Date.now()-12*60000,image:''},
+    {id:1044,client:'Sicoob • Unidade Centro',category:'CONSULTA DE FIDELIDADE',requester:'Lucas',priority:'Normal',description:'Consultar vigência de contrato e eventual multa de fidelidade.',status:'andamento',assignee:'Felipe',created:Date.now()-35*60000,image:''},
+    {id:1043,client:'Empresa Alfa',category:'MUDANÇA',requester:'Carolina',priority:'Normal',description:'Cliente solicita avaliação de upgrade de dados móveis.',status:'lancada',assignee:'Ana',created:Date.now()-65*60000,image:''},
+    {id:1042,client:'Unidade Comercial Norte',category:'TRANSFERÊNCIA DE TITULARIDADE',requester:'Rafael',priority:'Alta',description:'Link fixo apresentando instabilidade. Necessário acompanhamento.',status:'pendente',assignee:'',created:Date.now()-110*60000,image:''},
+    {id:1041,client:'Grupo Batista',category:'CONSULTA DE FIDELIDADE',requester:'Juliana',priority:'Normal',description:'Consulta de prazo contratual de serviço de internet.',status:'lancada',assignee:'Pedro',created:Date.now()-220*60000,image:''}
+  ];
+  let data;try{const v=JSON.parse(localStorage.getItem(KEY));data=Array.isArray(v)?v:initial}catch{data=initial}
+  let tab='todos',assumeId=null;
+  const $=id=>document.getElementById(id);
+  const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const date=v=>new Date(v).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+  const statuses={pendente:['Pendente','pending'],andamento:['Em andamento','working'],lancada:['Lançada','done']};
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(data));return true}catch{notify('Sem espaço no navegador para salvar a imagem. Tente uma imagem menor.');return false}}
+  let timer;function notify(msg){$('notice').textContent=msg;$('notice').classList.add('show');clearTimeout(timer);timer=setTimeout(()=>$('notice').classList.remove('show'),3500)}
+  function setTab(value){tab=value;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));document.querySelectorAll('.nav-item').forEach((x,i)=>x.classList.toggle('active',['todos','pendente','andamento','lancada'][i]===tab));render()}
+  window.setTab=setTab;
+  function render(){
+    $('total').textContent=data.length;$('pending').textContent=data.filter(x=>x.status==='pendente').length;$('working').textContent=data.filter(x=>x.status==='andamento').length;$('done').textContent=data.filter(x=>x.status==='lancada').length;
+    const q=$('search').value.trim().toLowerCase(),type=$('typeFilter').value,sort=$('sort').value;
+    let list=data.filter(x=>(tab==='todos'||x.status===tab)&&(!type||x.category===type)&&(!q||[x.client,x.category,x.requester,x.assignee,x.description,String(x.id)].join(' ').toLowerCase().includes(q)));
+    list.sort((a,b)=>sort==='old'?a.created-b.created:sort==='priority'?(b.priority==='Alta')-(a.priority==='Alta')||b.created-a.created:b.created-a.created);
+    $('showing').textContent=`${list.length} demanda${list.length===1?'':'s'}`;
+    $('board').innerHTML=list.length?list.map(x=>`<article class="ticket"><div><div class="ticket-top"><span class="id">#${x.id}</span><span class="badge ${statuses[x.status][1]}">${statuses[x.status][0]}</span>${x.priority==='Alta'?'<span class="badge priority">⚑ Alta prioridade</span>':''}</div><h3>${escapeHtml(x.category)} <span style="color:#61778b;font-weight:400">•</span> ${escapeHtml(x.client)}</h3><p>${escapeHtml(x.description||'Sem descrição adicional.')}</p><div class="details"><span>◉ Solicitado por: <strong>${escapeHtml(x.requester)}</strong></span><span>◷ ${date(x.created)}</span><span>♙ Responsável: <strong>${escapeHtml(x.assignee||'Não atribuído')}</strong></span>${x.image?'<span>▧ Print anexado</span>':''}</div></div><div class="ticket-actions">${x.status==='pendente'?`<button class="mini" data-action="assume" data-id="${x.id}">👍 Assumir caso</button>`:''}${x.status==='andamento'?`<button class="mini finish" data-action="finish" data-id="${x.id}">✓ Marcar lançada</button>`:''}<button class="mini secondary" data-action="detail" data-id="${x.id}">Ver detalhes →</button></div></article>`).join(''):'<div class="empty"><div style="font-size:32px">▤</div><h3>Nenhuma demanda encontrada</h3><p>Altere os filtros ou cadastre uma nova solicitação.</p></div>';
+  }
+  function open(id){$(id).classList.add('show');const first=$(id).querySelector('input,button');if(first)first.focus()}
+  function close(id){$(id).classList.remove('show')}
+  $('openModal').addEventListener('click',()=>open('createOverlay'));
+  document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>close(x.dataset.close)));
+  document.querySelectorAll('.overlay').forEach(x=>x.addEventListener('click',e=>{if(e.target===x)close(x.id)}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.overlay.show').forEach(x=>close(x.id))});
+  document.querySelectorAll('.tab').forEach(x=>x.addEventListener('click',()=>setTab(x.dataset.tab)));
+  ['search','typeFilter','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
+  $('createForm').addEventListener('submit',async e=>{
+    e.preventDefault();const file=$('attachment').files[0];let image='';
+    if(file){if(file.size>1024*1024){notify('Escolha um print de até 1 MB.');return}if(!['image/png','image/jpeg','image/webp'].includes(file.type)){notify('Use imagem PNG, JPG ou WebP.');return}image=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
+    const id=Math.max(1040,...data.map(x=>x.id))+1;
+    const item={id,client:$('client').value.trim(),category:$('category').value,requester:$('requester').value.trim(),priority:$('urgency').value,description:$('description').value.trim(),status:'pendente',assignee:'',created:Date.now(),image};
+    if(!item.client||!item.category||!item.requester)return;
+    data.unshift(item);if(!save()){data.shift();return}
+    $('createForm').reset();close('createOverlay');setTab('todos');notify(`Demanda #${id} criada com sucesso!`)
+  });
+  $('board').addEventListener('click',e=>{
+    const btn=e.target.closest('[data-action]');if(!btn)return;const id=Number(btn.dataset.id),x=data.find(y=>y.id===id);if(!x)return;
+    if(btn.dataset.action==='assume'){assumeId=id;$('agent').value='';open('assumeOverlay')}
+    if(btn.dataset.action==='finish'){if(!confirm(`Confirmar que a demanda #${id} foi lançada?`))return;x.status='lancada';save();render();notify(`Demanda #${id} marcada como lançada ✅`)}
+    if(btn.dataset.action==='detail'){
+      $('detailId').textContent=`Demanda #${id} • Criada em ${date(x.created)}`;
+      $('detailContent').innerHTML=`<div class="detail-line"><b>Cliente:</b> ${escapeHtml(x.client)}</div><div class="detail-line"><b>Tipo:</b> ${escapeHtml(x.category)}</div><div class="detail-line"><b>Solicitado por:</b> ${escapeHtml(x.requester)}</div><div class="detail-line"><b>Responsável:</b> ${escapeHtml(x.assignee||'Ainda não assumida')}</div><div class="detail-line"><b>Status:</b> ${escapeHtml(statuses[x.status][0])}</div><div class="detail-line"><b>Prioridade:</b> ${escapeHtml(x.priority)}</div><div class="detail-line"><b>Descrição:</b> ${escapeHtml(x.description||'Sem observações.')}</div>${x.image?`<div class="detail-line"><b>Print da solicitação:</b><div class="image-preview-wrap"><button type="button" class="zoom-hint" aria-label="Ampliar print">⌕ Ampliar imagem</button><img class="preview-image zoomable" title="Clique para ampliar" src="${x.image}" alt="Print anexado à demanda" /></div></div>`:'<p class="hint">Nenhum print anexado.</p>'}<div class="form-foot"><button class="button" id="removeDemand" style="color:var(--red)">Excluir demanda</button></div>`;
+      open('detailOverlay');$('removeDemand').addEventListener('click',()=>{if(confirm(`Excluir permanentemente a demanda #${id}?`)){data=data.filter(y=>y.id!==id);save();close('detailOverlay');render();notify('Demanda excluída.')}})
+    }
+  });
+  $('detailContent').addEventListener('click',e=>{
+    if(e.target.closest('.zoomable, .zoom-hint')){
+      const photo=$('detailContent').querySelector('.zoomable');
+      if(photo){$('zoomImage').src=photo.src;open('zoomOverlay')}
+    }
+  });
+  $('zoomClose').addEventListener('click',()=>close('zoomOverlay'));
+  const sideButton=$('toggleSidebar');
+  sideButton.addEventListener('click',()=>{
+    const hidden=document.body.classList.toggle('sidebar-closed');
+    sideButton.textContent=hidden?'❯':'❮';
+    sideButton.setAttribute('aria-expanded',String(!hidden));
+    sideButton.setAttribute('aria-label',hidden?'Mostrar menu':'Recolher menu');
+    try{localStorage.setItem('demandas_sidebar_closed',hidden?'1':'0')}catch{}
+  });
+  try{if(localStorage.getItem('demandas_sidebar_closed')==='1')sideButton.click()}catch{}
+  $('assumeForm').addEventListener('submit',e=>{e.preventDefault();const x=data.find(y=>y.id===assumeId),name=$('agent').value.trim();if(!x||!name)return;x.assignee=name;x.status='andamento';save();close('assumeOverlay');render();notify(`Demanda #${x.id} assumida por ${name} 👍`)});
+  $('resetBtn').addEventListener('click',()=>{if(!confirm('Restaurar os exemplos? Todas as demandas cadastradas neste navegador serão apagadas.'))return;data=initial.map(x=>({...x}));save();setTab('todos');notify('Demonstração restaurada.')});
+  render();
+})();
+</script>
+</body>
+</html>

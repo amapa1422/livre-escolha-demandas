@@ -1,0 +1,314 @@
+{
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+  "results": [
+    {
+      "name": "Layout original preservado em 1920px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Sem rolagem horizontal em 1920px",
+      "passed": true
+    },
+    {
+      "name": "Layout original preservado em 1366px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Sem rolagem horizontal em 1366px",
+      "passed": true
+    },
+    {
+      "name": "Layout original preservado em 768px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Sem rolagem horizontal em 768px",
+      "passed": true
+    },
+    {
+      "name": "Layout original preservado em 390px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Sem rolagem horizontal em 390px",
+      "passed": true
+    },
+    {
+      "name": "Layout original preservado em 320px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Sem rolagem horizontal em 320px",
+      "passed": true
+    },
+    {
+      "name": "Painel inicial e quatro indicadores",
+      "passed": true
+    },
+    {
+      "name": "Quatro tipos e cinco responsáveis preservados",
+      "passed": true
+    },
+    {
+      "name": "Campos obrigatórios",
+      "passed": true
+    },
+    {
+      "name": "Cliente somente com espaços rejeitado",
+      "passed": true
+    },
+    {
+      "name": "Cadastro com PNG e proteção contra envio duplicado",
+      "passed": true
+    },
+    {
+      "name": "Indicadores após cadastro",
+      "passed": true
+    },
+    {
+      "name": "Pesquisa instantânea",
+      "passed": true
+    },
+    {
+      "name": "Filtro exclui outro tipo",
+      "passed": true
+    },
+    {
+      "name": "Filtro encontra tipo",
+      "passed": true
+    },
+    {
+      "name": "Assumir: responsável e status",
+      "passed": true
+    },
+    {
+      "name": "Foco preservado após atualizar cartão",
+      "passed": true
+    },
+    {
+      "name": "Detalhes exibem print",
+      "passed": true
+    },
+    {
+      "name": "Zoom preserva proporção",
+      "passed": true
+    },
+    {
+      "name": "Fechamento pelo botão mantém detalhes",
+      "passed": true
+    },
+    {
+      "name": "Fechamento pelo overlay",
+      "passed": true
+    },
+    {
+      "name": "Zoom por teclado",
+      "passed": true
+    },
+    {
+      "name": "ESC mantém comportamento original de fechar todos os modais",
+      "passed": true
+    },
+    {
+      "name": "Cancelar finalização",
+      "passed": true
+    },
+    {
+      "name": "Marcar lançada e atualizar indicadores",
+      "passed": true
+    },
+    {
+      "name": "Aba pendente",
+      "passed": true
+    },
+    {
+      "name": "Menu pendente",
+      "passed": true
+    },
+    {
+      "name": "Aba andamento",
+      "passed": true
+    },
+    {
+      "name": "Menu andamento",
+      "passed": true
+    },
+    {
+      "name": "Aba lancada",
+      "passed": true
+    },
+    {
+      "name": "Menu lancada",
+      "passed": true
+    },
+    {
+      "name": "Aba todos",
+      "passed": true
+    },
+    {
+      "name": "Menu todos",
+      "passed": true
+    },
+    {
+      "name": "Ordenar antigas",
+      "passed": true
+    },
+    {
+      "name": "Ordenar recentes",
+      "passed": true
+    },
+    {
+      "name": "Ordenar prioridade",
+      "passed": true
+    },
+    {
+      "name": "Recolher barra",
+      "passed": true
+    },
+    {
+      "name": "Persistência após recarregar",
+      "passed": true
+    },
+    {
+      "name": "Expandir barra",
+      "passed": true
+    },
+    {
+      "name": "Cancelar exclusão",
+      "passed": true
+    },
+    {
+      "name": "Excluir com confirmação",
+      "passed": true
+    },
+    {
+      "name": "Foco contido no modal",
+      "passed": true
+    },
+    {
+      "name": "Shift+Tab contido no modal",
+      "passed": true
+    },
+    {
+      "name": "Foco retorna ao acionador",
+      "passed": true
+    },
+    {
+      "name": "Textos cadastrados não executam HTML",
+      "passed": true
+    },
+    {
+      "name": "Detalhes escapam HTML",
+      "passed": true
+    },
+    {
+      "name": "Anexo image/jpeg",
+      "passed": true
+    },
+    {
+      "name": "Anexo image/webp",
+      "passed": true
+    },
+    {
+      "name": "Arquivo acima de 1 MB rejeitado",
+      "passed": true
+    },
+    {
+      "name": "Tipo não permitido rejeitado",
+      "passed": true
+    },
+    {
+      "name": "Imagem falsa rejeitado",
+      "passed": true
+    },
+    {
+      "name": "Imagem truncada rejeitado",
+      "passed": true
+    },
+    {
+      "name": "Falha de FileReader tratada",
+      "passed": true
+    },
+    {
+      "name": "Falha ao criar preserva dados e formulário",
+      "passed": true
+    },
+    {
+      "name": "Falha ao assumir mantém pendente",
+      "passed": true
+    },
+    {
+      "name": "Falha ao finalizar mantém andamento",
+      "passed": true
+    },
+    {
+      "name": "Falha ao excluir mantém registro e modal",
+      "passed": true
+    },
+    {
+      "name": "Falha ao restaurar mantém dados",
+      "passed": true
+    },
+    {
+      "name": "Cancelar restauração",
+      "passed": true
+    },
+    {
+      "name": "Restaurar demo",
+      "passed": true
+    },
+    {
+      "name": "Imagem adulterada não injeta atributos",
+      "passed": true
+    },
+    {
+      "name": "JSON inválido preservado sem sobrescrita",
+      "passed": true
+    },
+    {
+      "name": "Registro inválido não impede consulta dos válidos",
+      "passed": true
+    },
+    {
+      "name": "Registros inválidos não são apagados",
+      "passed": true
+    },
+    {
+      "name": "Formulário utilizável em 768px",
+      "passed": true
+    },
+    {
+      "name": "Detalhes sem overflow em 768px",
+      "passed": true
+    },
+    {
+      "name": "Formulário utilizável em 390px",
+      "passed": true
+    },
+    {
+      "name": "Detalhes sem overflow em 390px",
+      "passed": true
+    },
+    {
+      "name": "Formulário utilizável em 320px",
+      "passed": true
+    },
+    {
+      "name": "Detalhes sem overflow em 320px",
+      "passed": true
+    },
+    {
+      "name": "Sem erros JavaScript/console",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "passed": 75,
+  "failed": 0,
+  "errors": []
+}
