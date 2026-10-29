@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demandas | Livre Escolha</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside id="sidebar">
+        <div class="brand">
+          <div class="brand-icon">LE</div>
+          <div>
+            <strong>LivreEscolha</strong>
+            <small>GESTÃO TELECOM</small>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Navegação principal">
+          <div class="nav-label">Espaço de trabalho</div>
+          <button class="nav-item active" data-tab="todos"><span class="symbol">▦</span><span>Painel geral</span></button>
+          <button class="nav-item" data-tab="pendente"><span class="symbol">◷</span><span>Pendentes</span></button>
+          <button class="nav-item" data-tab="andamento"><span class="symbol">↗</span><span>Em andamento</span></button>
+          <button class="nav-item" data-tab="lancada"><span class="symbol">✓</span><span>Lançadas</span></button>
+        </nav>
+        <div class="side-bottom">
+          <strong class="demo-title"><span class="online-dot"></span>Modo demonstração</strong>
+          <p>As demandas ficam salvas neste navegador. Para acesso entre vários funcionários, será necessário conectar um banco de dados.</p>
+        </div>
+      </aside>
+      <button class="sidebar-toggle" id="toggleSidebar" aria-label="Recolher menu" title="Mostrar / ocultar menu" aria-expanded="true" aria-controls="sidebar">❮</button>
+      <main class="main">
+        <header class="top">
+          <div>
+            <div class="eyebrow">GESTÃO OPERACIONAL</div>
+            <h1>Demandas</h1>
+          </div>
+          <div class="actions">
+            <button class="button" id="resetBtn" title="Restaurar os exemplos">↺ <span>Restaurar demo</span></button>
+            <button class="button primary" id="openModal">＋ Nova demanda</button>
+          </div>
+        </header>
+        <section class="metrics" aria-label="Indicadores de demandas">
+          <div class="metric">
+            <span class="label">Total de demandas</span>
+            <span class="glyph" aria-label="Total">▦</span>
+            <b id="total">0</b>
+          </div>
+          <div class="metric">
+            <span class="label">Aguardando responsável</span>
+            <span class="glyph" aria-label="Aguardando">⏳</span>
+            <b id="pending">0</b>
+          </div>
+          <div class="metric">
+            <span class="label">Em andamento</span>
+            <span class="glyph" aria-label="Assumidas">👍</span>
+            <b id="working">0</b>
+          </div>
+          <div class="metric">
+            <span class="label">Lançadas</span>
+            <span class="glyph" aria-label="Concluídas">✅</span>
+            <b id="done">0</b>
+          </div>
+        </section>
+        <section>
+          <div class="section-head">
+            <div>
+              <h2>Fila de solicitações</h2>
+              <p>Acompanhe, assuma e finalize as demandas da equipe.</p>
+            </div>
+            <span id="showing"></span>
+          </div>
+          <div class="toolbar">
+            <div class="search">
+              <span class="magnify">⌕</span>
+              <input id="search" aria-label="Buscar demandas" placeholder="Buscar por cliente, solicitação ou responsável..." />
+            </div>
+            <select id="typeFilter" class="filter" aria-label="Filtrar tipo">
+              <option value="">Todos os tipos</option>
+              <option>CANCELAMENTO</option>
+              <option>CONSULTA DE FIDELIDADE</option>
+              <option>TRANSFERÊNCIA DE TITULARIDADE</option>
+              <option>MUDANÇA</option>
+            </select>
+            <select id="sort" class="filter" aria-label="Ordenar">
+              <option value="recent">Mais recentes</option>
+              <option value="old">Mais antigas</option>
+              <option value="priority">Prioridade alta</option>
+            </select>
+          </div>
+          <div class="tabs">
+            <button class="tab active" data-tab="todos">Todas</button>
+            <button class="tab" data-tab="pendente">Pendentes</button>
+            <button class="tab" data-tab="andamento">Em andamento</button>
+            <button class="tab" data-tab="lancada">Lançadas</button>
+          </div>
+          <div id="board" class="board"></div>
+        </section>
+        <footer class="footer">
+          <span>© 2026 Livre Escolha • Protótipo da Central de Demandas</span>
+          <span>Dados de demonstração • Salvos apenas neste navegador</span>
+        </footer>
+      </main>
+    </div>
+    <div class="overlay" id="createOverlay" role="dialog" aria-modal="true" aria-labelledby="createTitle">
+      <div class="modal">
+        <div class="modal-header">
+          <div>
+            <h2 id="createTitle">Nova demanda</h2>
+            <p>Registre uma solicitação recebida no WhatsApp.</p>
+          </div>
+          <button class="x" data-close="createOverlay" aria-label="Fechar">×</button>
+        </div>
+        <form id="createForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="client">Cliente / empresa *</label>
+              <input id="client" maxlength="100" required placeholder="Ex.: Empresa ABC" />
+            </div>
+            <div class="field">
+              <label for="category">Tipo de demanda *</label>
+              <select id="category" required>
+                <option value="">Selecione</option>
+                <option>CANCELAMENTO</option>
+                <option>CONSULTA DE FIDELIDADE</option>
+                <option>TRANSFERÊNCIA DE TITULARIDADE</option>
+                <option>MUDANÇA</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="requester">Solicitado por *</label>
+              <input id="requester" maxlength="80" required placeholder="Nome de quem encaminhou" />
+            </div>
+            <div class="field">
+              <label for="urgency">Prioridade</label>
+              <select id="urgency">
+                <option>Normal</option>
+                <option>Alta</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="description">Descrição / observações</label>
+            <textarea id="description" maxlength="2500" placeholder="Ex.: Cliente solicita cancelamento da linha..." ></textarea>
+          </div>
+          <div class="field">
+            <label for="attachment">Print da solicitação (opcional)</label>
+            <input type="file" id="attachment" accept="image/png,image/jpeg,image/webp"/>
+            <span class="hint">Imagens de até 1 MB. Para testes, o print é armazenado localmente no navegador.</span>
+          </div>
+          <div class="form-foot">
+            <button type="button" class="button" data-close="createOverlay">Cancelar</button>
+            <button class="button primary" type="submit">Criar demanda</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="modal">
+        <div class="modal-header">
+          <div>
+            <h2 id="detailTitle">Detalhes da demanda</h2>
+            <p id="detailId"></p>
+          </div>
+          <button class="x" data-close="detailOverlay" aria-label="Fechar">×</button>
+        </div>
+        <div id="detailContent"></div>
+        <div class="form-foot">
+          <button class="button" data-close="detailOverlay">Fechar</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="assumeOverlay" role="dialog" aria-modal="true" aria-labelledby="assumeTitle">
+      <div class="modal assume-modal">
+        <div class="modal-header">
+          <div>
+            <h2 id="assumeTitle">Assumir demanda 👍</h2>
+            <p>Identifique quem ficará responsável pelo caso.</p>
+          </div>
+          <button class="x" data-close="assumeOverlay" aria-label="Fechar">×</button>
+        </div>
+        <form id="assumeForm">
+          <div class="field">
+            <label for="agent">Nome do responsável *</label>
+            <select id="agent" required>
+              <option value="">Selecione o responsável</option>
+              <option>Felipe</option>
+              <option>Pedro</option>
+              <option>Vinícius</option>
+              <option>Kaique</option>
+              <option>Luíz</option>
+            </select>
+          </div>
+          <div class="form-foot">
+            <button type="button" class="button" data-close="assumeOverlay">Cancelar</button>
+            <button type="submit" class="button primary">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="notice" id="notice" role="status"></div>
+    <div class="overlay zoom-overlay" id="zoomOverlay" role="dialog" aria-modal="true" aria-label="Visualização ampliada do print">
+      <button class="zoom-close" id="zoomClose" aria-label="Fechar ampliação">✕ Fechar</button>
+      <img id="zoomImage" alt="Print ampliado da solicitação" />
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
