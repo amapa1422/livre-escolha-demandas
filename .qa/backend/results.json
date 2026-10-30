@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-10-30T14:02:01.923Z",
+  "checks": [
+    "PostgreSQL e HTTP iniciados; rotas e arquivos privados protegidos",
+    "Login admin e funcionários com scrypt e rotação de sessão",
+    "Senha inválida, CSRF, origem externa e login protegido",
+    "Criação, persistência, idempotência concorrente e dois sockets autenticados",
+    "Corrida de tomada: exatamente um sucesso e um conflito",
+    "PNG privado na criação, logo do catálogo e validação do print",
+    "Upload multipart: criador/admin, um anexo, MIME real e limite",
+    "Histórico transacional e exclusão lógica somente admin",
+    "Socket rejeita visitante; logout revoga HTTP e conexão aberta",
+    "Chrome: login admin/funcionário, criar, visualizar em dois contextos",
+    "Chrome: assumir/finalizar sincronizados, detalhes, print, zoom e histórico",
+    "Chrome: filtros, logos, preferência da barra e preservação de localStorage",
+    "CSS aprovado idêntico byte a byte; geometria/estilos comparados em 5 larguras",
+    "Chrome: logout e proteção após encerrar sessão",
+    "Navegadores sem erros de JavaScript/console",
+    "Dados e hashes dos usuários reais preservados"
+  ],
+  "consoleErrors": [],
+  "database": "Existing PostgreSQL, isolated temporary schema",
+  "publicDataUnchanged": true,
+  "actualUserPasswordsTested": false,
+  "note": "Login testado com contas sintéticas; nenhuma senha real solicitada ou redefinida."
+}

@@ -1,0 +1,40 @@
+{
+    "id":  7,
+    "result":  {
+                   "result":  {
+                                  "type":  "object",
+                                  "value":  {
+                                                "results":  [
+                                                                {
+                                                                    "name":  "Plus Jakarta Sans efetivamente carregada",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "JPEG aceito e preservado quando WebP não economiza",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "WebP aceito e preservado sem reprocessar",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Tab fecha sugestões sem selecionar empresa",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sem novos erros capturados",
+                                                                    "passed":  true
+                                                                }
+                                                            ],
+                                                "errors":  [
+
+                                                           ],
+                                                "passed":  5,
+                                                "failed":  0
+                                            }
+                              }
+               },
+    "consoleEvents":  [
+
+                      ]
+}

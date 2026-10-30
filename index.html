@@ -1,9 +1,13 @@
+<!-- Gerado por sync_pages.py; editar central-demandas/index.html. -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demandas | Livre Escolha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap&text=Demandas" />
     <link rel="stylesheet" href="central-demandas/css/style.css" />
   </head>
   <body>
@@ -23,10 +27,6 @@
           <button class="nav-item" data-tab="andamento"><span class="symbol">↗</span><span>Em andamento</span></button>
           <button class="nav-item" data-tab="lancada"><span class="symbol">✓</span><span>Lançadas</span></button>
         </nav>
-        <div class="side-bottom">
-          <strong class="demo-title"><span class="online-dot"></span>Modo demonstração</strong>
-          <p>As demandas ficam salvas neste navegador. Para acesso entre vários funcionários, será necessário conectar um banco de dados.</p>
-        </div>
       </aside>
       <button class="sidebar-toggle" id="toggleSidebar" aria-label="Recolher menu" title="Mostrar / ocultar menu" aria-expanded="true" aria-controls="sidebar">❮</button>
       <main class="main">
@@ -36,7 +36,6 @@
             <h1>Demandas</h1>
           </div>
           <div class="actions">
-            <button class="button" id="resetBtn" title="Restaurar os exemplos">↺ <span>Restaurar demo</span></button>
             <button class="button primary" id="openModal">＋ Nova demanda</button>
           </div>
         </header>
@@ -97,8 +96,7 @@
           <div id="board" class="board"></div>
         </section>
         <footer class="footer">
-          <span>© 2026 Livre Escolha • Protótipo da Central de Demandas</span>
-          <span>Dados de demonstração • Salvos apenas neste navegador</span>
+          <span>© 2026 Livre Escolha</span>
         </footer>
       </main>
     </div>
@@ -113,9 +111,10 @@
         </div>
         <form id="createForm">
           <div class="form-grid">
-            <div class="field">
+            <div class="field client-field">
               <label for="client">Cliente / empresa *</label>
-              <input id="client" maxlength="100" required placeholder="Ex.: Empresa ABC" />
+              <input id="client" maxlength="100" required placeholder="Ex.: Empresa ABC" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="clientSuggestions" />
+              <ul id="clientSuggestions" class="client-suggestions" role="listbox" aria-label="Empresas cadastradas" hidden></ul>
             </div>
             <div class="field">
               <label for="category">Tipo de demanda *</label>
@@ -146,7 +145,7 @@
           <div class="field">
             <label for="attachment">Print da solicitação (opcional)</label>
             <input type="file" id="attachment" accept="image/png,image/jpeg,image/webp"/>
-            <span class="hint">Imagens de até 1 MB. Para testes, o print é armazenado localmente no navegador.</span>
+            <span class="hint">Imagens de até 1 MB.</span>
           </div>
           <div class="form-foot">
             <button type="button" class="button" data-close="createOverlay">Cancelar</button>
@@ -203,6 +202,8 @@
       <button class="zoom-close" id="zoomClose" aria-label="Fechar ampliação">✕ Fechar</button>
       <img id="zoomImage" alt="Print ampliado da solicitação" />
     </div>
+    <script src="central-demandas/assets/clientes/catalogo.js"></script>
+    <script src="central-demandas/js/api.js"></script>
     <script src="central-demandas/js/app.js"></script>
   </body>
 </html>

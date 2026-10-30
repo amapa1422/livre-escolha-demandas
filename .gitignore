@@ -1,0 +1,18 @@
+# Segredos, dependências e dados locais
+.env
+.env.*
+!.env.example
+**/node_modules/
+backend/storage/
+backend/uploads/
+*.log
+# Cópias privadas; documentação de controle continua versionada
+_CONTROLE_PROJETO/backups/
+# Temporários do sistema/editor
+.DS_Store
+Thumbs.db
+# Artefatos temporários de QA; preservar relatórios e capturas úteis
+__pycache__/
+.qa/logos-pages/fixtures/
+.qa/logos-pages/session.json
+.qa/logos-pages/*-params.json

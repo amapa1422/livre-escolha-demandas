@@ -1,0 +1,2062 @@
+{
+  "passed": 514,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Original preservado: A.A._Arruda.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: A.A._Arruda.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: A.B_Supermercados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: A.B_Supermercados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Acetiseg_Seguros.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Acetiseg_Seguros.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Acetiseg_Seguros.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Aciap.jpg",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Aciap.jpg",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Aciap.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Afmm.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Afmm.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Agropratinha_Prats.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Agropratinha_Prats.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Agropratinha_Prats.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Agropratinha_Viveiro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Agropratinha_Viveiro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Aguia_Veiculos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Aguia_Veiculos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Argus_Contabilidade.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Argus_Contabilidade.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Art_Liberdade.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Art_Liberdade.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Aspen_Park.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Aspen_Park.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Batista_Izepe.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Batista_Izepe.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Beeight.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Beeight.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Beeight.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: BH_Alimentos_Recife.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: BH_Alimentos_Recife.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: BH_Alimentos_Sede.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: BH_Alimentos_Sede.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Bolamel.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Bolamel.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Bolamel.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Br_Consorcios.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Br_Consorcios.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Br_Consorcios.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cac_Papeis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Cac_Papeis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: CBJ.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: CBJ.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Centro_Unicv.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Centro_Unicv.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Centro_Unicv.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Chapa_Quente.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Chapa_Quente.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Ciapetro_Trading.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Ciapetro_Trading.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Ciapetro_Trading.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem Sp.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Cinesystem Sp.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Cinesystem Sp.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Ana.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Ara.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Bbc.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Bgu.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Bsb.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Btf.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Cpo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Cwb.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Fcc.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Fln.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Hrt.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Idg.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Imp.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Ita.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Lda.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Leo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Mcz.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Mtw.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Pgd.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Piai.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Plt.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Ppa.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Rdg.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Rec.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Rgd.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Ssl.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Str.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Vbr.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cinesystem_Vvl.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Coelma.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Coelma.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Coelma.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Campo_Mourao.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Comercial_Agricola_Campo_Mourao.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Comercial_Agricola_Campo_Mourao.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Cornelio.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Cornelio_Procopio.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Goioere.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Irati.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Jardim.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Jardim_Alegre.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Londrina.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Maringa.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Paranavai.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Toledo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Comercial_Agricola_Toledo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Comercial_Agricola_Toledo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Ubirata.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Agricola_Umuarama.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Comercial_Virginia.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Comercial_Virginia.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Conquista_Textil.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Conquista_Textil.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Conquista_Textil.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Contabe_Bernabe.jpeg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Contabe_Bernabe.jpeg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cpa_Armazens_Gerais.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Cpa_Armazens_Gerais.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cpa_Comercio_Combustiveis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cpa_Posto_P2.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cpa_Trading.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cresol_Grandes_Lagos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Cresol_Grandes_Lagos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Cresol_Grandes_Lagos.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Cresol_Transamazonica.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Decortex_Tecidos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Decortex_Tecidos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Deposito_Popular.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Deposito_Popular.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Deposito_Popular.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Destro_Alimentos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Destro_Alimentos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Dimatex.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Dimatex.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Dimatex.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Bebidas_Virginia_Guarapuava.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Distribuidora_Bebidas_Virginia_Guarapuava.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Distribuidora_Bebidas_Virginia_Guarapuava.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Bebidas_Virginia_Maringa.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Bebidas_Virginia_Norte_Pioneiro.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Bebidas_Virginia_Ponta_Grossa.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Campeao.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Distribuidora_Campeao.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Columbia.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Distribuidora_Columbia.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Distribuidora_Columbia.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Distribuidora_Virginia_Refrigerados.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Dmm_Administradora.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Dmm_Administradora.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Dmm_Administradora.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Emporio_Dude.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Emporio_Dude.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Euphoria_Curitiba.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Euphoria_Curitiba.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Euphoria_Londrina.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Euphoria_Maringa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Expo_Design.enc",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Faculdade_Fatecie.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Faculdade_Fatecie.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Faculdade_Fatecie.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Fg_Pneus.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Fg_Pneus.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Fg_Pneus.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Fibrometal_Brasil.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Fibrometal_Brasil.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Fiomar_Atacado.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Fiomar_Atacado.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Force_One.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Force_One.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Force_One.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Fusion_Aluminios.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Fusion_Aluminios.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Fusion_Aluminios.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Futura_Transportes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Futura_Transportes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Gl_Assessoria.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Gl_Assessoria.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Gp_Grupo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Gp_Grupo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Gp_Grupo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grafica_Almeida.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Grafica_Almeida.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Grafica_Almeida.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Ciapetro.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Grupo_Ciapetro.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Grupo_Ciapetro.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Crefaz.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Grupo_Crefaz.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Gtfoods.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Grupo_Gtfoods.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Metafa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Grupo_Metafa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Prever_Pr.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Grupo_Prever_Pr.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Grupo_Prever_Pr.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Prever_Rs.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Grupo_Prever_Rs.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Grupo_Prever_Rs.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Grupo_Prever_Sc.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Grupo_Prever_Sc.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Grupo_Prever_Sc.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Guguy_Supermercados.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Guguy_Supermercados.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Guguy_Supermercados.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: GVT_Pneus.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: GVT_Pneus.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: House_Design.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: House_Design.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Ideal_Automoveis.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Ideal_Automoveis.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Ideal_Automoveis.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Ideal_Ortodontia.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Ideal_Ortodontia.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Ideal_Ortodontia.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Imobiliaria_S_Iwata.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Imobiliaria_S_Iwata.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Imobiliaria_S_Iwata.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Inblue_Cosmeticos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Inblue_Cosmeticos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Inblue_Cosmeticos.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Incopostes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Incopostes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: IPC_Nordeste.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: IPC_Nordeste.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: IPC_Nordeste.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Itiban_Ariyoshi.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Itiban_Ariyoshi.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Itiban_Ariyoshi.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Jucalli_Calcados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Jucalli_Calcados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Just_Construcoes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Just_Construcoes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: KAK_Papeis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: KAK_Papeis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Latco_Beverages.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Latco_Beverages.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Latco_Laticinios.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Lema_Corretora.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Lema_Corretora.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Leongas.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Leongas.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: LF_Correa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: LF_Correa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Lion_Automotivo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Lion_Automotivo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Lion_Automotivo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Lojas_Marcato.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Lojas_Marcato.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Marcos_Boutique.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Marcos_Boutique.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Marcos_Serra.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Mercado_Ideal.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Mercado_Ideal.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Mercado_Ideal.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Metafa_Moveleira.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Metafa_Moveleira.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Metalurgica_Teixeira.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Metalurgica_Teixeira.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: MH_Administradora.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: MH_Administradora.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Moveis_Albatroz.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Moveis_Albatroz.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Moveis_Albatroz.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Moveis_Casa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Moveis_Casa.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Oilala_Kids.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Oilala_Kids.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Original_Distr_Sucos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Original_Distr_Sucos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Parana_Trucks.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Parana_Trucks.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Parana_Trucks.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Pasa_Operacoes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Pasa_Operacoes.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Petrovina_Sementes.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Petrovina_Sementes.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Petrovina_Sementes.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Plastbel.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Plastbel.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Podium_Alimentos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Podium_Alimentos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Pontal_Chevrolet.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Pontal_Chevrolet.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Posto_Tuiuti.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Posto_Tuiuti.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Posto_Tuiuti.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Potencial Suprimentos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Potencial Suprimentos.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Potencial Suprimentos.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Prato_Cheio.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Prato_Cheio.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Prato_Cheio.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Prepara_Cursos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Prepara_Cursos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Recco_Confeccoes.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Recco_Confeccoes.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Recco_Confeccoes.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sandra_Tortas.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Sandra_Tortas.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Sandra_Tortas.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Santa_Casa_Paranavai.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Santa_Casa_Paranavai.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Agrocredi.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Sicoob_Agrocredi.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Sicoob_Agrocredi.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Agrorural.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Alianca.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Aracredi.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Arenito.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_BRMIL.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Cecremef.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Central_Rondon.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Cerrado.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coimppa.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Confianca.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coomperj.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coopcred(Ccred).png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coopcred_Ccred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coopercred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Cooperemb.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Coopjustica.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Credicaf.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Credicapital.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Credicoop.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Credimota.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Credisudeste.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Descobrimento.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Empresarial_GO.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Empresas.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Engecred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Fluminense.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Fronteiras.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Integracao.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Ipe.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Juriscredcelg.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Lagoacred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Meridional.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Metropolitano.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Montecredi.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Médio_Oeste.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Noroeste_MG.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Norte_MT.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Nossacoop.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Nosso.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Nossocredito.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Ouricred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Ouro_Verde.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Rubiataba.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Sacramento.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Serrano.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Sul.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Uniao_Centro_Oeste.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Unicentro_Brasileira.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Unicoob.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicoob_Vale_Sul.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi Soma Pa 15.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Sicredi Soma Pa 15.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Sicredi Soma Pa 15.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi Soma Pa 16.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi Soma Pa 21.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Cerrado.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Cooperjuris.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Dexis.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Expansao.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Serigy.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_Cad.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_02.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_03.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_04.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_05.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_06.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_07.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_08.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_09.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_10.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_11.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_12.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_14.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_17.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_18.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_19.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_20.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_22.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_23.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_25.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_26.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_27.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_28.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_29.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_40.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_41.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_42.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_43.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_44.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_45.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_46.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_47.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_48.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_49.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_50.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_51.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_52.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_53.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_54.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_55.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_56.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Soma_PA_57.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Sul_Minas.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Valor.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sicredi_Vanguarda.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sindicato_Colorado.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Sindicato_Colorado.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Sindicato_Colorado.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Stock_Atacadista.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Stock_Atacadista.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Stock_Atacadista.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Sulmobile.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Sulmobile.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Super_Alvo.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Super_Alvo.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Tct_Ciapetro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Tct_Ciapetro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Totalmix.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Totalmix.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Totalmix.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Transportadora_Marconi.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicampo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Unicampo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Unicampo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicoob_Corretora.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Unicred.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Unicred.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Ampla.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Unicred_Ampla.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coalizao.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coalizao_Costa_Do_Sol.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coalizao_Niteroi.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coalizao_Norte_Lagos.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coalizao_Rjmt.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Coopnore.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Porto_Alegre.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unicred_Progresso.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimais_Centro_Leste_Paulista.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Unimais_Centro_Leste_Paulista.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimais_Circuito_Das_Aguas.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimais_Mantiqueira.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimais_Metropolitana.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimais_Rio.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Alto_Jacui.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Unimed_Alto_Jacui.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Unimed_Alto_Jacui.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Campo_Mourao.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Cianorte.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Francisco_Beltrao.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Guarapuava.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Jaragua_Do_Sul.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Noroeste_Parana.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_Paranavai.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Unimed_SSP.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Valdar_Moveis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Valdar_Moveis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Valtur_Turismo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP preserva pixels RGBA e resolução: Valtur_Turismo.png",
+      "passed": true
+    },
+    {
+      "name": "WebP menor: Valtur_Turismo.png",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Vignoto_Imoveis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Vignoto_Imoveis.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Vivaro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Vivaro.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: WA_Pneus.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: WA_Pneus.jpg",
+      "passed": true
+    },
+    {
+      "name": "Original preservado: Zilo_Calcados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Formato original mantido byte a byte: Zilo_Calcados.jpg",
+      "passed": true
+    },
+    {
+      "name": "Catálogo sem IDs duplicados",
+      "passed": true
+    },
+    {
+      "name": "Catálogo somente com arquivos fornecidos",
+      "passed": true
+    },
+    {
+      "name": "Todos os recursos gerados sincronizados",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: ../escape.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: /absolute.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: C:/escape.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: logos/../../escape.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: ..\\escape.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: //host/share.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: CON.png",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: logos/foo.png ",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: logos/NUL",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejeita caminho inseguro: logos/a:stream",
+      "passed": true
+    },
+    {
+      "name": "Raiz antiga nunca sobrescreve fonte principal",
+      "passed": true
+    },
+    {
+      "name": "Catálogo vazio aceito",
+      "passed": true
+    },
+    {
+      "name": "Publicação rejeita caminho absoluto que quebra subpasta",
+      "passed": true
+    },
+    {
+      "name": "Publicação rejeita logo ausente",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: index.html",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: sync_pages.py",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: README_PUBLICACAO.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: .gitignore",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: AGENTS.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: demandas_otimizado (1).html",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\.gitignore",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\index.html",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\README.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\assets\\images\\.gitkeep",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\css\\style.css",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: central-demandas\\js\\app.js",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\DESIGN_APROVADO.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\ESTADO_ATUAL.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\FUNCIONALIDADES.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\HISTORICO_ALTERACOES.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\INSTRUCOES_REVERSAO.md",
+      "passed": true
+    },
+    {
+      "name": "Backup íntegro: _CONTROLE_PROJETO\\LEIA_PRIMEIRO.md",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\.env",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\.env.example",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\.gitignore",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\package.json",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\migrations\\001_initial.sql",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\scripts\\migrate.js",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\scripts\\user-add.js",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\src\\config.js",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\src\\db.js",
+      "passed": true
+    },
+    {
+      "name": "Backend inalterado: backend\\src\\password.js",
+      "passed": true
+    },
+    {
+      "name": "HTML original e alteração anterior preservados",
+      "passed": true
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 # Leia primeiro — LivreEscolha · Central de Demandas
 
+**Vigente — BACKEND-003 (30/10/2026):** `backend/src/server.js` agora existe. Executar `npm.cmd start` em `backend/` e abrir `http://127.0.0.1:3000`. HTTP integrado usa PostgreSQL/autenticação/Socket.IO; abertura por arquivo mantém armazenamento local independente. Consulte [RELATORIO_BACKEND.md](RELATORIO_BACKEND.md) e [backend/README.md](../backend/README.md). As descrições anteriores sobre ausência de backend são históricas.
+
 Controle implantado em 29/10/2026. Fuso de todos os novos registros: **America/Sao_Paulo**, com deslocamento UTC explícito.
+
+**Atualização factual de 30/10/2026:** a fonte atual é `central-demandas/`; existe `index.html` na raiz, gerado por `sync_pages.py`. O Git agora tem raiz própria em `Demandas/`. As descrições estruturais abaixo são do marco inicial; consulte primeiro a seção vigente de [ESTADO_ATUAL.md](ESTADO_ATUAL.md) e o relatório [LOGOS-PAGES-002](RELATORIO_LOGOS_PAGES.md). As regras de preservação e backup continuam válidas.
 
 ## Regra principal
 

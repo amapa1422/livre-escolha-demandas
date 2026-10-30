@@ -1,0 +1,28 @@
+{
+  "name": "livre-escolha-demandas-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "user:add": "node scripts/user-add.js",
+    "test": "node --test --test-isolation=none test/images.test.js",
+    "test:integration": "node test/integration.js"
+  },
+  "dependencies": {
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3",
+    "sharp": "^0.34.4",
+    "socket.io": "^4.8.1",
+    "yauzl": "^3.2.0"
+  },
+  "devDependencies": { "playwright-core": "^1.56.1", "socket.io-client": "^4.8.1" }
+}

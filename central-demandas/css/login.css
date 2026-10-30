@@ -1,0 +1,5 @@
+.login-page { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 20px; }
+.login-panel { width: min(100%, 430px); }
+.login-panel .brand { padding: 0 0 28px; }
+.login-panel h1 { color: var(--brand); font-size: 1.625rem; }
+.login-panel .form-foot .button { width: 100%; }

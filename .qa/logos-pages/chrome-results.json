@@ -1,0 +1,251 @@
+{
+    "id":  7,
+    "result":  {
+                   "result":  {
+                                  "type":  "object",
+                                  "value":  {
+                                                "results":  [
+                                                                {
+                                                                    "name":  "Registros antigos e campos adicionais intactos ao carregar",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "CSS e JavaScript carregados",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Monitoramento de erros ativo",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Restaurar demo e caixa demonstrativa ausentes",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Rodapé atualizado",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Título laranja e fonte exclusiva",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Tipos e responsáveis preservados",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Métricas originais",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Autocompletar parcial e sem distinção de caixa",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Autocompletar ignora acentos",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Navegação por teclado e ARIA",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Seleção preenche empresa e fecha lista",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Associação persiste ID sem mudar esquema antigo",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Logo correta no card, dimensões fixas",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Logo nos detalhes sem substituir o print",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Imagem inválida preserva nome e espaço",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Associação e logo após recarregar",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Seta para cima seleciona última opção",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Escape fecha apenas as sugestões primeiro",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Editar nome limpa vínculo e permite cadastro livre",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Print otimizado WebP e envio duplicado bloqueado",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Print preserva resolução e economiza pelo menos 10%",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Print e logo coexistem nos detalhes",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Ampliação por teclado preserva print",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Fechar ampliação mantém detalhes",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Pesquisa existente",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Filtro combinado",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Ordenação antiga",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Ordenação por prioridade",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Assumir demanda preserva logo e print",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Cancelar finalização preserva estado",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Finalizar demanda",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Aba por status",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Cancelar exclusão preserva demanda",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Excluir demanda",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sidebar recolhe e persiste",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Cancelar cadastro não altera registros",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Assinatura inválida rejeitada",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Limite de upload preservado",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Layout sem overflow em 1920px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sugestões contidas em 1920px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Layout sem overflow em 1366px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sugestões contidas em 1366px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Layout sem overflow em 768px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sugestões contidas em 768px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Layout sem overflow em 390px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sugestões contidas em 390px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Layout sem overflow em 320px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sugestões contidas em 320px",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "CSS, JS, catálogo e logo em /central-demandas/index.html",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "CSS, JS, catálogo e logo em /livre-escolha-demandas/index.html",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "CSS, JS, catálogo e logo em /livre-escolha-demandas/central-demandas/index.html",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Catálogo vazio não bloqueia aplicação",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Falha de armazenamento avisa e preserva registros",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Dados corrompidos não são apagados",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Escrita bloqueada preserva dados corrompidos",
+                                                                    "passed":  true
+                                                                },
+                                                                {
+                                                                    "name":  "Sem erros JavaScript ou console nos fluxos normais",
+                                                                    "passed":  true,
+                                                                    "details":  [
+
+                                                                                ]
+                                                                }
+                                                            ],
+                                                "errors":  [
+
+                                                           ],
+                                                "passed":  57,
+                                                "failed":  0
+                                            }
+                              }
+               },
+    "consoleEvents":  [
+
+                      ]
+}

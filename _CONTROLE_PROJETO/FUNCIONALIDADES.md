@@ -1,5 +1,31 @@
 # Funcionalidades existentes e comportamentos a preservar
 
+## Vigente em HTTP — BACKEND-003 — 30/10/2026
+
+Versão organizada integrada ao backend PostgreSQL: login por e-mail/senha existentes, logout, sessão protegida, papéis, API e atualização Socket.IO. Demanda criada começa pendente; assumir é atômico e atribui uma conta ativa; finalizar exige responsável ou admin; excluir exige admin e é lógico. Histórico transacional de criar/assumir/finalizar/excluir disponível nos detalhes. Anexo único PNG/JPEG/WebP até 1 MB, validado no servidor e servido somente com autenticação. Dados de banco e arquivos privados não são expostos estaticamente.
+
+Funcionário assume para si; administrador escolhe entre contas ativas. Cards, status, categorias, prioridades, filtros, ordenação, logos, upload/zoom, sidebar e modais preservados. Incluídos login, Sair e Histórico usando identidade/componentes existentes. HTTP usa exclusivamente PostgreSQL; localStorage antigo não é importado, removido ou sobrescrito. Abertura por arquivo continua com comportamento local anterior. Sem backend em HTTP, informa indisponibilidade.
+
+As descrições abaixo de ausência de login/API/banco referem-se ao estado anterior ou à abertura local. Contrato HTTP conserva os campos visuais e usa URL autenticada em `image`, UUID de criação idempotente e versão do banco. Consulte [backend/README.md](../backend/README.md) e [RELATORIO_BACKEND.md](RELATORIO_BACKEND.md).
+
+## Atualização vigente da versão organizada — 30/10/2026
+
+As descrições de 29/10 abaixo permanecem como referência anterior; estas alterações se aplicam a `central-demandas/` e à entrada gerada da raiz, sem sincronizar o HTML monolítico original.
+
+| Recurso | Comportamento vigente |
+| --- | --- |
+| Restauração da demo | Removidos botão, listener e exceção de restauração em `save`. O conjunto inicial permanece disponível em memória somente quando não existe a chave de armazenamento, como antes. |
+| Catálogo | JSON canônico com `id`, `nome`, `nome_normalizado`, `logo`, `arquivo_original`; JS de dados gerado automaticamente pelo sincronizador, compatível com abertura sem servidor. 291 empresas identificadas pelos nomes fornecidos. |
+| Autocompletar | Busca parcial instantânea normalizando acentos e caixa; lista vertical; setas/Enter/mouse selecionam. Tab fecha; primeiro Escape fecha as sugestões, Escape seguinte mantém o fechamento já existente dos modais. Sem resultado, cadastro livre. |
+| Vínculo | Campo opcional `clientId` somente quando a empresa é selecionada. Registros antigos dispensam esse campo. Editar o texto desfaz a seleção; não se inferem vínculos por semelhança. A logo é resolvida pelo ID no catálogo local, sem gravar URLs ou imagens duplicadas nas demandas. |
+| Logos | Cards e detalhes, ao lado do nome. Caminhos locais validados, lazy/async, dimensão fixa. Logo ausente/defeituosa não substitui o print nem bloqueia os fluxos. |
+| Prints | Mesmos formatos e limite de 1 MB, validações de assinatura/decodificação e mensagens de erro. WebP opcional em canvas local, qualidade 1, sem reduzir resolução; somente se reduzir pelo menos 10%. WebP de entrada não é reprocessado. Imagens acima de 16 MP mantêm o original para limitar memória. |
+| Publicação | `sync_pages.py` gera raiz e catálogo JS em sentido único; `--check` verifica sincronização, catálogo e existência de recursos/logos. Caminhos relativos válidos em raiz, subpasta e `file://`. |
+
+Não foram alterados identificadores/chaves existentes, cadastro livre, responsáveis, categorias, status, indicadores, filtros, ordenação, prioridades, sidebar, exclusão ou persistência. Não foram adicionados banco/API/autenticação. O caso de armazenamento corrompido exige preservação e reparação separada; não há mais botão para substituir os dados pelos exemplos.
+
+## Referência anterior — 29/10/2026
+
 Leitura do código em 29/10/2026. Esta documentação descreve o que existe; não autoriza correções ou funcionalidades novas.
 
 ## Mapa dos arquivos

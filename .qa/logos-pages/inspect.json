@@ -1,0 +1,4 @@
+﻿{
+    "expression":  "JSON.stringify([...document.querySelectorAll(\u0027iframe\u0027)].map(f=\u003e({client:f.contentDocument.getElementById(\u0027client\u0027).value,hidden:f.contentDocument.getElementById(\u0027clientSuggestions\u0027).hidden,options:f.contentDocument.getElementById(\u0027clientSuggestions\u0027).textContent})))",
+    "returnByValue":  true
+}

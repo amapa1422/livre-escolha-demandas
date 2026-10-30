@@ -1,0 +1,6 @@
+﻿{
+    "userGesture":  true,
+    "returnByValue":  true,
+    "awaitPromise":  true,
+    "expression":  "fetch(\u0027/.qa/logos-pages/browser-tests.js\u0027).then(r=\u003er.text()).then(code=\u003e(0,eval)(code))"
+}

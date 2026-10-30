@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar | LivreEscolha</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body class="login-page">
+    <main class="modal login-panel">
+      <div class="brand"><div class="brand-icon">LE</div><div><strong>LivreEscolha</strong><small>GESTÃO TELECOM</small></div></div>
+      <div class="modal-header"><div><h1>Demandas</h1><p>Entre com sua conta para continuar.</p></div></div>
+      <form id="loginForm">
+        <div class="field"><label for="email">E-mail</label><input id="email" type="email" maxlength="254" autocomplete="username" required autofocus /></div>
+        <div class="field"><label for="password">Senha</label><input id="password" type="password" maxlength="128" autocomplete="current-password" required /></div>
+        <p id="loginError" class="hint" role="alert"></p>
+        <div class="form-foot"><button class="button primary" type="submit" disabled>Entrar</button></div>
+      </form>
+    </main>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

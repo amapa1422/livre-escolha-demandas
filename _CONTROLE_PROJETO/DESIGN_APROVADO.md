@@ -1,5 +1,7 @@
 # Design aprovado — LivreEscolha · Central de Demandas
 
+**BACKEND-003 — 30/10/2026:** CSS aprovado preservado byte a byte. Login novo reutiliza marca, painel, campos e botão laranja; estilos adicionais ficam exclusivamente em `css/login.css`. Painel ganhou Sair e detalhes ganharam Histórico, com classes existentes. Seleção de responsável conserva o select/modal e passa a listar as contas permitidas. Dica do upload agora informa somente o limite, pois HTTP armazena no servidor. Geometria/estilos dos componentes comparados ao backup em 1920/1366/768/390/320 px, sem diferenças; capturas em `../.qa/backend/` inspecionadas. Não houve redesenho.
+
 Referência: estilos de `demandas_otimizado (1).html` e `central-demandas/css/style.css`, conferidos em 29/10/2026. A estrutura visual está no original e em `central-demandas/index.html`; cartões e conteúdo dos detalhes também são montados pelo JavaScript.
 
 **O design atual está aprovado. Não alterar layout, paleta, tipografia, tamanhos, pesos, espaçamentos, bordas, ícones, textos, animações ou comportamento responsivo sem solicitação explícita que contemple a mudança.** Esta documentação não cria novos estilos. A paleta abaixo é a referência oficial deste projeto, extraída do código existente.
@@ -27,12 +29,12 @@ Preservar também as cores locais do CSS: descrição do cartão `#aeb4bf`, sepa
 
 ## Tipografia
 
-Família existente: `Inter, "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif`. Não há download de fontes; a fonte efetiva depende das disponíveis no dispositivo.
+Família do corpo e demais elementos: `Inter, "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif`. Somente `.top h1` usa `"Plus Jakarta Sans", "Segoe UI", Arial, sans-serif`, peso 600 e cor `var(--brand)`, conforme pedido de 30/10/2026. A fonte externa inclui apenas os caracteres de Demandas e usa `display=swap`; alternativas locais mantêm legibilidade sem internet.
 
 | Elemento | Configuração de referência |
 | --- | --- |
 | Corpo | Peso 400, tamanho `.9375rem`, altura de linha 1.5 |
-| Título principal | Peso 750, `clamp(1.625rem, 1.2rem + 1.6vw, 2.125rem)`, linha 1.1, espaçamento `-.03em` |
+| Título principal | Plus Jakarta Sans 600, `--brand`, `clamp(1.625rem, 1.2rem + 1.6vw, 2.125rem)`, linha 1.1, espaçamento `-.03em` |
 | Título da fila | `1.125rem`, peso 700 |
 | Título do cartão | `1rem`, peso 700, linha 1.35 |
 | Descrição do cartão | `.875rem`, linha 1.55 |
@@ -48,7 +50,7 @@ Manter pesos, line-height, tamanhos e transformações de caixa dos rótulos exi
 | --- | --- |
 | Layout | Grid com barra de 244 px e conteúdo flexível. Área principal com máximo de 1240 px, centralizada, espaçamentos fluidos por `clamp`. |
 | Identidade | Bloco laranja **LE** de 36 × 36 px, marca **LivreEscolha**, subtítulo **Gestão telecom** e textos atuais. |
-| Barra lateral | Fundo mais escuro, navegação vertical, item ativo laranja translúcido e trilho de 3 px; cartão inferior **Modo demonstração**. Botão circular de recolher de 28 px junto à borda. Estado recolhido mantém o botão disponível no desktop. |
+| Barra lateral | Fundo mais escuro, navegação vertical, item ativo laranja translúcido e trilho de 3 px; caixa inferior de demonstração removida em 30/10. Botão circular de recolher de 28 px junto à borda. Estado recolhido mantém o botão disponível no desktop. |
 | Botões | `.button` com altura mínima 40 px, raio 10 px e peso 600; primário laranja com texto escuro. `.mini` com altura mínima 36 px e peso 700; assumir laranja, finalizar verde e detalhes neutro. Pressão usa `scale(.98)`. Preservar hover, focus-visible e opacidade de desabilitado. |
 | Cards | Superfície escura, raio 14 px, padding `18px 20px 18px 24px`, trilho esquerdo de 4 px colorido pelo status. Texto à esquerda e coluna de ações de 168 px à direita no desktop. Selo de status com ponto e prioridade alta em vermelho. |
 | Indicadores | Quatro métricas em faixa compartilhada, divisórias de 1 px, raio externo 18 px; ícones **▦**, **⏳**, **👍**, **✅**, rótulos e cores atuais. |
@@ -57,7 +59,9 @@ Manter pesos, line-height, tamanhos e transformações de caixa dos rótulos exi
 | Formulários | Grid de duas colunas no desktop. Inputs/selects de 42 px, textarea com mínimo 96 px, bordas neutras. Foco laranja e halo discreto; labels, obrigatoriedade, placeholders e dica de tamanho do anexo preservados. |
 | Prints | Preview limitado ao espaço disponível, raio 10 px; imagem ampliável com cursor zoom-in e botão sobreposto. Zoom em overlay acima dos detalhes, `object-fit:contain`, máximo 95vw × 84vh e botão **✕ Fechar**. |
 | Avisos | Toast no canto inferior direito com borda esquerda laranja, largura limitada e animação breve; texto exibido por aproximadamente 3,5 segundos. |
-| Rodapé | Textos existentes sobre protótipo e armazenamento neste navegador, borda superior neutra. |
+| Rodapé | Somente **© 2026 Livre Escolha**, alinhamento discreto à esquerda e borda superior neutra preservada. |
+
+Exceções visuais autorizadas em 30/10/2026: cabeçalho mantém apenas Nova demanda; logos de 32 × 24 px nos cards e 48 × 32 px nos detalhes, `object-fit:contain`, fundo branco discreto e raio 4 px. Sugestões do cliente em lista vertical ancorada ao campo, até 210 px de altura com rolagem e destaque nas cores existentes. Demais estilos, breakpoints e transições preservados. O texto Gestão operacional não foi alterado.
 
 Raios de referência: `--r-sm:8px`, `--r-md:10px`, `--r-lg:14px`, `--r-xl:18px`. Sombra `--shadow:0 18px 48px #00000080`. Há valores específicos adicionais; o CSS é a fonte exata.
 
@@ -86,4 +90,4 @@ Não confundir a rolagem interna permitida nas abas com overflow horizontal do d
 
 Capturas existentes: [desktop](../.qa/desktop.png) e [celular](../.qa/mobile.png). Relatório anterior: [RESULTADOS.md](../.qa/RESULTADOS.md), com comparação de geometria/estilos do painel entre original e entrega organizada em 1920, 1366, 768, 390 e 320 px.
 
-Essas são evidências da validação anterior. Nesta tarefa de proteção, nenhum estilo foi modificado nem foi executada nova sessão de navegador.
+Essas são evidências da validação anterior. Evidências da atualização de 30/10: [desktop](../.qa/logos-pages/desktop.png), [celular](../.qa/logos-pages/mobile.png) e relatório [LOGOS-PAGES-002](RELATORIO_LOGOS_PAGES.md). Capturas usam dados sintéticos em perfil descartável.

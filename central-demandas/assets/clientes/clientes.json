@@ -1,0 +1,2039 @@
+[
+  {
+    "id": "cliente-8c06b058434cf849",
+    "nome": "A.A. Arruda",
+    "nome_normalizado": "a.a. arruda",
+    "logo": "logos/logo-6de6daf2eb7ae387afde.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/A.A._Arruda.jpg"
+  },
+  {
+    "id": "cliente-05d5ada9aaddbbdb",
+    "nome": "A.B Supermercados",
+    "nome_normalizado": "a.b supermercados",
+    "logo": "logos/logo-fea1866d6f94cf16cbb7.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/A.B_Supermercados.jpg"
+  },
+  {
+    "id": "cliente-dfccadeb40b39967",
+    "nome": "Acetiseg Seguros",
+    "nome_normalizado": "acetiseg seguros",
+    "logo": "logos/logo-628f5e0f0517fddeb294.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Acetiseg_Seguros.png"
+  },
+  {
+    "id": "cliente-f0e3f4379e09061d",
+    "nome": "Aciap",
+    "nome_normalizado": "aciap",
+    "logo": "logos/logo-c84e76d666ba1b333945.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Aciap.jpg"
+  },
+  {
+    "id": "cliente-7d759538b1feba97",
+    "nome": "Afmm",
+    "nome_normalizado": "afmm",
+    "logo": "logos/logo-adb055678af4dcc34835.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Afmm.jpg"
+  },
+  {
+    "id": "cliente-534f7c90cf899553",
+    "nome": "Agropratinha Prats",
+    "nome_normalizado": "agropratinha prats",
+    "logo": "logos/logo-0f14bee67b7f78eed0e7.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Agropratinha_Prats.png"
+  },
+  {
+    "id": "cliente-b8cf0ef3dc0e05ba",
+    "nome": "Agropratinha Viveiro",
+    "nome_normalizado": "agropratinha viveiro",
+    "logo": "logos/logo-b31af51d1f8b664740d5.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Agropratinha_Viveiro.jpg"
+  },
+  {
+    "id": "cliente-a31fcceb32540792",
+    "nome": "Aguia Veiculos",
+    "nome_normalizado": "aguia veiculos",
+    "logo": "logos/logo-7a77575fa235f6facb94.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Aguia_Veiculos.jpg"
+  },
+  {
+    "id": "cliente-5458b5f3e80b55de",
+    "nome": "Argus Contabilidade",
+    "nome_normalizado": "argus contabilidade",
+    "logo": "logos/logo-17a903b2ad0747300f3e.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Argus_Contabilidade.jpg"
+  },
+  {
+    "id": "cliente-d56ebe8ac01a88e6",
+    "nome": "Art Liberdade",
+    "nome_normalizado": "art liberdade",
+    "logo": "logos/logo-5d743109a7fa1b54e5b7.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Art_Liberdade.jpg"
+  },
+  {
+    "id": "cliente-f5f9d930078ea7ba",
+    "nome": "Aspen Park",
+    "nome_normalizado": "aspen park",
+    "logo": "logos/logo-6e297def62094a43d27d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Aspen_Park.jpg"
+  },
+  {
+    "id": "cliente-af9ee60f8e020dd7",
+    "nome": "Batista Izepe",
+    "nome_normalizado": "batista izepe",
+    "logo": "logos/logo-99afe27df6a7b76c40a1.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Batista_Izepe.jpg"
+  },
+  {
+    "id": "cliente-550fd3fd11614c40",
+    "nome": "Beeight",
+    "nome_normalizado": "beeight",
+    "logo": "logos/logo-69af03fce6a96adc84dd.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Beeight.png"
+  },
+  {
+    "id": "cliente-4c00cf54b0c850da",
+    "nome": "BH Alimentos Recife",
+    "nome_normalizado": "bh alimentos recife",
+    "logo": "logos/logo-67c9461b61b8346eb891.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/BH_Alimentos_Recife.jpg"
+  },
+  {
+    "id": "cliente-86d19f5e7d93f31f",
+    "nome": "BH Alimentos Sede",
+    "nome_normalizado": "bh alimentos sede",
+    "logo": "logos/logo-ba3c5169de7591198a63.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/BH_Alimentos_Sede.jpg"
+  },
+  {
+    "id": "cliente-c724244fdc2b3f93",
+    "nome": "Bolamel",
+    "nome_normalizado": "bolamel",
+    "logo": "logos/logo-0794818bcb7b40fcdae2.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Bolamel.png"
+  },
+  {
+    "id": "cliente-9a15ee3d23199a6f",
+    "nome": "Br Consorcios",
+    "nome_normalizado": "br consorcios",
+    "logo": "logos/logo-4e14324511f0f4018984.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Br_Consorcios.png"
+  },
+  {
+    "id": "cliente-35484df69bd781f1",
+    "nome": "Cac Papeis",
+    "nome_normalizado": "cac papeis",
+    "logo": "logos/logo-e049bae326fdac14b809.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Cac_Papeis.jpg"
+  },
+  {
+    "id": "cliente-da4082e0423f461a",
+    "nome": "CBJ",
+    "nome_normalizado": "cbj",
+    "logo": "logos/logo-ee3543cc2509b089407e.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/CBJ.jpg"
+  },
+  {
+    "id": "cliente-1f7cfa5258daf54d",
+    "nome": "Centro Unicv",
+    "nome_normalizado": "centro unicv",
+    "logo": "logos/logo-c82fb6b61ee0f5973d53.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Centro_Unicv.png"
+  },
+  {
+    "id": "cliente-188c8278bacada09",
+    "nome": "Chapa Quente",
+    "nome_normalizado": "chapa quente",
+    "logo": "logos/logo-9acb8917d47e4b85da71.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Chapa_Quente.jpg"
+  },
+  {
+    "id": "cliente-566120494f3b12d5",
+    "nome": "Ciapetro Trading",
+    "nome_normalizado": "ciapetro trading",
+    "logo": "logos/logo-9c28e75c70d03257ff1a.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Ciapetro_Trading.png"
+  },
+  {
+    "id": "cliente-616952de5d3dcf8a",
+    "nome": "Cinesystem Ana",
+    "nome_normalizado": "cinesystem ana",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Ana.png"
+  },
+  {
+    "id": "cliente-188c600ec7bcc5ce",
+    "nome": "Cinesystem Ara",
+    "nome_normalizado": "cinesystem ara",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Ara.png"
+  },
+  {
+    "id": "cliente-52b876d5fdcf5e1f",
+    "nome": "Cinesystem Bbc",
+    "nome_normalizado": "cinesystem bbc",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Bbc.png"
+  },
+  {
+    "id": "cliente-48706ba83820228d",
+    "nome": "Cinesystem Bgu",
+    "nome_normalizado": "cinesystem bgu",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Bgu.png"
+  },
+  {
+    "id": "cliente-74165d3a2bb1a0d9",
+    "nome": "Cinesystem Bsb",
+    "nome_normalizado": "cinesystem bsb",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Bsb.png"
+  },
+  {
+    "id": "cliente-48648eea17e5e136",
+    "nome": "Cinesystem Btf",
+    "nome_normalizado": "cinesystem btf",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Btf.png"
+  },
+  {
+    "id": "cliente-f965604eb25951de",
+    "nome": "Cinesystem Cpo",
+    "nome_normalizado": "cinesystem cpo",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Cpo.png"
+  },
+  {
+    "id": "cliente-4904991ae51baceb",
+    "nome": "Cinesystem Cwb",
+    "nome_normalizado": "cinesystem cwb",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Cwb.png"
+  },
+  {
+    "id": "cliente-1a794819bc4224a0",
+    "nome": "Cinesystem Fcc",
+    "nome_normalizado": "cinesystem fcc",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Fcc.png"
+  },
+  {
+    "id": "cliente-1b213bf1fd49dbc3",
+    "nome": "Cinesystem Fln",
+    "nome_normalizado": "cinesystem fln",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Fln.png"
+  },
+  {
+    "id": "cliente-65122464bfe31bc0",
+    "nome": "Cinesystem Hrt",
+    "nome_normalizado": "cinesystem hrt",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Hrt.png"
+  },
+  {
+    "id": "cliente-075103a85cf1e5c4",
+    "nome": "Cinesystem Idg",
+    "nome_normalizado": "cinesystem idg",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Idg.png"
+  },
+  {
+    "id": "cliente-513a2a82053baaf8",
+    "nome": "Cinesystem Imp",
+    "nome_normalizado": "cinesystem imp",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Imp.png"
+  },
+  {
+    "id": "cliente-40c94c2514310d5b",
+    "nome": "Cinesystem Ita",
+    "nome_normalizado": "cinesystem ita",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Ita.png"
+  },
+  {
+    "id": "cliente-787fa12b9dfd463c",
+    "nome": "Cinesystem Lda",
+    "nome_normalizado": "cinesystem lda",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Lda.png"
+  },
+  {
+    "id": "cliente-6af24c5f137ad16c",
+    "nome": "Cinesystem Leo",
+    "nome_normalizado": "cinesystem leo",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Leo.png"
+  },
+  {
+    "id": "cliente-676e8bfa8d418ba0",
+    "nome": "Cinesystem Mcz",
+    "nome_normalizado": "cinesystem mcz",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Mcz.png"
+  },
+  {
+    "id": "cliente-7c920bca7549901b",
+    "nome": "Cinesystem Mtw",
+    "nome_normalizado": "cinesystem mtw",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Mtw.png"
+  },
+  {
+    "id": "cliente-0e49dfca5de47db6",
+    "nome": "Cinesystem Pgd",
+    "nome_normalizado": "cinesystem pgd",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Pgd.png"
+  },
+  {
+    "id": "cliente-1302bf85af82fc8d",
+    "nome": "Cinesystem Piai",
+    "nome_normalizado": "cinesystem piai",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Piai.png"
+  },
+  {
+    "id": "cliente-9caca7a3250ee5ff",
+    "nome": "Cinesystem Plt",
+    "nome_normalizado": "cinesystem plt",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Plt.png"
+  },
+  {
+    "id": "cliente-762ea5c3f9476458",
+    "nome": "Cinesystem Ppa",
+    "nome_normalizado": "cinesystem ppa",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Ppa.png"
+  },
+  {
+    "id": "cliente-62ad98ee897e77cd",
+    "nome": "Cinesystem Rdg",
+    "nome_normalizado": "cinesystem rdg",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Rdg.png"
+  },
+  {
+    "id": "cliente-4f3b66f49f48cb5f",
+    "nome": "Cinesystem Rec",
+    "nome_normalizado": "cinesystem rec",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Rec.png"
+  },
+  {
+    "id": "cliente-ab724b73509393f0",
+    "nome": "Cinesystem Rgd",
+    "nome_normalizado": "cinesystem rgd",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Rgd.png"
+  },
+  {
+    "id": "cliente-95ccd5c204f84fb4",
+    "nome": "Cinesystem Sp",
+    "nome_normalizado": "cinesystem sp",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem Sp.png"
+  },
+  {
+    "id": "cliente-c3ff465c9b33c6ce",
+    "nome": "Cinesystem Ssl",
+    "nome_normalizado": "cinesystem ssl",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Ssl.png"
+  },
+  {
+    "id": "cliente-0fbe408dd0b2ccf6",
+    "nome": "Cinesystem Str",
+    "nome_normalizado": "cinesystem str",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Str.png"
+  },
+  {
+    "id": "cliente-817d1a07a7d9e6c0",
+    "nome": "Cinesystem Vbr",
+    "nome_normalizado": "cinesystem vbr",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Vbr.png"
+  },
+  {
+    "id": "cliente-57408d80dca751d8",
+    "nome": "Cinesystem Vvl",
+    "nome_normalizado": "cinesystem vvl",
+    "logo": "logos/logo-6f218ea762fe5042db50.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cinesystem_Vvl.png"
+  },
+  {
+    "id": "cliente-87fec041e0dac716",
+    "nome": "Coelma",
+    "nome_normalizado": "coelma",
+    "logo": "logos/logo-110828d9489d72505346.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Coelma.png"
+  },
+  {
+    "id": "cliente-5ffc77ba04e86c94",
+    "nome": "Comercial Agricola Campo Mourao",
+    "nome_normalizado": "comercial agricola campo mourao",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Campo_Mourao.png"
+  },
+  {
+    "id": "cliente-6c27881089b58506",
+    "nome": "Comercial Agricola Cornelio Procopio",
+    "nome_normalizado": "comercial agricola cornelio procopio",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Cornelio_Procopio.png"
+  },
+  {
+    "id": "cliente-61aa9e0fb6088eb5",
+    "nome": "Comercial Agricola Goioere",
+    "nome_normalizado": "comercial agricola goioere",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Goioere.png"
+  },
+  {
+    "id": "cliente-4f0b3f007afa0bbc",
+    "nome": "Comercial Agricola Irati",
+    "nome_normalizado": "comercial agricola irati",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Irati.png"
+  },
+  {
+    "id": "cliente-4e65f5fa1957545c",
+    "nome": "Comercial Agricola Jardim Alegre",
+    "nome_normalizado": "comercial agricola jardim alegre",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Jardim_Alegre.png"
+  },
+  {
+    "id": "cliente-91329efb3d9734a1",
+    "nome": "Comercial Agricola Londrina",
+    "nome_normalizado": "comercial agricola londrina",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Londrina.png"
+  },
+  {
+    "id": "cliente-f0628b58824171bc",
+    "nome": "Comercial Agricola Maringa",
+    "nome_normalizado": "comercial agricola maringa",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Maringa.png"
+  },
+  {
+    "id": "cliente-204ab98585bea62c",
+    "nome": "Comercial Agricola Paranavai",
+    "nome_normalizado": "comercial agricola paranavai",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Paranavai.png"
+  },
+  {
+    "id": "cliente-cc7d5fca7296d3e3",
+    "nome": "Comercial Agricola Toledo",
+    "nome_normalizado": "comercial agricola toledo",
+    "logo": "logos/logo-3d716f381f82da3b20cc.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Toledo.png"
+  },
+  {
+    "id": "cliente-bcef91b2a76163b9",
+    "nome": "Comercial Agricola Ubirata",
+    "nome_normalizado": "comercial agricola ubirata",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Ubirata.png"
+  },
+  {
+    "id": "cliente-2b32d0ce3fb01649",
+    "nome": "Comercial Agricola Umuarama",
+    "nome_normalizado": "comercial agricola umuarama",
+    "logo": "logos/logo-3d5e209758bbb6420b84.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Agricola_Umuarama.png"
+  },
+  {
+    "id": "cliente-1786203076868ac9",
+    "nome": "Comercial Virginia",
+    "nome_normalizado": "comercial virginia",
+    "logo": "logos/logo-0bccd9ea3c1d600e5dba.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Comercial_Virginia.jpg"
+  },
+  {
+    "id": "cliente-b5a3f6434bfdb877",
+    "nome": "Conquista Textil",
+    "nome_normalizado": "conquista textil",
+    "logo": "logos/logo-ceac478243596bdaa034.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Conquista_Textil.png"
+  },
+  {
+    "id": "cliente-9eac8e90a89e70a2",
+    "nome": "Contabe Bernabe",
+    "nome_normalizado": "contabe bernabe",
+    "logo": "logos/logo-19b58f7e174d6b5ade9a.jpeg",
+    "arquivo_original": "LOGOS DE CLIENTES/Contabe_Bernabe.jpeg"
+  },
+  {
+    "id": "cliente-be1c8fba9f90dd01",
+    "nome": "Cpa Armazens Gerais",
+    "nome_normalizado": "cpa armazens gerais",
+    "logo": "logos/logo-7dc8a6e11d599e37508d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Cpa_Armazens_Gerais.jpg"
+  },
+  {
+    "id": "cliente-886dab6bc1c38a60",
+    "nome": "Cpa Comercio Combustiveis",
+    "nome_normalizado": "cpa comercio combustiveis",
+    "logo": "logos/logo-7dc8a6e11d599e37508d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Cpa_Comercio_Combustiveis.jpg"
+  },
+  {
+    "id": "cliente-d900fbb022b6e8c4",
+    "nome": "Cpa Posto P2",
+    "nome_normalizado": "cpa posto p2",
+    "logo": "logos/logo-7dc8a6e11d599e37508d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Cpa_Posto_P2.jpg"
+  },
+  {
+    "id": "cliente-bf7f76015d6c6988",
+    "nome": "Cpa Trading",
+    "nome_normalizado": "cpa trading",
+    "logo": "logos/logo-7dc8a6e11d599e37508d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Cpa_Trading.jpg"
+  },
+  {
+    "id": "cliente-b748c516c1119f2d",
+    "nome": "Cresol Grandes Lagos",
+    "nome_normalizado": "cresol grandes lagos",
+    "logo": "logos/logo-14319638dc4520f73df8.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cresol_Grandes_Lagos.png"
+  },
+  {
+    "id": "cliente-8e809c687262b186",
+    "nome": "Cresol Transamazonica",
+    "nome_normalizado": "cresol transamazonica",
+    "logo": "logos/logo-14319638dc4520f73df8.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Cresol_Transamazonica.png"
+  },
+  {
+    "id": "cliente-e832a7b46e2ae50a",
+    "nome": "Decortex Tecidos",
+    "nome_normalizado": "decortex tecidos",
+    "logo": "logos/logo-073498a44b8e99416c2f.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Decortex_Tecidos.jpg"
+  },
+  {
+    "id": "cliente-9d69beb5daf66cd3",
+    "nome": "Deposito Popular",
+    "nome_normalizado": "deposito popular",
+    "logo": "logos/logo-1067f0e4d31b2532f352.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Deposito_Popular.png"
+  },
+  {
+    "id": "cliente-3b24af118c82a5c2",
+    "nome": "Destro Alimentos",
+    "nome_normalizado": "destro alimentos",
+    "logo": "logos/logo-5734fee8c62b0e4f782d.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Destro_Alimentos.jpg"
+  },
+  {
+    "id": "cliente-a95407809d9e2dcf",
+    "nome": "Dimatex",
+    "nome_normalizado": "dimatex",
+    "logo": "logos/logo-342c95bcc02cac25a97d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Dimatex.png"
+  },
+  {
+    "id": "cliente-3acf0d075345d25d",
+    "nome": "Distribuidora Bebidas Virginia Guarapuava",
+    "nome_normalizado": "distribuidora bebidas virginia guarapuava",
+    "logo": "logos/logo-8ea69166d9b848e08856.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Bebidas_Virginia_Guarapuava.png"
+  },
+  {
+    "id": "cliente-df5f1f0781a9ba4d",
+    "nome": "Distribuidora Bebidas Virginia Maringa",
+    "nome_normalizado": "distribuidora bebidas virginia maringa",
+    "logo": "logos/logo-8ea69166d9b848e08856.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Bebidas_Virginia_Maringa.png"
+  },
+  {
+    "id": "cliente-efd0554b9ddbc98e",
+    "nome": "Distribuidora Bebidas Virginia Norte Pioneiro",
+    "nome_normalizado": "distribuidora bebidas virginia norte pioneiro",
+    "logo": "logos/logo-8ea69166d9b848e08856.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Bebidas_Virginia_Norte_Pioneiro.png"
+  },
+  {
+    "id": "cliente-9c8392d07f7521c0",
+    "nome": "Distribuidora Bebidas Virginia Ponta Grossa",
+    "nome_normalizado": "distribuidora bebidas virginia ponta grossa",
+    "logo": "logos/logo-8ea69166d9b848e08856.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Bebidas_Virginia_Ponta_Grossa.png"
+  },
+  {
+    "id": "cliente-cef35fd8260968b4",
+    "nome": "Distribuidora Campeao",
+    "nome_normalizado": "distribuidora campeao",
+    "logo": "logos/logo-037033d1f8c02fd1b239.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Campeao.jpg"
+  },
+  {
+    "id": "cliente-fe94456d36804de1",
+    "nome": "Distribuidora Columbia",
+    "nome_normalizado": "distribuidora columbia",
+    "logo": "logos/logo-a5668a230b9d553af41c.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Columbia.png"
+  },
+  {
+    "id": "cliente-dde4c8a89461bd16",
+    "nome": "Distribuidora Virginia Refrigerados",
+    "nome_normalizado": "distribuidora virginia refrigerados",
+    "logo": "logos/logo-8ea69166d9b848e08856.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Distribuidora_Virginia_Refrigerados.png"
+  },
+  {
+    "id": "cliente-20cf13feb9571aa4",
+    "nome": "Dmm Administradora",
+    "nome_normalizado": "dmm administradora",
+    "logo": "logos/logo-b1a3a8efde4ce895c013.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Dmm_Administradora.png"
+  },
+  {
+    "id": "cliente-42382be1c6c22f8b",
+    "nome": "Emporio Dude",
+    "nome_normalizado": "emporio dude",
+    "logo": "logos/logo-5f01b9c668f496a669bf.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Emporio_Dude.jpg"
+  },
+  {
+    "id": "cliente-6d843581604fe6e5",
+    "nome": "Euphoria Curitiba",
+    "nome_normalizado": "euphoria curitiba",
+    "logo": "logos/logo-8a348853440fe23b984b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Euphoria_Curitiba.jpg"
+  },
+  {
+    "id": "cliente-fdbc47f7ff7f80a9",
+    "nome": "Euphoria Londrina",
+    "nome_normalizado": "euphoria londrina",
+    "logo": "logos/logo-8a348853440fe23b984b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Euphoria_Londrina.jpg"
+  },
+  {
+    "id": "cliente-d1d7476e13fbcbe7",
+    "nome": "Euphoria Maringa",
+    "nome_normalizado": "euphoria maringa",
+    "logo": "logos/logo-8a348853440fe23b984b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Euphoria_Maringa.jpg"
+  },
+  {
+    "id": "cliente-5ec509bc9b8bf9ff",
+    "nome": "Faculdade Fatecie",
+    "nome_normalizado": "faculdade fatecie",
+    "logo": "logos/logo-f2e08bbfb3602fea1da6.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Faculdade_Fatecie.png"
+  },
+  {
+    "id": "cliente-4c844bcc1e468158",
+    "nome": "Fg Pneus",
+    "nome_normalizado": "fg pneus",
+    "logo": "logos/logo-52971bb7d0833d1f2c6d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Fg_Pneus.png"
+  },
+  {
+    "id": "cliente-7217cb4c23d62e37",
+    "nome": "Fibrometal Brasil",
+    "nome_normalizado": "fibrometal brasil",
+    "logo": "logos/logo-073f7f85988842cddf1c.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Fibrometal_Brasil.jpg"
+  },
+  {
+    "id": "cliente-db63344a07b41f82",
+    "nome": "Fiomar Atacado",
+    "nome_normalizado": "fiomar atacado",
+    "logo": "logos/logo-7664af6148a0be854fce.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Fiomar_Atacado.jpg"
+  },
+  {
+    "id": "cliente-8bc160bfd98ec3e7",
+    "nome": "Force One",
+    "nome_normalizado": "force one",
+    "logo": "logos/logo-3bd5edc216ef812ef4a1.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Force_One.png"
+  },
+  {
+    "id": "cliente-cb3304aeb041bc5f",
+    "nome": "Fusion Aluminios",
+    "nome_normalizado": "fusion aluminios",
+    "logo": "logos/logo-fc98cd63630ffd9ceed0.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Fusion_Aluminios.png"
+  },
+  {
+    "id": "cliente-ec9c7a349794cd14",
+    "nome": "Futura Transportes",
+    "nome_normalizado": "futura transportes",
+    "logo": "logos/logo-f978a07312af2a82f33f.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Futura_Transportes.jpg"
+  },
+  {
+    "id": "cliente-5b39a66c05123dd0",
+    "nome": "Gl Assessoria",
+    "nome_normalizado": "gl assessoria",
+    "logo": "logos/logo-baf492f2ede7df6739cc.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Gl_Assessoria.jpg"
+  },
+  {
+    "id": "cliente-a4a8e8cdc1a7f640",
+    "nome": "Gp Grupo",
+    "nome_normalizado": "gp grupo",
+    "logo": "logos/logo-f32b20372386768049e2.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Gp_Grupo.png"
+  },
+  {
+    "id": "cliente-d5709368615b367e",
+    "nome": "Grafica Almeida",
+    "nome_normalizado": "grafica almeida",
+    "logo": "logos/logo-f8e7974cebcc09fe47cd.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Grafica_Almeida.png"
+  },
+  {
+    "id": "cliente-f0f01a10e8f8f52a",
+    "nome": "Grupo Ciapetro",
+    "nome_normalizado": "grupo ciapetro",
+    "logo": "logos/logo-1e0334260a1467e1aa96.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Ciapetro.png"
+  },
+  {
+    "id": "cliente-18ac26789dd73b94",
+    "nome": "Grupo Crefaz",
+    "nome_normalizado": "grupo crefaz",
+    "logo": "logos/logo-fab3bbffcb496c5d4a53.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Crefaz.jpg"
+  },
+  {
+    "id": "cliente-49615c82f22ec79c",
+    "nome": "Grupo Gtfoods",
+    "nome_normalizado": "grupo gtfoods",
+    "logo": "logos/logo-0d3a0bcd9e354b1a3e1b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Gtfoods.jpg"
+  },
+  {
+    "id": "cliente-8cfe8eb3a506bd2e",
+    "nome": "Grupo Metafa",
+    "nome_normalizado": "grupo metafa",
+    "logo": "logos/logo-c5493a469b03fb81f781.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Metafa.jpg"
+  },
+  {
+    "id": "cliente-4dbbd295259785fb",
+    "nome": "Grupo Prever Pr",
+    "nome_normalizado": "grupo prever pr",
+    "logo": "logos/logo-c999528bca1106633002.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Prever_Pr.png"
+  },
+  {
+    "id": "cliente-d3da9ee1120b3d2a",
+    "nome": "Grupo Prever Rs",
+    "nome_normalizado": "grupo prever rs",
+    "logo": "logos/logo-80029c58b85f9f035dd7.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Prever_Rs.png"
+  },
+  {
+    "id": "cliente-1a8eeb58089cdba0",
+    "nome": "Grupo Prever Sc",
+    "nome_normalizado": "grupo prever sc",
+    "logo": "logos/logo-042c0c0143ebd65df3a5.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Grupo_Prever_Sc.png"
+  },
+  {
+    "id": "cliente-6f954c8ae22a99ab",
+    "nome": "Guguy Supermercados",
+    "nome_normalizado": "guguy supermercados",
+    "logo": "logos/logo-292d43423dd3396a115f.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Guguy_Supermercados.png"
+  },
+  {
+    "id": "cliente-eaf8307e6d3c109d",
+    "nome": "GVT Pneus",
+    "nome_normalizado": "gvt pneus",
+    "logo": "logos/logo-8cdf90f7e051f2d76848.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/GVT_Pneus.jpg"
+  },
+  {
+    "id": "cliente-e80721135100b5eb",
+    "nome": "House Design",
+    "nome_normalizado": "house design",
+    "logo": "logos/logo-43fa2d52d730fb484d9f.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/House_Design.jpg"
+  },
+  {
+    "id": "cliente-8ac0c2947c8d56a4",
+    "nome": "Ideal Automoveis",
+    "nome_normalizado": "ideal automoveis",
+    "logo": "logos/logo-49a5bc9f9146a8d10124.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Ideal_Automoveis.png"
+  },
+  {
+    "id": "cliente-a7d2ea080c68f47d",
+    "nome": "Ideal Ortodontia",
+    "nome_normalizado": "ideal ortodontia",
+    "logo": "logos/logo-f02ff204eb7c7f3fb0c1.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Ideal_Ortodontia.png"
+  },
+  {
+    "id": "cliente-783bd5692ef50e04",
+    "nome": "Imobiliaria S Iwata",
+    "nome_normalizado": "imobiliaria s iwata",
+    "logo": "logos/logo-fe8d091b7d7e0b9adfa8.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Imobiliaria_S_Iwata.png"
+  },
+  {
+    "id": "cliente-bf4ba0ab42798488",
+    "nome": "Inblue Cosmeticos",
+    "nome_normalizado": "inblue cosmeticos",
+    "logo": "logos/logo-219dd3dc42f313b02764.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Inblue_Cosmeticos.png"
+  },
+  {
+    "id": "cliente-8cc4d86f78456cfe",
+    "nome": "Incopostes",
+    "nome_normalizado": "incopostes",
+    "logo": "logos/logo-98855bb623088aa2bdba.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Incopostes.jpg"
+  },
+  {
+    "id": "cliente-4dc9a81b2ad5e64e",
+    "nome": "IPC Nordeste",
+    "nome_normalizado": "ipc nordeste",
+    "logo": "logos/logo-14bbd04779fee5886aaf.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/IPC_Nordeste.png"
+  },
+  {
+    "id": "cliente-812c1ac3cf646616",
+    "nome": "Itiban Ariyoshi",
+    "nome_normalizado": "itiban ariyoshi",
+    "logo": "logos/logo-b924c0cbcf65bfcd55a6.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Itiban_Ariyoshi.png"
+  },
+  {
+    "id": "cliente-2ea1504bd4af470b",
+    "nome": "Jucalli Calcados",
+    "nome_normalizado": "jucalli calcados",
+    "logo": "logos/logo-6cf106ddd132438046a7.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Jucalli_Calcados.jpg"
+  },
+  {
+    "id": "cliente-cfbd8a8a6697b948",
+    "nome": "Just Construcoes",
+    "nome_normalizado": "just construcoes",
+    "logo": "logos/logo-5cf35f6d196aee10ea51.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Just_Construcoes.jpg"
+  },
+  {
+    "id": "cliente-41d5ffecd7d732e1",
+    "nome": "KAK Papeis",
+    "nome_normalizado": "kak papeis",
+    "logo": "logos/logo-f8e5ae6d3cc6feb11238.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/KAK_Papeis.jpg"
+  },
+  {
+    "id": "cliente-290cb05ff56f04f6",
+    "nome": "Latco Beverages",
+    "nome_normalizado": "latco beverages",
+    "logo": "logos/logo-7c079118d815aff65286.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Latco_Beverages.jpg"
+  },
+  {
+    "id": "cliente-8f71678b3c83d1fc",
+    "nome": "Latco Laticinios",
+    "nome_normalizado": "latco laticinios",
+    "logo": "logos/logo-7c079118d815aff65286.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Latco_Laticinios.jpg"
+  },
+  {
+    "id": "cliente-4bef37ae8c00a876",
+    "nome": "Lema Corretora",
+    "nome_normalizado": "lema corretora",
+    "logo": "logos/logo-e4b7a67ec7968719edb7.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Lema_Corretora.jpg"
+  },
+  {
+    "id": "cliente-256640c671f9092a",
+    "nome": "Leongas",
+    "nome_normalizado": "leongas",
+    "logo": "logos/logo-755555c6b965e1ca7f27.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Leongas.jpg"
+  },
+  {
+    "id": "cliente-53a1d854d45c1a49",
+    "nome": "LF Correa",
+    "nome_normalizado": "lf correa",
+    "logo": "logos/logo-a151bc34685069ddfd2a.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/LF_Correa.jpg"
+  },
+  {
+    "id": "cliente-c1b92bf0f1108bfc",
+    "nome": "Lion Automotivo",
+    "nome_normalizado": "lion automotivo",
+    "logo": "logos/logo-de89a18f548a01ba0eb6.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Lion_Automotivo.png"
+  },
+  {
+    "id": "cliente-9eac58e796ea1a63",
+    "nome": "Lojas Marcato",
+    "nome_normalizado": "lojas marcato",
+    "logo": "logos/logo-d40b696341e9315689d0.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Lojas_Marcato.jpg"
+  },
+  {
+    "id": "cliente-4c4edc40d2b04cc1",
+    "nome": "Marcos Boutique",
+    "nome_normalizado": "marcos boutique",
+    "logo": "logos/logo-575675d48d87679595ae.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Marcos_Boutique.jpg"
+  },
+  {
+    "id": "cliente-027e47de6c29a9ce",
+    "nome": "Marcos Serra",
+    "nome_normalizado": "marcos serra",
+    "logo": "logos/logo-575675d48d87679595ae.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Marcos_Serra.jpg"
+  },
+  {
+    "id": "cliente-604903665e1ac22c",
+    "nome": "Mercado Ideal",
+    "nome_normalizado": "mercado ideal",
+    "logo": "logos/logo-36e2dcddba3c7bebfa86.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Mercado_Ideal.png"
+  },
+  {
+    "id": "cliente-5f72a2846b9db775",
+    "nome": "Metafa Moveleira",
+    "nome_normalizado": "metafa moveleira",
+    "logo": "logos/logo-a4be22b577cca5ec4936.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Metafa_Moveleira.jpg"
+  },
+  {
+    "id": "cliente-5930ff159cc65d76",
+    "nome": "Metalurgica Teixeira",
+    "nome_normalizado": "metalurgica teixeira",
+    "logo": "logos/logo-afca16e9bd51bc5d532c.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Metalurgica_Teixeira.jpg"
+  },
+  {
+    "id": "cliente-ca03615c97a91ee9",
+    "nome": "MH Administradora",
+    "nome_normalizado": "mh administradora",
+    "logo": "logos/logo-918fcab66213b2453092.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/MH_Administradora.jpg"
+  },
+  {
+    "id": "cliente-515831b13070d263",
+    "nome": "Moveis Albatroz",
+    "nome_normalizado": "moveis albatroz",
+    "logo": "logos/logo-cc4394360f069c6f123d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Moveis_Albatroz.png"
+  },
+  {
+    "id": "cliente-811d38fc09c23e67",
+    "nome": "Moveis Casa",
+    "nome_normalizado": "moveis casa",
+    "logo": "logos/logo-4cf111423e563892f8eb.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Moveis_Casa.jpg"
+  },
+  {
+    "id": "cliente-5e6d26d92d91307f",
+    "nome": "Oilala Kids",
+    "nome_normalizado": "oilala kids",
+    "logo": "logos/logo-e08b91c13be9d3904150.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Oilala_Kids.jpg"
+  },
+  {
+    "id": "cliente-6ec5f193c7639b54",
+    "nome": "Original Distr Sucos",
+    "nome_normalizado": "original distr sucos",
+    "logo": "logos/logo-5083486a07975575ba8b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Original_Distr_Sucos.jpg"
+  },
+  {
+    "id": "cliente-24f796fadc7eb4e9",
+    "nome": "Parana Trucks",
+    "nome_normalizado": "parana trucks",
+    "logo": "logos/logo-46c3d867860af3c55acb.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Parana_Trucks.png"
+  },
+  {
+    "id": "cliente-45641e74bd1c63c6",
+    "nome": "Pasa Operacoes",
+    "nome_normalizado": "pasa operacoes",
+    "logo": "logos/logo-37de4838ebf6cf057b8f.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Pasa_Operacoes.jpg"
+  },
+  {
+    "id": "cliente-f9b6dc2244297199",
+    "nome": "Petrovina Sementes",
+    "nome_normalizado": "petrovina sementes",
+    "logo": "logos/logo-2b7b02e62a258091e394.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Petrovina_Sementes.png"
+  },
+  {
+    "id": "cliente-e23fa970710c30a1",
+    "nome": "Plastbel",
+    "nome_normalizado": "plastbel",
+    "logo": "logos/logo-4fab21d7781e32e99cf9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Plastbel.jpg"
+  },
+  {
+    "id": "cliente-9b3b72bbc1134a99",
+    "nome": "Podium Alimentos",
+    "nome_normalizado": "podium alimentos",
+    "logo": "logos/logo-0119fecc4b509a69042c.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Podium_Alimentos.jpg"
+  },
+  {
+    "id": "cliente-e56d527b0cd882db",
+    "nome": "Pontal Chevrolet",
+    "nome_normalizado": "pontal chevrolet",
+    "logo": "logos/logo-23ff763f53a3b00d0596.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Pontal_Chevrolet.jpg"
+  },
+  {
+    "id": "cliente-93a96e390d05ecdc",
+    "nome": "Posto Tuiuti",
+    "nome_normalizado": "posto tuiuti",
+    "logo": "logos/logo-67673f207baa86d0cc55.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Posto_Tuiuti.png"
+  },
+  {
+    "id": "cliente-c10c47d849774422",
+    "nome": "Potencial Suprimentos",
+    "nome_normalizado": "potencial suprimentos",
+    "logo": "logos/logo-cbd1ec7b94afc52221ed.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Potencial Suprimentos.png"
+  },
+  {
+    "id": "cliente-0c3703ee65ae7ea3",
+    "nome": "Prato Cheio",
+    "nome_normalizado": "prato cheio",
+    "logo": "logos/logo-a1f96812e7c6270d2b1c.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Prato_Cheio.png"
+  },
+  {
+    "id": "cliente-7602eec444b71968",
+    "nome": "Prepara Cursos",
+    "nome_normalizado": "prepara cursos",
+    "logo": "logos/logo-3f454804d2264a2151f6.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Prepara_Cursos.jpg"
+  },
+  {
+    "id": "cliente-a3e27aab0140882a",
+    "nome": "Recco Confeccoes",
+    "nome_normalizado": "recco confeccoes",
+    "logo": "logos/logo-6c2bc118ad81d1789d38.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Recco_Confeccoes.png"
+  },
+  {
+    "id": "cliente-97465eff06a2e1bc",
+    "nome": "Sandra Tortas",
+    "nome_normalizado": "sandra tortas",
+    "logo": "logos/logo-69a35063aa18f57ffb5d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sandra_Tortas.png"
+  },
+  {
+    "id": "cliente-cfd847076dbcf50c",
+    "nome": "Santa Casa Paranavai",
+    "nome_normalizado": "santa casa paranavai",
+    "logo": "logos/logo-29e6297131abe8fd8b1a.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Santa_Casa_Paranavai.jpg"
+  },
+  {
+    "id": "cliente-9c4d23448a27bf01",
+    "nome": "Sicoob Agrocredi",
+    "nome_normalizado": "sicoob agrocredi",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Agrocredi.png"
+  },
+  {
+    "id": "cliente-7ac2c0c5879c8ce8",
+    "nome": "Sicoob Agrorural",
+    "nome_normalizado": "sicoob agrorural",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Agrorural.png"
+  },
+  {
+    "id": "cliente-65e8eba5503ac9e8",
+    "nome": "Sicoob Alianca",
+    "nome_normalizado": "sicoob alianca",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Alianca.png"
+  },
+  {
+    "id": "cliente-f93cea3ae59eb1bc",
+    "nome": "Sicoob Aracredi",
+    "nome_normalizado": "sicoob aracredi",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Aracredi.png"
+  },
+  {
+    "id": "cliente-9b1af089f72a7187",
+    "nome": "Sicoob Arenito",
+    "nome_normalizado": "sicoob arenito",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Arenito.png"
+  },
+  {
+    "id": "cliente-3c1e81c6946e40b3",
+    "nome": "Sicoob BRMIL",
+    "nome_normalizado": "sicoob brmil",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_BRMIL.png"
+  },
+  {
+    "id": "cliente-71315f2f3d5fa88c",
+    "nome": "Sicoob Cecremef",
+    "nome_normalizado": "sicoob cecremef",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Cecremef.png"
+  },
+  {
+    "id": "cliente-10bccbc69ad80e2c",
+    "nome": "Sicoob Central Rondon",
+    "nome_normalizado": "sicoob central rondon",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Central_Rondon.png"
+  },
+  {
+    "id": "cliente-d5999936dbba9ee5",
+    "nome": "Sicoob Cerrado",
+    "nome_normalizado": "sicoob cerrado",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Cerrado.png"
+  },
+  {
+    "id": "cliente-6b038c9595faf990",
+    "nome": "Sicoob Coimppa",
+    "nome_normalizado": "sicoob coimppa",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Coimppa.png"
+  },
+  {
+    "id": "cliente-8847773c9135cf61",
+    "nome": "Sicoob Confianca",
+    "nome_normalizado": "sicoob confianca",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Confianca.png"
+  },
+  {
+    "id": "cliente-6dc3b2a007c0693e",
+    "nome": "Sicoob Coomperj",
+    "nome_normalizado": "sicoob coomperj",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Coomperj.png"
+  },
+  {
+    "id": "cliente-f4994630467c3323",
+    "nome": "Sicoob Coopcred(Ccred)",
+    "nome_normalizado": "sicoob coopcred(ccred)",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Coopcred(Ccred).png"
+  },
+  {
+    "id": "cliente-0ffaf4047c3fc54e",
+    "nome": "Sicoob Coopercred",
+    "nome_normalizado": "sicoob coopercred",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Coopercred.png"
+  },
+  {
+    "id": "cliente-e1b094580e392453",
+    "nome": "Sicoob Cooperemb",
+    "nome_normalizado": "sicoob cooperemb",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Cooperemb.png"
+  },
+  {
+    "id": "cliente-99383759eb451b39",
+    "nome": "Sicoob Coopjustica",
+    "nome_normalizado": "sicoob coopjustica",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Coopjustica.png"
+  },
+  {
+    "id": "cliente-40ec2729a9ad6623",
+    "nome": "Sicoob Credicaf",
+    "nome_normalizado": "sicoob credicaf",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Credicaf.png"
+  },
+  {
+    "id": "cliente-e832f371518d4142",
+    "nome": "Sicoob Credicapital",
+    "nome_normalizado": "sicoob credicapital",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Credicapital.png"
+  },
+  {
+    "id": "cliente-6245be783b2f988f",
+    "nome": "Sicoob Credicoop",
+    "nome_normalizado": "sicoob credicoop",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Credicoop.png"
+  },
+  {
+    "id": "cliente-9f771e7fea391827",
+    "nome": "Sicoob Credimota",
+    "nome_normalizado": "sicoob credimota",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Credimota.png"
+  },
+  {
+    "id": "cliente-7ac4a12e3405e76e",
+    "nome": "Sicoob Credisudeste",
+    "nome_normalizado": "sicoob credisudeste",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Credisudeste.png"
+  },
+  {
+    "id": "cliente-b8b3ac7f0427dce5",
+    "nome": "Sicoob Descobrimento",
+    "nome_normalizado": "sicoob descobrimento",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Descobrimento.png"
+  },
+  {
+    "id": "cliente-ee7b134ed615fbd9",
+    "nome": "Sicoob Empresarial GO",
+    "nome_normalizado": "sicoob empresarial go",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Empresarial_GO.png"
+  },
+  {
+    "id": "cliente-32f51e6a58155721",
+    "nome": "Sicoob Empresas",
+    "nome_normalizado": "sicoob empresas",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Empresas.png"
+  },
+  {
+    "id": "cliente-68d710495bfaed42",
+    "nome": "Sicoob Engecred",
+    "nome_normalizado": "sicoob engecred",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Engecred.png"
+  },
+  {
+    "id": "cliente-e07d45c923e5713c",
+    "nome": "Sicoob Fluminense",
+    "nome_normalizado": "sicoob fluminense",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Fluminense.png"
+  },
+  {
+    "id": "cliente-7b532909a13fdc83",
+    "nome": "Sicoob Fronteiras",
+    "nome_normalizado": "sicoob fronteiras",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Fronteiras.png"
+  },
+  {
+    "id": "cliente-ea478057a9b53905",
+    "nome": "Sicoob Integracao",
+    "nome_normalizado": "sicoob integracao",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Integracao.png"
+  },
+  {
+    "id": "cliente-5e2934b2b4495d50",
+    "nome": "Sicoob Ipe",
+    "nome_normalizado": "sicoob ipe",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Ipe.png"
+  },
+  {
+    "id": "cliente-1db3b78277f7c839",
+    "nome": "Sicoob Juriscredcelg",
+    "nome_normalizado": "sicoob juriscredcelg",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Juriscredcelg.png"
+  },
+  {
+    "id": "cliente-e52d5244287e450e",
+    "nome": "Sicoob Lagoacred",
+    "nome_normalizado": "sicoob lagoacred",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Lagoacred.png"
+  },
+  {
+    "id": "cliente-19c706d62e351e1b",
+    "nome": "Sicoob Médio Oeste",
+    "nome_normalizado": "sicoob medio oeste",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Médio_Oeste.png"
+  },
+  {
+    "id": "cliente-ddeae09580997c8b",
+    "nome": "Sicoob Meridional",
+    "nome_normalizado": "sicoob meridional",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Meridional.png"
+  },
+  {
+    "id": "cliente-be6ea2041fc65e84",
+    "nome": "Sicoob Metropolitano",
+    "nome_normalizado": "sicoob metropolitano",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Metropolitano.png"
+  },
+  {
+    "id": "cliente-0ae1186024bb2894",
+    "nome": "Sicoob Montecredi",
+    "nome_normalizado": "sicoob montecredi",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Montecredi.png"
+  },
+  {
+    "id": "cliente-060ba7b3749ea030",
+    "nome": "Sicoob Noroeste MG",
+    "nome_normalizado": "sicoob noroeste mg",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Noroeste_MG.png"
+  },
+  {
+    "id": "cliente-73e9c439f9b67308",
+    "nome": "Sicoob Norte MT",
+    "nome_normalizado": "sicoob norte mt",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Norte_MT.png"
+  },
+  {
+    "id": "cliente-dc2644b733c201b4",
+    "nome": "Sicoob Nossacoop",
+    "nome_normalizado": "sicoob nossacoop",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Nossacoop.png"
+  },
+  {
+    "id": "cliente-fe9885809a1e1ced",
+    "nome": "Sicoob Nosso",
+    "nome_normalizado": "sicoob nosso",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Nosso.png"
+  },
+  {
+    "id": "cliente-70a1d8b42429afcc",
+    "nome": "Sicoob Nossocredito",
+    "nome_normalizado": "sicoob nossocredito",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Nossocredito.png"
+  },
+  {
+    "id": "cliente-b84698b3daf2b99c",
+    "nome": "Sicoob Ouricred",
+    "nome_normalizado": "sicoob ouricred",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Ouricred.png"
+  },
+  {
+    "id": "cliente-809cb2f11812a4ff",
+    "nome": "Sicoob Ouro Verde",
+    "nome_normalizado": "sicoob ouro verde",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Ouro_Verde.png"
+  },
+  {
+    "id": "cliente-82f624b2ee3e8d4f",
+    "nome": "Sicoob Rubiataba",
+    "nome_normalizado": "sicoob rubiataba",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Rubiataba.png"
+  },
+  {
+    "id": "cliente-7bc4b4bc7c0feeaa",
+    "nome": "Sicoob Sacramento",
+    "nome_normalizado": "sicoob sacramento",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Sacramento.png"
+  },
+  {
+    "id": "cliente-33de0b9625200818",
+    "nome": "Sicoob Serrano",
+    "nome_normalizado": "sicoob serrano",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Serrano.png"
+  },
+  {
+    "id": "cliente-2e8accd126d40d57",
+    "nome": "Sicoob Sul",
+    "nome_normalizado": "sicoob sul",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Sul.png"
+  },
+  {
+    "id": "cliente-eee934a26a232090",
+    "nome": "Sicoob Uniao Centro Oeste",
+    "nome_normalizado": "sicoob uniao centro oeste",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Uniao_Centro_Oeste.png"
+  },
+  {
+    "id": "cliente-a5037131d371802c",
+    "nome": "Sicoob Unicentro Brasileira",
+    "nome_normalizado": "sicoob unicentro brasileira",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Unicentro_Brasileira.png"
+  },
+  {
+    "id": "cliente-e305ac2031551ad5",
+    "nome": "Sicoob Unicoob",
+    "nome_normalizado": "sicoob unicoob",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Unicoob.png"
+  },
+  {
+    "id": "cliente-e5b0b442544b22b5",
+    "nome": "Sicoob Vale Sul",
+    "nome_normalizado": "sicoob vale sul",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicoob_Vale_Sul.png"
+  },
+  {
+    "id": "cliente-80c8188f5132e744",
+    "nome": "Sicredi Cerrado",
+    "nome_normalizado": "sicredi cerrado",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Cerrado.png"
+  },
+  {
+    "id": "cliente-2450af36f316c04c",
+    "nome": "Sicredi Cooperjuris",
+    "nome_normalizado": "sicredi cooperjuris",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Cooperjuris.png"
+  },
+  {
+    "id": "cliente-bd58f2ef3be11246",
+    "nome": "Sicredi Dexis",
+    "nome_normalizado": "sicredi dexis",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Dexis.png"
+  },
+  {
+    "id": "cliente-f102359d9da71753",
+    "nome": "Sicredi Expansao",
+    "nome_normalizado": "sicredi expansao",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Expansao.png"
+  },
+  {
+    "id": "cliente-bdc59acb72e45da4",
+    "nome": "Sicredi Serigy",
+    "nome_normalizado": "sicredi serigy",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Serigy.png"
+  },
+  {
+    "id": "cliente-402c2fcea95a6686",
+    "nome": "Sicredi Soma Cad",
+    "nome_normalizado": "sicredi soma cad",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_Cad.png"
+  },
+  {
+    "id": "cliente-08c8e46f0579c6e2",
+    "nome": "Sicredi Soma PA 02",
+    "nome_normalizado": "sicredi soma pa 02",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_02.png"
+  },
+  {
+    "id": "cliente-d2a777f833aca402",
+    "nome": "Sicredi Soma PA 03",
+    "nome_normalizado": "sicredi soma pa 03",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_03.png"
+  },
+  {
+    "id": "cliente-0430d1b98dcc7736",
+    "nome": "Sicredi Soma PA 04",
+    "nome_normalizado": "sicredi soma pa 04",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_04.png"
+  },
+  {
+    "id": "cliente-8304eb14eb295cc1",
+    "nome": "Sicredi Soma PA 05",
+    "nome_normalizado": "sicredi soma pa 05",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_05.png"
+  },
+  {
+    "id": "cliente-68ee79d355c1047d",
+    "nome": "Sicredi Soma PA 06",
+    "nome_normalizado": "sicredi soma pa 06",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_06.png"
+  },
+  {
+    "id": "cliente-8718963b5e53a70f",
+    "nome": "Sicredi Soma PA 07",
+    "nome_normalizado": "sicredi soma pa 07",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_07.png"
+  },
+  {
+    "id": "cliente-2ffed8e8cbb781c6",
+    "nome": "Sicredi Soma PA 08",
+    "nome_normalizado": "sicredi soma pa 08",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_08.png"
+  },
+  {
+    "id": "cliente-fa2980daa438217f",
+    "nome": "Sicredi Soma PA 09",
+    "nome_normalizado": "sicredi soma pa 09",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_09.png"
+  },
+  {
+    "id": "cliente-51ac560e4783f503",
+    "nome": "Sicredi Soma PA 10",
+    "nome_normalizado": "sicredi soma pa 10",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_10.png"
+  },
+  {
+    "id": "cliente-c79f9415c7d80828",
+    "nome": "Sicredi Soma PA 11",
+    "nome_normalizado": "sicredi soma pa 11",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_11.png"
+  },
+  {
+    "id": "cliente-896db94a1f938a7d",
+    "nome": "Sicredi Soma PA 12",
+    "nome_normalizado": "sicredi soma pa 12",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_12.png"
+  },
+  {
+    "id": "cliente-f5a51ca8abdecdd6",
+    "nome": "Sicredi Soma PA 14",
+    "nome_normalizado": "sicredi soma pa 14",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_14.png"
+  },
+  {
+    "id": "cliente-bd4a48dbb7ecedb5",
+    "nome": "Sicredi Soma Pa 15",
+    "nome_normalizado": "sicredi soma pa 15",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi Soma Pa 15.png"
+  },
+  {
+    "id": "cliente-6176b77bfce8264f",
+    "nome": "Sicredi Soma Pa 16",
+    "nome_normalizado": "sicredi soma pa 16",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi Soma Pa 16.png"
+  },
+  {
+    "id": "cliente-32cb0ca138e470c9",
+    "nome": "Sicredi Soma PA 17",
+    "nome_normalizado": "sicredi soma pa 17",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_17.png"
+  },
+  {
+    "id": "cliente-bdb3d1ceba317b56",
+    "nome": "Sicredi Soma PA 18",
+    "nome_normalizado": "sicredi soma pa 18",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_18.png"
+  },
+  {
+    "id": "cliente-e6b3295a91a51ff9",
+    "nome": "Sicredi Soma PA 19",
+    "nome_normalizado": "sicredi soma pa 19",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_19.png"
+  },
+  {
+    "id": "cliente-9a11bf58920cd5e8",
+    "nome": "Sicredi Soma PA 20",
+    "nome_normalizado": "sicredi soma pa 20",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_20.png"
+  },
+  {
+    "id": "cliente-d09de93b5d8e5ca1",
+    "nome": "Sicredi Soma Pa 21",
+    "nome_normalizado": "sicredi soma pa 21",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi Soma Pa 21.png"
+  },
+  {
+    "id": "cliente-ff9534cb14feb1e5",
+    "nome": "Sicredi Soma PA 22",
+    "nome_normalizado": "sicredi soma pa 22",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_22.png"
+  },
+  {
+    "id": "cliente-cb543dd2735e995c",
+    "nome": "Sicredi Soma PA 23",
+    "nome_normalizado": "sicredi soma pa 23",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_23.png"
+  },
+  {
+    "id": "cliente-2c5630098a3fc19b",
+    "nome": "Sicredi Soma PA 25",
+    "nome_normalizado": "sicredi soma pa 25",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_25.png"
+  },
+  {
+    "id": "cliente-d5dd5da29b6fe394",
+    "nome": "Sicredi Soma PA 26",
+    "nome_normalizado": "sicredi soma pa 26",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_26.png"
+  },
+  {
+    "id": "cliente-7d99b5b56a45328a",
+    "nome": "Sicredi Soma PA 27",
+    "nome_normalizado": "sicredi soma pa 27",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_27.png"
+  },
+  {
+    "id": "cliente-140034ca1b99992a",
+    "nome": "Sicredi Soma PA 28",
+    "nome_normalizado": "sicredi soma pa 28",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_28.png"
+  },
+  {
+    "id": "cliente-9845b3d7d4922a20",
+    "nome": "Sicredi Soma PA 29",
+    "nome_normalizado": "sicredi soma pa 29",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_29.png"
+  },
+  {
+    "id": "cliente-06df18047655a903",
+    "nome": "Sicredi Soma PA 40",
+    "nome_normalizado": "sicredi soma pa 40",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_40.png"
+  },
+  {
+    "id": "cliente-9c436d91be584493",
+    "nome": "Sicredi Soma PA 41",
+    "nome_normalizado": "sicredi soma pa 41",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_41.png"
+  },
+  {
+    "id": "cliente-7690894f7d33ba29",
+    "nome": "Sicredi Soma PA 42",
+    "nome_normalizado": "sicredi soma pa 42",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_42.png"
+  },
+  {
+    "id": "cliente-3717befb85b4864a",
+    "nome": "Sicredi Soma PA 43",
+    "nome_normalizado": "sicredi soma pa 43",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_43.png"
+  },
+  {
+    "id": "cliente-a20e3fbfe945164a",
+    "nome": "Sicredi Soma PA 44",
+    "nome_normalizado": "sicredi soma pa 44",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_44.png"
+  },
+  {
+    "id": "cliente-5629088de4b58f34",
+    "nome": "Sicredi Soma PA 45",
+    "nome_normalizado": "sicredi soma pa 45",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_45.png"
+  },
+  {
+    "id": "cliente-01e8857c90319dc7",
+    "nome": "Sicredi Soma PA 46",
+    "nome_normalizado": "sicredi soma pa 46",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_46.png"
+  },
+  {
+    "id": "cliente-ca298dba6d4d0710",
+    "nome": "Sicredi Soma PA 47",
+    "nome_normalizado": "sicredi soma pa 47",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_47.png"
+  },
+  {
+    "id": "cliente-825f01c102792dda",
+    "nome": "Sicredi Soma PA 48",
+    "nome_normalizado": "sicredi soma pa 48",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_48.png"
+  },
+  {
+    "id": "cliente-cf83f2df7ed758a9",
+    "nome": "Sicredi Soma PA 49",
+    "nome_normalizado": "sicredi soma pa 49",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_49.png"
+  },
+  {
+    "id": "cliente-c79272d7d14ab74c",
+    "nome": "Sicredi Soma PA 50",
+    "nome_normalizado": "sicredi soma pa 50",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_50.png"
+  },
+  {
+    "id": "cliente-4002c52cb3bc990f",
+    "nome": "Sicredi Soma PA 51",
+    "nome_normalizado": "sicredi soma pa 51",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_51.png"
+  },
+  {
+    "id": "cliente-5e2b58f8f88f21c0",
+    "nome": "Sicredi Soma PA 52",
+    "nome_normalizado": "sicredi soma pa 52",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_52.png"
+  },
+  {
+    "id": "cliente-b9d0341f5acf9549",
+    "nome": "Sicredi Soma PA 53",
+    "nome_normalizado": "sicredi soma pa 53",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_53.png"
+  },
+  {
+    "id": "cliente-81681ceb51a95cde",
+    "nome": "Sicredi Soma PA 54",
+    "nome_normalizado": "sicredi soma pa 54",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_54.png"
+  },
+  {
+    "id": "cliente-94dc03bf0d8a16bf",
+    "nome": "Sicredi Soma PA 55",
+    "nome_normalizado": "sicredi soma pa 55",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_55.png"
+  },
+  {
+    "id": "cliente-26530a5578be7023",
+    "nome": "Sicredi Soma PA 56",
+    "nome_normalizado": "sicredi soma pa 56",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_56.png"
+  },
+  {
+    "id": "cliente-769b081813c82623",
+    "nome": "Sicredi Soma PA 57",
+    "nome_normalizado": "sicredi soma pa 57",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Soma_PA_57.png"
+  },
+  {
+    "id": "cliente-33a6d089fc779c80",
+    "nome": "Sicredi Sul Minas",
+    "nome_normalizado": "sicredi sul minas",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Sul_Minas.png"
+  },
+  {
+    "id": "cliente-a8415c29e601fe2d",
+    "nome": "Sicredi Valor",
+    "nome_normalizado": "sicredi valor",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Valor.png"
+  },
+  {
+    "id": "cliente-646df69e40a606ba",
+    "nome": "Sicredi Vanguarda",
+    "nome_normalizado": "sicredi vanguarda",
+    "logo": "logos/logo-4e3b0a832bcd19eb3963.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sicredi_Vanguarda.png"
+  },
+  {
+    "id": "cliente-43148986718663c7",
+    "nome": "Sindicato Colorado",
+    "nome_normalizado": "sindicato colorado",
+    "logo": "logos/logo-e8185d097ab0031a7f9a.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Sindicato_Colorado.png"
+  },
+  {
+    "id": "cliente-cce86080c47cbe26",
+    "nome": "Stock Atacadista",
+    "nome_normalizado": "stock atacadista",
+    "logo": "logos/logo-13768e418d86c0638c82.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Stock_Atacadista.png"
+  },
+  {
+    "id": "cliente-ceb7520a8c89696e",
+    "nome": "Sulmobile",
+    "nome_normalizado": "sulmobile",
+    "logo": "logos/logo-949e29e4cd6e56924ea6.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Sulmobile.jpg"
+  },
+  {
+    "id": "cliente-0cb89696aed0d519",
+    "nome": "Super Alvo",
+    "nome_normalizado": "super alvo",
+    "logo": "logos/logo-5a3ee48102e915ee9bc6.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Super_Alvo.jpg"
+  },
+  {
+    "id": "cliente-6937ecad4280c97a",
+    "nome": "Tct Ciapetro",
+    "nome_normalizado": "tct ciapetro",
+    "logo": "logos/logo-0ef2fd17581e55bae47b.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Tct_Ciapetro.jpg"
+  },
+  {
+    "id": "cliente-075162bed4f8ff0d",
+    "nome": "Totalmix",
+    "nome_normalizado": "totalmix",
+    "logo": "logos/logo-4a8c5c6ee7ea69cf0976.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Totalmix.png"
+  },
+  {
+    "id": "cliente-5aa9b768e60fb8a2",
+    "nome": "Transportadora Marconi",
+    "nome_normalizado": "transportadora marconi",
+    "logo": "logos/logo-4cf111423e563892f8eb.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Transportadora_Marconi.jpg"
+  },
+  {
+    "id": "cliente-b0b5bc5ddf91069b",
+    "nome": "Unicampo",
+    "nome_normalizado": "unicampo",
+    "logo": "logos/logo-58f87dd39e75ed5d14c3.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicampo.png"
+  },
+  {
+    "id": "cliente-ad561c38ce9c1e19",
+    "nome": "Unicoob Corretora",
+    "nome_normalizado": "unicoob corretora",
+    "logo": "logos/logo-7905de2b3bee262d407d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicoob_Corretora.png"
+  },
+  {
+    "id": "cliente-d920916d8bded9e3",
+    "nome": "Unicred",
+    "nome_normalizado": "unicred",
+    "logo": "logos/logo-3ba2a63ad8cc83316149.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred.png"
+  },
+  {
+    "id": "cliente-ded64a6b5053994e",
+    "nome": "Unicred Ampla",
+    "nome_normalizado": "unicred ampla",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Ampla.jpg"
+  },
+  {
+    "id": "cliente-0e44c5e4d39dc01a",
+    "nome": "Unicred Coalizao",
+    "nome_normalizado": "unicred coalizao",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coalizao.jpg"
+  },
+  {
+    "id": "cliente-8e18eb36f7f48fde",
+    "nome": "Unicred Coalizao Costa Do Sol",
+    "nome_normalizado": "unicred coalizao costa do sol",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coalizao_Costa_Do_Sol.jpg"
+  },
+  {
+    "id": "cliente-08d9b00cf4e69827",
+    "nome": "Unicred Coalizao Niteroi",
+    "nome_normalizado": "unicred coalizao niteroi",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coalizao_Niteroi.jpg"
+  },
+  {
+    "id": "cliente-bb4954a8de55f858",
+    "nome": "Unicred Coalizao Norte Lagos",
+    "nome_normalizado": "unicred coalizao norte lagos",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coalizao_Norte_Lagos.jpg"
+  },
+  {
+    "id": "cliente-8d2a01fdb70500b5",
+    "nome": "Unicred Coalizao Rjmt",
+    "nome_normalizado": "unicred coalizao rjmt",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coalizao_Rjmt.jpg"
+  },
+  {
+    "id": "cliente-caa3eb0cfc5d7ae6",
+    "nome": "Unicred Coopnore",
+    "nome_normalizado": "unicred coopnore",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Coopnore.jpg"
+  },
+  {
+    "id": "cliente-61d8085f78302d21",
+    "nome": "Unicred Porto Alegre",
+    "nome_normalizado": "unicred porto alegre",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Porto_Alegre.jpg"
+  },
+  {
+    "id": "cliente-ef5f0c1f0beb885c",
+    "nome": "Unicred Progresso",
+    "nome_normalizado": "unicred progresso",
+    "logo": "logos/logo-8bcb07452ec957e0d695.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unicred_Progresso.jpg"
+  },
+  {
+    "id": "cliente-01e390fced8dc8d8",
+    "nome": "Unimais Centro Leste Paulista",
+    "nome_normalizado": "unimais centro leste paulista",
+    "logo": "logos/logo-28cf898aeae95dbd37b9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimais_Centro_Leste_Paulista.jpg"
+  },
+  {
+    "id": "cliente-80f11960f9be4642",
+    "nome": "Unimais Circuito Das Aguas",
+    "nome_normalizado": "unimais circuito das aguas",
+    "logo": "logos/logo-28cf898aeae95dbd37b9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimais_Circuito_Das_Aguas.jpg"
+  },
+  {
+    "id": "cliente-e2a824826dc12b19",
+    "nome": "Unimais Mantiqueira",
+    "nome_normalizado": "unimais mantiqueira",
+    "logo": "logos/logo-28cf898aeae95dbd37b9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimais_Mantiqueira.jpg"
+  },
+  {
+    "id": "cliente-9f43fb0842111065",
+    "nome": "Unimais Metropolitana",
+    "nome_normalizado": "unimais metropolitana",
+    "logo": "logos/logo-28cf898aeae95dbd37b9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimais_Metropolitana.jpg"
+  },
+  {
+    "id": "cliente-b8fdf278677c39de",
+    "nome": "Unimais Rio",
+    "nome_normalizado": "unimais rio",
+    "logo": "logos/logo-28cf898aeae95dbd37b9.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimais_Rio.jpg"
+  },
+  {
+    "id": "cliente-faffc8962541a7c8",
+    "nome": "Unimed Alto Jacui",
+    "nome_normalizado": "unimed alto jacui",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Alto_Jacui.png"
+  },
+  {
+    "id": "cliente-9474f2d2fca76354",
+    "nome": "Unimed Campo Mourao",
+    "nome_normalizado": "unimed campo mourao",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Campo_Mourao.png"
+  },
+  {
+    "id": "cliente-92b772dd5e4f568b",
+    "nome": "Unimed Cianorte",
+    "nome_normalizado": "unimed cianorte",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Cianorte.png"
+  },
+  {
+    "id": "cliente-8025736ac7875632",
+    "nome": "Unimed Francisco Beltrao",
+    "nome_normalizado": "unimed francisco beltrao",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Francisco_Beltrao.png"
+  },
+  {
+    "id": "cliente-70a3e17429d6904e",
+    "nome": "Unimed Guarapuava",
+    "nome_normalizado": "unimed guarapuava",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Guarapuava.png"
+  },
+  {
+    "id": "cliente-6bb55eea6953dcd5",
+    "nome": "Unimed Jaragua Do Sul",
+    "nome_normalizado": "unimed jaragua do sul",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Jaragua_Do_Sul.png"
+  },
+  {
+    "id": "cliente-0f5a9d42f01c004c",
+    "nome": "Unimed Noroeste Parana",
+    "nome_normalizado": "unimed noroeste parana",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Noroeste_Parana.png"
+  },
+  {
+    "id": "cliente-dd108d4340bf2116",
+    "nome": "Unimed Paranavai",
+    "nome_normalizado": "unimed paranavai",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_Paranavai.png"
+  },
+  {
+    "id": "cliente-b664c53667ac160d",
+    "nome": "Unimed SSP",
+    "nome_normalizado": "unimed ssp",
+    "logo": "logos/logo-1eb331809bf27a6d1f58.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Unimed_SSP.png"
+  },
+  {
+    "id": "cliente-9af250da1d624990",
+    "nome": "Valdar Moveis",
+    "nome_normalizado": "valdar moveis",
+    "logo": "logos/logo-3efdee80bff419dfd7ed.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Valdar_Moveis.jpg"
+  },
+  {
+    "id": "cliente-dc43d324a198f7a2",
+    "nome": "Valtur Turismo",
+    "nome_normalizado": "valtur turismo",
+    "logo": "logos/logo-408d84053bd9d877966d.webp",
+    "arquivo_original": "LOGOS DE CLIENTES/Valtur_Turismo.png"
+  },
+  {
+    "id": "cliente-8ad66d3e03d00a08",
+    "nome": "Vignoto Imoveis",
+    "nome_normalizado": "vignoto imoveis",
+    "logo": "logos/logo-f0b7c6f9a5223a5dd3cf.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Vignoto_Imoveis.jpg"
+  },
+  {
+    "id": "cliente-20f37670bf7c1ee7",
+    "nome": "Vivaro",
+    "nome_normalizado": "vivaro",
+    "logo": "logos/logo-6d6ddc9255322432ac1e.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Vivaro.jpg"
+  },
+  {
+    "id": "cliente-320cd92445abae85",
+    "nome": "WA Pneus",
+    "nome_normalizado": "wa pneus",
+    "logo": "logos/logo-871782ada941cd520c66.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/WA_Pneus.jpg"
+  },
+  {
+    "id": "cliente-c68a7e082eccdd26",
+    "nome": "Zilo Calcados",
+    "nome_normalizado": "zilo calcados",
+    "logo": "logos/logo-a29ff7c122a1b54b43db.jpg",
+    "arquivo_original": "LOGOS DE CLIENTES/Zilo_Calcados.jpg"
+  }
+]

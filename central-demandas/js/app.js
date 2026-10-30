@@ -2,14 +2,34 @@
  * Seções: configuração, armazenamento, renderização, modais, imagens, eventos.
  * O formato dos registros e as chaves do protótipo são mantidos.
  */
-(function () {
+(async function () {
   'use strict';
+
+  const api = window.LivreEscolhaAPI;
+  const appScript = document.currentScript.src;
+  if (api) {
+    try { await api.ready; }
+    catch (error) {
+      document.getElementById('board').textContent = error.message;
+      document.getElementById('openModal').disabled = true;
+      return;
+    }
+  }
 
   // 1 · Configuração e estado
   const KEY = 'livre_escolha_demandas_demo_v1';
   const SIDEBAR_KEY = 'demandas_sidebar_closed';
   const MAX_IMAGE_BYTES = 1024 * 1024;
   const IMAGE_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
+  const assetBase = new URL('../assets/clientes/', appScript);
+  const normalizeClient = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  // catalogo.js é gerado de clientes.json: funciona também ao abrir via file://.
+  const clientCatalog = (Array.isArray(window.LivreEscolhaClientes) ? window.LivreEscolhaClientes : [])
+    .filter(client => client && typeof client.id === 'string' && typeof client.nome === 'string'
+      && typeof client.logo === 'string' && /^logos\/[a-z0-9-]+\.(webp|png|jpg|jpeg)$/.test(client.logo))
+    .map(client => ({ ...client, nome_normalizado: normalizeClient(client.nome) }));
+  const clientsById = new Map(clientCatalog.map(client => [client.id, client]));
+  delete window.LivreEscolhaClientes;
   const statuses = {
     pendente: ['Pendente', 'pending'],
     andamento: ['Em andamento', 'working'],
@@ -27,9 +47,17 @@
     'board', 'total', 'pending', 'working', 'done', 'showing', 'search',
     'typeFilter', 'sort', 'notice', 'createForm', 'client', 'category',
     'requester', 'urgency', 'description', 'attachment', 'detailContent',
-    'detailId', 'agent', 'zoomImage', 'toggleSidebar', 'openModal'
+    'detailId', 'agent', 'zoomImage', 'toggleSidebar', 'openModal', 'clientSuggestions'
   ].map(id => [id, $(id)]));
   const categories = Array.from(ui.category.options, option => option.value).filter(Boolean);
+  if (api) {
+    ui.agent.replaceChildren(new Option('Selecione o responsável', ''), ...api.users.map(user => new Option(user.nome, user.id)));
+    const logout = document.createElement('button');
+    logout.className = 'button'; logout.textContent = 'Sair'; logout.type = 'button';
+    logout.title = `Conectado como ${api.user.nome}`;
+    logout.addEventListener('click', () => api.logout().catch(error => notify(error.message)));
+    document.querySelector('.actions').append(logout);
+  }
   const agents = Array.from(ui.agent.options, option => option.value).filter(Boolean);
   const tabButtons = [...document.querySelectorAll('.tab, .nav-item')];
   const overlays = [...document.querySelectorAll('.overlay')];
@@ -48,6 +76,43 @@
   let submitting = false;
   let createVersion = 0;
   let storageState = 'ready';
+  let selectedClient = null;
+  let suggestions = [];
+  let activeSuggestion = -1;
+
+  function hideSuggestions() {
+    ui.clientSuggestions.hidden = true;
+    ui.client.setAttribute('aria-expanded', 'false');
+    ui.client.removeAttribute('aria-activedescendant');
+    activeSuggestion = -1;
+  }
+
+  function suggestClients() {
+    const query = normalizeClient(ui.client.value);
+    suggestions = query ? clientCatalog.filter(client => client.nome_normalizado.includes(query)) : [];
+    activeSuggestion = -1;
+    ui.client.removeAttribute('aria-activedescendant');
+    ui.clientSuggestions.innerHTML = suggestions.map((client, index) =>
+      `<li id="client-option-${index}" role="option" aria-selected="false" data-index="${index}">${escapeHtml(client.nome)}</li>`).join('');
+    ui.clientSuggestions.hidden = !suggestions.length;
+    ui.client.setAttribute('aria-expanded', String(Boolean(suggestions.length)));
+  }
+
+  function chooseClient(index) {
+    const client = suggestions[index];
+    if (!client) return;
+    selectedClient = client;
+    ui.client.value = client.nome;
+    ui.client.focus();
+    hideSuggestions();
+  }
+
+  function clientLogo(item) {
+    const client = clientsById.get(item.clientId);
+    // Nunca inferir a empresa de registros antigos ou confiar em URLs do localStorage.
+    if (!client || normalizeClient(item.client) !== client.nome_normalizado) return '';
+    return `<img class="client-logo" src="${escapeHtml(new URL(client.logo, assetBase).href)}" alt="" width="32" height="24" loading="lazy" decoding="async" />`;
+  }
 
   function notify(message) {
     ui.notice.textContent = message;
@@ -97,10 +162,30 @@
     }
   }
 
-  let data = load();
+  let data = api ? [] : load();
+  let refreshRequested = false;
+  let refreshing = false;
+  async function refresh() {
+    if (!api) return;
+    refreshRequested = true;
+    if (refreshing) return;
+    refreshing = true;
+    try {
+      while (refreshRequested) {
+        refreshRequested = false;
+        data = await api.list();
+        renderMetrics(); render();
+        if (modalStack.includes('detailOverlay')) {
+          const current = data.find(item => item.id === detailId);
+          if (current) showDetails(current); else close('detailOverlay');
+        }
+      }
+    } catch (error) { notify(error.message); }
+    finally { refreshing = false; }
+  }
 
-  function save(next, restoring = false) {
-    if (storageState !== 'ready' && !(restoring && storageState === 'corrupt')) {
+  function save(next) {
+    if (storageState !== 'ready') {
       notify('Os dados não podem ser alterados com segurança. Verifique o armazenamento e reabra a página.');
       return false;
     }
@@ -141,7 +226,7 @@
 
   function ticket(item) {
     const [label, statusClass] = statuses[item.status];
-    return `<article class="ticket"><div><div class="ticket-top"><span class="id">#${item.id}</span><span class="badge ${statusClass}">${label}</span>${item.priority === 'Alta' ? '<span class="badge priority">⚑ Alta prioridade</span>' : ''}</div><h3>${escapeHtml(item.category)} <span class="ticket-separator">•</span> ${escapeHtml(item.client)}</h3><p>${escapeHtml(item.description || 'Sem descrição adicional.')}</p><div class="details"><span>◉ Solicitado por: <strong>${escapeHtml(item.requester)}</strong></span><span>◷ ${date(item.created)}</span><span>♙ Responsável: <strong>${escapeHtml(item.assignee || 'Não atribuído')}</strong></span>${item.image ? '<span>▧ Print anexado</span>' : ''}</div></div><div class="ticket-actions">${item.status === 'pendente' ? `<button type="button" class="mini" data-action="assume" data-id="${item.id}">👍 Assumir caso</button>` : ''}${item.status === 'andamento' ? `<button type="button" class="mini finish" data-action="finish" data-id="${item.id}">✓ Marcar lançada</button>` : ''}<button type="button" class="mini secondary" data-action="detail" data-id="${item.id}">Ver detalhes →</button></div></article>`;
+    return `<article class="ticket"><div><div class="ticket-top"><span class="id">#${item.id}</span><span class="badge ${statusClass}">${label}</span>${item.priority === 'Alta' ? '<span class="badge priority">⚑ Alta prioridade</span>' : ''}</div><h3>${escapeHtml(item.category)} <span class="ticket-separator">•</span> ${clientLogo(item)}${escapeHtml(item.client)}</h3><p>${escapeHtml(item.description || 'Sem descrição adicional.')}</p><div class="details"><span>◉ Solicitado por: <strong>${escapeHtml(item.requester)}</strong></span><span>◷ ${date(item.created)}</span><span>♙ Responsável: <strong>${escapeHtml(item.assignee || 'Não atribuído')}</strong></span>${item.image ? '<span>▧ Print anexado</span>' : ''}</div></div><div class="ticket-actions">${item.status === 'pendente' ? `<button type="button" class="mini" data-action="assume" data-id="${item.id}">👍 Assumir caso</button>` : ''}${item.status === 'andamento' ? `<button type="button" class="mini finish" data-action="finish" data-id="${item.id}">✓ Marcar lançada</button>` : ''}<button type="button" class="mini secondary" data-action="detail" data-id="${item.id}">Ver detalhes →</button></div></article>`;
   }
 
   function render() {
@@ -195,7 +280,7 @@
     const wasTop = index === modalStack.length - 1;
     modalStack.splice(index, 1);
     $(id).classList.remove('show');
-    if (id === 'createOverlay') createVersion++;
+    if (id === 'createOverlay') { createVersion++; hideSuggestions(); }
     if (id === 'zoomOverlay') ui.zoomImage.removeAttribute('src');
     syncModalAccess();
     const previous = focusReturns.get(id);
@@ -209,6 +294,7 @@
 
   // 5 · Imagens: formato, tamanho, assinatura e decodificação antes de salvar.
   function safeImageSource(source) {
+    if (api && typeof source === 'string' && /^\/api\/anexos\/[a-f0-9-]{36}$/.test(source)) return source;
     return typeof source === 'string'
       && source.length <= Math.ceil(MAX_IMAGE_BYTES / 3) * 4 + 40
       && /^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(source)
@@ -238,6 +324,18 @@
     } catch {
       throw new Error('Não foi possível abrir o print. Selecione uma imagem válida.');
     }
+    // Sem redimensionar: textos e números mantêm todos os pixels da resolução original.
+    // Canvas WebP com qualidade máxima; só mantém a conversão se economizar pelo menos 10%.
+    if (file.type !== 'image/webp' && image.naturalWidth * image.naturalHeight <= 16000000) {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = image.naturalWidth;
+        canvas.height = image.naturalHeight;
+        canvas.getContext('2d').drawImage(image, 0, 0);
+        const optimized = canvas.toDataURL('image/webp', 1);
+        if (optimized.startsWith('data:image/webp;') && optimized.length < source.length * 0.9) return optimized;
+      } catch { /* Conversão opcional: preservar o original validado. */ }
+    }
     return source;
   }
 
@@ -251,10 +349,11 @@
     ];
     const source = safeImageSource(item.image);
     ui.detailContent.innerHTML = lines.map(([label, value]) =>
-      `<div class="detail-line"><b>${label}:</b> ${escapeHtml(value)}</div>`).join('')
+      `<div class="detail-line"><b>${label}:</b> ${label === 'Cliente' ? clientLogo(item) : ''}${escapeHtml(value)}</div>`).join('')
       + (source ? '<div class="detail-line"><b>Print da solicitação:</b><div class="image-preview-wrap"><button type="button" class="zoom-hint" aria-label="Ampliar print">⌕ Ampliar imagem</button><img class="preview-image zoomable" title="Clique para ampliar" alt="Print anexado à demanda" tabindex="0" role="button" aria-label="Ampliar print" /></div></div>'
         : `<p class="hint">${item.image ? 'Não foi possível exibir o print anexado.' : 'Nenhum print anexado.'}</p>`)
-      + '<div class="form-foot"><button type="button" class="button" id="removeDemand">Excluir demanda</button></div>';
+      + `<div class="form-foot">${api ? '<button type="button" class="button" id="showHistory">Histórico</button>' : ''}${!api || api.user.papel === 'admin' ? '<button type="button" class="button" id="removeDemand">Excluir demanda</button>' : ''}</div>`
+      + '<div id="demandHistory"></div>';
     if (source) ui.detailContent.querySelector('.zoomable').src = source;
     open('detailOverlay');
   }
@@ -268,6 +367,41 @@
   }
 
   // 6 · Eventos registrados uma única vez; ações dos cartões usam delegação.
+  ui.client.addEventListener('input', () => { selectedClient = null; suggestClients(); });
+  ui.client.addEventListener('focus', suggestClients);
+  ui.client.addEventListener('blur', hideSuggestions);
+  ui.clientSuggestions.addEventListener('pointerdown', event => event.preventDefault());
+  ui.clientSuggestions.addEventListener('click', event => {
+    const option = event.target.closest('[data-index]');
+    if (option) chooseClient(Number(option.dataset.index));
+  });
+  ui.client.addEventListener('keydown', event => {
+    if (event.isComposing) return;
+    if (['ArrowDown', 'ArrowUp'].includes(event.key)) {
+      if (ui.clientSuggestions.hidden) suggestClients();
+      if (!suggestions.length) return;
+      event.preventDefault();
+      activeSuggestion = (activeSuggestion + (event.key === 'ArrowDown' ? 1 : activeSuggestion < 0 ? 0 : -1) + suggestions.length) % suggestions.length;
+      [...ui.clientSuggestions.children].forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion)));
+      const option = ui.clientSuggestions.children[activeSuggestion];
+      ui.client.setAttribute('aria-activedescendant', option.id);
+      option.scrollIntoView({ block: 'nearest' });
+    } else if (event.key === 'Enter' && !ui.clientSuggestions.hidden && activeSuggestion >= 0) {
+      event.preventDefault();
+      chooseClient(activeSuggestion);
+    } else if (event.key === 'Escape' && !ui.clientSuggestions.hidden) {
+      event.preventDefault();
+      event.stopPropagation();
+      hideSuggestions();
+    } else if (event.key === 'Tab') hideSuggestions();
+  });
+  ui.createForm.addEventListener('reset', () => { selectedClient = null; hideSuggestions(); });
+  // Oculta apenas a logo defeituosa, mantendo espaço reservado e o nome legível.
+  document.addEventListener('error', event => {
+    if (event.target instanceof HTMLImageElement && event.target.classList.contains('client-logo')) {
+      event.target.style.visibility = 'hidden';
+    }
+  }, true);
   ui.openModal.addEventListener('click', () => open('createOverlay'));
   for (const overlay of overlays) {
     overlay.addEventListener('click', event => {
@@ -319,6 +453,9 @@
       return;
     }
     if (!['Normal', 'Alta'].includes(values.priority)) return;
+    if (selectedClient && normalizeClient(values.client) === selectedClient.nome_normalizado) {
+      values.clientId = selectedClient.id;
+    }
     const file = ui.attachment.files[0];
     const version = createVersion;
     const submit = ui.createForm.querySelector('[type="submit"]');
@@ -327,9 +464,18 @@
     try {
       const image = file ? await readImage(file) : '';
       if (version !== createVersion) return;
-      const id = data.reduce((max, item) => Math.max(max, item.id), 1040) + 1;
-      const item = { id, ...values, status: 'pendente', assignee: '', created: Date.now(), image };
-      if (!save([item, ...data])) return;
+      let id;
+      if (api) {
+        const item = await api.create({ ...values, image, imageName: file?.name,
+          chaveCriacao: ui.createForm.dataset.creationKey ||= crypto.randomUUID() });
+        id = item.id;
+        delete ui.createForm.dataset.creationKey;
+        await refresh();
+      } else {
+        id = data.reduce((max, item) => Math.max(max, item.id), 1040) + 1;
+        const item = { id, ...values, status: 'pendente', assignee: '', created: Date.now(), image };
+        if (!save([item, ...data])) return;
+      }
       ui.createForm.reset();
       close('createOverlay');
       setTab('todos');
@@ -342,7 +488,7 @@
     }
   });
 
-  ui.board.addEventListener('click', event => {
+  ui.board.addEventListener('click', async event => {
     const button = event.target.closest('[data-action]');
     if (!button) return;
     const id = Number(button.dataset.id);
@@ -350,19 +496,40 @@
     if (!item) return;
     if (button.dataset.action === 'assume' && item.status === 'pendente') {
       assumeId = id;
-      ui.agent.value = '';
+      ui.agent.value = api && api.user.papel !== 'admin' ? api.user.id : '';
       open('assumeOverlay');
     } else if (button.dataset.action === 'finish' && item.status === 'andamento') {
       if (!confirm(`Confirmar que a demanda #${id} foi lançada?`)) return;
+      if (api) {
+        button.disabled = true;
+        try { await api.action(id, 'finalizar'); await refresh(); notify(`Demanda #${id} marcada como lançada ✅`); }
+        catch (error) { notify(error.message); await refresh(); }
+        finally { button.disabled = false; }
+        return;
+      }
       if (!save(data.map(record => record.id === id ? { ...record, status: 'lancada' } : record))) return;
       render();
       notify(`Demanda #${id} marcada como lançada ✅`);
     } else if (button.dataset.action === 'detail') showDetails(item);
   });
-  ui.detailContent.addEventListener('click', event => {
+  ui.detailContent.addEventListener('click', async event => {
+    if (api && event.target.closest('#showHistory')) {
+      const id = detailId;
+      try {
+        const events = await api.history(id);
+        if (detailId !== id) return;
+        $('demandHistory').innerHTML = events.map(entry => `<div class="detail-line">${escapeHtml(date(entry.criado_em))} · ${escapeHtml(entry.usuario)} · ${escapeHtml(entry.acao)}</div>`).join('') || '<p class="hint">Sem histórico.</p>';
+      } catch (error) { notify(error.message); }
+      return;
+    }
     if (event.target.closest('.zoomable, .zoom-hint')) zoom();
     else if (event.target.closest('#removeDemand')) {
-      if (!confirm(`Excluir permanentemente a demanda #${detailId}?`)) return;
+      if (!confirm(`Excluir a demanda #${detailId}?`)) return;
+      if (api) {
+        try { await api.remove(detailId); close('detailOverlay'); await refresh(); notify('Demanda excluída.'); }
+        catch (error) { notify(error.message); }
+        return;
+      }
       if (!save(data.filter(item => item.id !== detailId))) return;
       close('detailOverlay');
       render();
@@ -376,22 +543,25 @@
     }
   });
   $('zoomClose').addEventListener('click', () => close('zoomOverlay'));
-  $('assumeForm').addEventListener('submit', event => {
+  $('assumeForm').addEventListener('submit', async event => {
     event.preventDefault();
     const item = data.find(record => record.id === assumeId);
     const name = ui.agent.value;
     if (!item || item.status !== 'pendente' || !agents.includes(name)) return;
+    if (api) {
+      const button = event.target.querySelector('[type="submit"]');
+      if (button.disabled) return;
+      button.disabled = true;
+      try { await api.action(assumeId, 'assumir', { assigneeId: name }); close('assumeOverlay'); await refresh(); notify(`Demanda #${item.id} assumida 👍`); }
+      catch (error) { notify(error.message); await refresh(); }
+      finally { button.disabled = false; }
+      return;
+    }
     if (!save(data.map(record => record.id === assumeId
       ? { ...record, assignee: name, status: 'andamento' } : record))) return;
     close('assumeOverlay');
     render();
     notify(`Demanda #${item.id} assumida por ${name} 👍`);
-  });
-  $('resetBtn').addEventListener('click', () => {
-    if (!confirm('Restaurar os exemplos? Todas as demandas cadastradas neste navegador serão apagadas.')) return;
-    if (!save(initial.map(item => ({ ...item })), true)) return;
-    setTab('todos');
-    notify('Demonstração restaurada.');
   });
 
   function setSidebar(hidden) {
@@ -415,4 +585,5 @@
   syncModalAccess();
   renderMetrics();
   setTab('todos');
+  if (api) { api.subscribe(refresh); await refresh(); }
 })();

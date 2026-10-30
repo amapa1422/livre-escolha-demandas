@@ -1,5 +1,17 @@
 # LivreEscolha · Central de Demandas
 
+## Atualização vigente — 30/10/2026
+
+Use esta pasta como fonte principal; `../index.html` e `assets/clientes/catalogo.js` são gerados por `../sync_pages.py`. Abra qualquer entrada diretamente no navegador ou por servidor estático. Para editar o catálogo, altere `assets/clientes/clientes.json` e execute `python sync_pages.py` na raiz.
+
+O cabeçalho mantém Nova demanda; Restaurar demo, a caixa de demonstração e as identificações de protótipo no rodapé foram removidos. Somente o título usa Plus Jakarta Sans laranja (com fonte alternativa local). O catálogo contém 291 empresas, autocompletar acessível e logos associadas via campo opcional `clientId`, preservando demandas antigas e digitação livre. Prints são otimizados localmente somente quando há benefício, sem reduzir resolução.
+
+Nenhum backend foi conectado. A fonte externa é opcional: sem internet o título usa a alternativa local. As demais operações e o catálogo funcionam offline. A chave de armazenamento continua a mesma; trocar de origem/perfil não transfere registros.
+
+Testes atuais e pendências: [relatório](../_CONTROLE_PROJETO/RELATORIO_LOGOS_PAGES.md). As seções seguintes documentam a organização anterior, incluindo recursos de demonstração que foram removidos nesta atualização.
+
+## Referência da organização anterior
+
 Protótipo local em HTML, CSS e JavaScript puro, organizado a partir do arquivo oficial `../demandas_otimizado (1).html`. O original permanece intacto. A interface, os textos, as categorias, os responsáveis disponíveis, os status e os dados de demonstração foram preservados.
 
 ## Executar no VS Code
