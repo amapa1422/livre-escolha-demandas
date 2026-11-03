@@ -16,6 +16,27 @@
     }
   }
 
+  // Gera um UUID v4 compatível com HTTP na rede local
+function gerarUUID() {
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+  const hex = Array.from(bytes, byte =>
+    byte.toString(16).padStart(2, '0')
+  ).join('');
+
+  return [
+    hex.slice(0, 8),
+    hex.slice(8, 12),
+    hex.slice(12, 16),
+    hex.slice(16, 20),
+    hex.slice(20, 32)
+  ].join('-');
+}
+
   // 1 · Configuração e estado
   const KEY = 'livre_escolha_demandas_demo_v1';
   const SIDEBAR_KEY = 'demandas_sidebar_closed';
@@ -466,8 +487,12 @@
       if (version !== createVersion) return;
       let id;
       if (api) {
-        const item = await api.create({ ...values, image, imageName: file?.name,
-          chaveCriacao: ui.createForm.dataset.creationKey ||= crypto.randomUUID() });
+        const item = await api.create({
+          ...values,
+          image,
+          imageName: file?.name,
+          chaveCriacao: ui.createForm.dataset.creationKey ||= gerarUUID()
+        });
         id = item.id;
         delete ui.createForm.dataset.creationKey;
         await refresh();
