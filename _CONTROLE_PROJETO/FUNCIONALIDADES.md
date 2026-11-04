@@ -1,5 +1,21 @@
 # Funcionalidades existentes e comportamentos a preservar
 
+## Verificação real — SUPABASE-012 — 03/11/2026
+
+Migração 003 aplicada pelo proprietário; exclusão sincronizada em Chrome e Edge independentes, aviso privado recebido e cards removidos sem reload/filtros alterados. Banco envia `{}`; a plataforma acrescenta UUID técnico da mensagem, sem dados da demanda. Login admin, sessão recuperada, logout, criação/RPCs/histórico/prints privados e recusa anônima verificados com serviços reais. Requer desativar cadastro público, ainda habilitado na revisão. Testes de funcionário/inativo/concorrência entre pessoas e callbacks de produção permanecem pendentes. Detalhes em VALIDACAO_REAL_SUPABASE; sem publicação.
+
+## Correção Realtime — SUPABASE-009 — 03/11/2026
+
+Para manter a RLS que oculta registros excluídos, a exclusão passa a notificar um tópico privado sem dados de demanda, por trigger transacional. O cliente mantém o canal postgres_changes aprovado para as demais alterações e um segundo canal privado exclusivo para invalidação da fila. Cada canal existe uma vez por aba, é removido no logout/saída e reconsulta ao conectar/reconectar. A reconsulta continua aplicando autenticação/RLS e preserva busca/tipo/ordem/aba e modais. Nenhuma alteração visual. Requer migração 003 e reteste real, ainda pendentes nesta preparação; os demais testes reais aprovados da etapa 008 permanecem registrados separadamente.
+
+## Vigente em HTTP — SUPABASE-006 — 03/11/2026
+
+A comunicação Express foi substituída por Supabase, mantendo cards, pesquisa, filtros combinados, ordenação, métricas, abas, sidebar, modais, logos, autocompletar, formatos/limite do print e zoom. IDs remotos são strings decimais para preservar bigint; modo `file://` conserva o contrato numérico/local anterior sem migração automática. Login individual, sessão, recuperação, convite e logout usam Auth; perfis vêm de `public.perfis`. Funcionário seleciona somente a si ao assumir; administrador lista contas ativas. As RPCs do banco validam a autorização final e concorrência. Status não é atualizado diretamente pelo navegador.
+
+Demandas excluídas logicamente não aparecem; criação usa Auth como `criado_por` e chave UUID para retry. Print é enviado ao bucket privado e registrado por função protegida, com URLs assinadas de 120 s renovadas na sincronização. Falha de anexo mantém a demanda, informa seu ID e permite tentar novamente sem duplicação com o formulário aberto. Cadastro de cliente selecionado no catálogo usa RPC específica quando ainda não existe o vínculo remoto; não importa catálogo em massa nem altera registros antigos. Histórico é somente leitura no navegador.
+
+Realtime tem canal único de demandas, reconsulta ao conectar/reconectar, ao voltar à aba/ficar online e a cada 45 s enquanto visível, preservando filtros/aba. Contas inativas/sessões expiradas são bloqueadas; erro temporário de rede não é tratado como logout. Detalhes de preparação, SQLs necessários e testes sintéticos em [RELATORIO_SUPABASE.md](RELATORIO_SUPABASE.md). SQLs e verificações reais ainda pendentes antes do uso operacional.
+
 ## Vigente em HTTP — BACKEND-003 — 30/10/2026
 
 Versão organizada integrada ao backend PostgreSQL: login por e-mail/senha existentes, logout, sessão protegida, papéis, API e atualização Socket.IO. Demanda criada começa pendente; assumir é atômico e atribui uma conta ativa; finalizar exige responsável ou admin; excluir exige admin e é lógico. Histórico transacional de criar/assumir/finalizar/excluir disponível nos detalhes. Anexo único PNG/JPEG/WebP até 1 MB, validado no servidor e servido somente com autenticação. Dados de banco e arquivos privados não são expostos estaticamente.

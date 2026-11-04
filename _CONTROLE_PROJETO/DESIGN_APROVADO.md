@@ -1,5 +1,7 @@
 # Design aprovado — LivreEscolha · Central de Demandas
 
+**SUPABASE-006 — 03/11/2026:** `css/style.css` preservado byte a byte. Geometria de painel, métricas, abas e cards comparada ao backup em 1920/1366/768/390/320 px, sem diferenças ou overflow; capturas desktop/mobile inspecionadas em `.qa/supabase/`. Mantidos componentes de histórico/Sair. Login recebeu recuperação e campos de confirmação de senha somente nos fluxos de convite/recuperação, usando classes existentes; único CSS adicional é a ocultação correta de `[hidden]` em `login.css`. Sem redesenho. Comparação e fluxos usam dados/SDK simulados; a inicialização sem sessão também foi verificada com SDK real.
+
 **BACKEND-003 — 30/10/2026:** CSS aprovado preservado byte a byte. Login novo reutiliza marca, painel, campos e botão laranja; estilos adicionais ficam exclusivamente em `css/login.css`. Painel ganhou Sair e detalhes ganharam Histórico, com classes existentes. Seleção de responsável conserva o select/modal e passa a listar as contas permitidas. Dica do upload agora informa somente o limite, pois HTTP armazena no servidor. Geometria/estilos dos componentes comparados ao backup em 1920/1366/768/390/320 px, sem diferenças; capturas em `../.qa/backend/` inspecionadas. Não houve redesenho.
 
 Referência: estilos de `demandas_otimizado (1).html` e `central-demandas/css/style.css`, conferidos em 29/10/2026. A estrutura visual está no original e em `central-demandas/index.html`; cartões e conteúdo dos detalhes também são montados pelo JavaScript.

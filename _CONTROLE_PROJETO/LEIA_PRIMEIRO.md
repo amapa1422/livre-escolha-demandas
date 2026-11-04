@@ -1,5 +1,7 @@
 # Leia primeiro — LivreEscolha · Central de Demandas
 
+**Vigente — SUPABASE-006 (03/11/2026):** a versão HTTP em `central-demandas/` foi integrada ao Supabase, sem dependência de Node/Socket.IO. Entrada raiz gerada por `sync_pages.py`, publicação preparada via GitHub Actions. Antes de usar online, aplicar os dois SQLs incrementais, desativar cadastro público, configurar callbacks e validar contas/RLS reais. Código/testes locais concluídos; sem deploy, migração de dados ou SQL executado. Backend preservado como legado; não usar seu iniciador para a nova versão. Consulte [RELATORIO_SUPABASE.md](RELATORIO_SUPABASE.md) e [README_PUBLICACAO.md](../README_PUBLICACAO.md). As descrições anteriores de impedimento por URL/esquema ou dependência Node são históricas.
+
 **Vigente — BACKEND-003 (30/10/2026):** `backend/src/server.js` agora existe. Executar `npm.cmd start` em `backend/` e abrir `http://127.0.0.1:3000`. HTTP integrado usa PostgreSQL/autenticação/Socket.IO; abertura por arquivo mantém armazenamento local independente. Consulte [RELATORIO_BACKEND.md](RELATORIO_BACKEND.md) e [backend/README.md](../backend/README.md). As descrições anteriores sobre ausência de backend são históricas.
 
 Controle implantado em 29/10/2026. Fuso de todos os novos registros: **America/Sao_Paulo**, com deslocamento UTC explícito.
