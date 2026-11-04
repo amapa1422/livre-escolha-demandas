@@ -16,3 +16,7 @@ __pycache__/
 .qa/logos-pages/fixtures/
 .qa/logos-pages/session.json
 .qa/logos-pages/*-params.json
+# Build público descartável e cópia temporária do SDK usada pelo smoke test
+.pages-build/
+.release/
+.qa/supabase/sdk.js

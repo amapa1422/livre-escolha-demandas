@@ -7,6 +7,11 @@
 
   const api = window.LivreEscolhaAPI;
   const appScript = document.currentScript.src;
+  if (!api && location.protocol !== 'file:') {
+    document.getElementById('board').textContent = 'Não foi possível carregar a conexão segura. Recarregue a página.';
+    document.getElementById('openModal').disabled = true;
+    return;
+  }
   if (api) {
     try { await api.ready; }
     catch (error) {
@@ -72,7 +77,8 @@ function gerarUUID() {
   ].map(id => [id, $(id)]));
   const categories = Array.from(ui.category.options, option => option.value).filter(Boolean);
   if (api) {
-    ui.agent.replaceChildren(new Option('Selecione o responsável', ''), ...api.users.map(user => new Option(user.nome, user.id)));
+    const allowedUsers = api.user.papel === 'admin' ? api.users : api.users.filter(user => user.id === api.user.id);
+    ui.agent.replaceChildren(new Option('Selecione o responsável', ''), ...allowedUsers.map(user => new Option(user.nome, user.id)));
     const logout = document.createElement('button');
     logout.className = 'button'; logout.textContent = 'Sair'; logout.type = 'button';
     logout.title = `Conectado como ${api.user.nome}`;
@@ -315,7 +321,7 @@ function gerarUUID() {
 
   // 5 · Imagens: formato, tamanho, assinatura e decodificação antes de salvar.
   function safeImageSource(source) {
-    if (api && typeof source === 'string' && /^\/api\/anexos\/[a-f0-9-]{36}$/.test(source)) return source;
+    if (api) return api.isImageUrl(source) ? source : '';
     return typeof source === 'string'
       && source.length <= Math.ceil(MAX_IMAGE_BYTES / 3) * 4 + 40
       && /^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(source)
@@ -516,7 +522,7 @@ function gerarUUID() {
   ui.board.addEventListener('click', async event => {
     const button = event.target.closest('[data-action]');
     if (!button) return;
-    const id = Number(button.dataset.id);
+    const id = api ? button.dataset.id : Number(button.dataset.id);
     const item = data.find(record => record.id === id);
     if (!item) return;
     if (button.dataset.action === 'assume' && item.status === 'pendente') {

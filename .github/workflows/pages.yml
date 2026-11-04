@@ -1,0 +1,42 @@
+name: Publicar Demandas no GitHub Pages
+on:
+  workflow_dispatch:
+    inputs:
+      confirmar_publicacao:
+        description: 'Publicar a versão revisada no endereço oficial?'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main' && inputs.confirmar_publicacao == true
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python sync_pages.py --check
+      - run: python scripts/verify-release.py --check
+      - run: node --test --test-isolation=none scripts/test-supabase-*.cjs
+      - run: python scripts/build-pages.py .pages-build
+      - run: node scripts/verify-pages.cjs .pages-build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .pages-build
+      - uses: actions/deploy-pages@v4
+        id: deployment

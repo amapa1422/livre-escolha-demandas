@@ -3,3 +3,4 @@
 .login-panel .brand { padding: 0 0 28px; }
 .login-panel h1 { color: var(--brand); font-size: 1.625rem; }
 .login-panel .form-foot .button { width: 100%; }
+.login-page [hidden] { display: none !important; }

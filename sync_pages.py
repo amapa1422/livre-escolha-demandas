@@ -28,7 +28,8 @@ def build(root):
         if not (source_dir / 'assets/clientes' / client['logo']).is_file():
             raise ValueError('Logo ausente: ' + client['logo'])
     generated = '// Gerado de clientes.json por sync_pages.py. Não editar manualmente.\nwindow.LivreEscolhaClientes=' + json.dumps(catalog, ensure_ascii=True, separators=(',', ':')) + ';\n'
-    expected = {'css/style.css', 'js/app.js', 'assets/clientes/catalogo.js'}
+    expected = {'css/style.css', 'js/app.js', 'assets/clientes/catalogo.js', 'js/api.js',
+                'js/supabase-config.js', 'js/supabase-client.js', 'js/supabase-auth.js', 'js/supabase-operations.js'}
     found = set()
 
     def rewrite(match):
