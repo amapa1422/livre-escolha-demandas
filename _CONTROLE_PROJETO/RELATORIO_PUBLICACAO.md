@@ -1,31 +1,20 @@
-# Publicação Supabase + GitHub Pages — 04/11/2026
+# Encerramento da implementa??o ? LivreEscolha Demandas
 
 Site: https://amapa1422.github.io/livre-escolha-demandas/
 
-## Resultado confirmado
+Implementa??o encerrada em 04/11/2026 por solicita??o do propriet?rio, sem altera??es no design ou novas funcionalidades.
 
-- Autorização explícita do proprietário para commit, push, workflow e testes de produção recebida em 04/11/2026.
-- Source verificado independentemente pela API GitHub: `build_type=workflow` (GitHub Actions).
-- Commit de aplicação publicado: `4f96fa2703f1d0b105f95067ffa68fc8699059c4`.
-- [GitHub Actions 41843292760](https://github.com/amapa1422/livre-escolha-demandas/actions/runs/41843292760): concluído com **success**, incluindo testes, scanner, build e deploy.
-- 27 testes isolados de CI aprovados localmente e etapa correspondente aprovada no Actions. São verificações isoladas, distintas dos testes reais do Supabase.
-- 133 arquivos públicos servidos comparados com o pacote auditado: todos HTTP 200 e conteúdo correspondente (normalizando apenas LF/CRLF para textos). `.nojekyll` não contabilizado como recurso HTTP.
-- `.env`, backend/server, SQL de migração, documentação privada e `.git/config` retornam 404 no site.
-- Seis verificações anônimas reais em produção aprovadas: página protegida, URLs com prefixo, cinco tabelas recusando leitura, invite/recovery sem sessão recusados e ausência de erros JavaScript capturados.
-- CSS/design e funcionalidades aprovadas preservados; nenhuma alteração funcional foi feita nesta publicação.
+## Encerrado ? SUPABASE-021 ? 04/11/2026
 
-## Teste autenticado no site
+Etapa de desenvolvimento encerrada por solicita??o do propriet?rio. Site publicado em https://amapa1422.github.io/livre-escolha-demandas/; Source GitHub Actions confirmado novamente, run 41843292760 success e vers?o de aplica??o 4f96fa2703f1d0b105f95067ffa68fc8699059c4. Nova confer?ncia HTTP: 133 recursos correspondentes ao pacote final, zero diverg?ncias; .env/.git/SQL privados retornam 404. Main local/remota alinhadas antes do fechamento documental (59496b9). Aplica??o, design e funcionalidades intocados.
 
-Janelas dedicadas Chrome/admin e Edge/funcionário abertas no endereço oficial. Roteiro real aguarda login manual antes de criar um registro QA com print. Prevê consulta PostgreSQL, criação, RPCs, print privado, ampliação, atualização dos cards e exclusão lógica sincronizada. Até esta atualização, não criado registro nessa rodada; não apresentar como testes autenticados de produção já aprovados.
+Aprovados anteriormente: 17 testes reais com Supabase entre admin/funcion?rio em ambiente local (permiss?es, concorr?ncia, Storage e Realtime); finaliza??o de demanda alheia recusada; inativa??o/restaura??o manual aprovada pelo propriet?rio. 27 testes isolados de CI e seis verifica??es an?nimas reais de produ??o aprovados. Propriet?rio confirmou acesso em produ??o com admin/Chrome e funcion?rio/Edge; registrar como confirma??o manual dele. Automa??o em produ??o comprovou somente login/perfil admin ativo e consulta da fila antes de parar, sem criar demanda (testDemandId=null). Houve tentativas anteriores invalid_credentials, seguidas de login admin bem-sucedido; n?o classificar a rodada inteira como aprovada.
 
-Evidências locais: `.qa/supabase/deploy-20261104.json`, `published-static-20261104.json`, `published-browser-20261104.json` e `production-real-20261104.json`. Essas evidências não fazem parte do pacote público.
+Por decis?o expl?cita do propriet?rio, roteiros interativos encerrados sem fechar seus navegadores e sem novos pedidos de login. N?o foram conclu?dos em produ??o pelo agente: cria??o, upload/zoom, RPCs/permiss?es entre pap?is e Realtime entre navegadores. Convite/recupera??o por e-mail v?lido e SMTP pr?prio seguem sem comprova??o. RLS/RPC/Storage sob JWT preservado de usu?rio inativo n?o foram testados diretamente. Confer?ncia/limpeza dos registros QA antigos 12/13 adiada, sem alterar banco no encerramento. Essas limita??es ficam para acompanhamento futuro; nenhum novo problema cr?tico comprovado nesta revis?o.
 
-## Segurança e limitações
+Arquivos locais n?o rastreados s?o roteiros/evid?ncias QA, consultas de diagn?stico/testes espec?ficos e snapshot backend/legacy-frontend; n?o necess?rios ? execu??o do site e n?o inclu?dos automaticamente no Git. Nenhuma altera??o funcional rastreada pendente. Documenta??o deste encerramento ser? enviada em commit separado, sem novo deploy. Backup parcial verificado: 2026-11-04_encerramento_01533f5f. Revers?o somente documental exige novo backup e retirada dos trechos 021, preservando altera??es posteriores; nenhuma revers?o de banco ou publica??o executada.
 
-Scanner aprovou seleção de fontes/índice sem padrões de credenciais reais e sem correspondências aos dois valores privados locais comparados apenas em memória. `.env`, uploads, novos backups, perfis de navegador e QA fora do commit selecionado e do artefato. Publishable key é pública; nenhuma Secret key/service_role foi usada. Credencial GitHub já cadastrada foi usada só em memória pelo gerenciador, sem token em arquivos ou saídas.
 
-Inativação/restauração manual aprovada pelo proprietário na etapa 018; 17 verificações reais entre papéis aprovadas anteriormente na 015. Não foram repetidas apenas para publicar. SMTP próprio e teste de entrega de convite/recuperação a destinatário autorizado em produção continuam sem confirmação; login por senha de contas existentes é independente dessa entrega. Limpeza dos QA antigos 12/13 ainda a conferir via sessão admin, excluindo somente se identificados como os registros da rodada interrompida.
+Evid?ncias: .qa/supabase/closure-static-20261104.json (nova confer?ncia HTTP), roles-real.json (17 testes reais locais), inativo-manual-20261104.json (confirma??o do propriet?rio), published-browser-20261104.json (seis testes an?nimos em produ??o), production-real-final-20261104.json (automa??o parcial preservada). Relat?rios de QA s?o locais e n?o integram o artefato p?blico.
 
-## Recuperação
-
-Backup pré-publicação: `_CONTROLE_PROJETO/backups/2026-11-04_publicacao_625e464b`, 156 arquivos conferidos mais suplemento do roteiro real. Base anterior local/remota era `041ed578ad215e531a45c0bafe6d8f7747d2ecf2`. Qualquer reversão exige backup atual separado, revisão do commit escolhido e autorização para novo deploy; não reverter banco ou apagar dados automaticamente. Nenhum rollback foi executado.
+[Workflow de publica??o aprovado](https://github.com/amapa1422/livre-escolha-demandas/actions/runs/41843292760). Nenhuma credencial privada detectada na auditoria de publica??o; usa-se apenas a publishable key no navegador. Limite: essa auditoria n?o equivale a revis?o integral de todo o hist?rico Git.
