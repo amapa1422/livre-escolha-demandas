@@ -8,7 +8,7 @@ function fixture(seed = {}) {
     tables: { perfis: [{ id: uid, nome: 'Felipe teste', papel: 'admin', ativo: true },
       { id: other, nome: 'Pedro teste', papel: 'funcionario', ativo: true }],
       clientes: [{ id: '33333333-3333-4333-8333-333333333333', nome: 'Empresa Teste', ativo: true }],
-      demandas: [], anexos: [], historico: [] }, session: { user: { id: uid } },
+      demandas: [], anexos: [], historico: [], edicoes_demandas: [] }, session: { user: { id: uid } },
     ...seed
   };
   const ok = data => ({ data, error: null });
