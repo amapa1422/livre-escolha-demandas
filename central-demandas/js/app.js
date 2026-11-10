@@ -86,7 +86,7 @@ function gerarUUID() {
     document.querySelector('.actions').append(logout);
   }
   const agents = Array.from(ui.agent.options, option => option.value).filter(Boolean);
-  const tabButtons = [...document.querySelectorAll('.tab, .nav-item')];
+  const tabButtons = [...document.querySelectorAll('.tab')];
   const overlays = [...document.querySelectorAll('.overlay')];
   const app = document.querySelector('.app');
   const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
@@ -97,8 +97,19 @@ function gerarUUID() {
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[character]));
   let tab = 'todos';
+  let currentView = 'dashboard';
+  let dashboardPeriod = 7;
+  let dashboardDirty = true;
+  let dashboardKey = '';
+  const chartContents = new Map();
+  let boardKey = '';
+  let searchTimer;
+  let dataLoaded = !api;
   let assumeId = null;
   let detailId = null;
+  let editOriginal = null;
+  let editSaving = false;
+  let editImageRemoved = false;
   let noticeTimer;
   let submitting = false;
   let createVersion = 0;
@@ -192,23 +203,34 @@ function gerarUUID() {
   let data = api ? [] : load();
   let refreshRequested = false;
   let refreshing = false;
+  let refreshCompletion;
   async function refresh() {
     if (!api) return;
     refreshRequested = true;
-    if (refreshing) return;
+    if (refreshing) return refreshCompletion;
     refreshing = true;
+    let complete;
+    let succeeded = false;
+    refreshCompletion = new Promise(resolve => { complete = resolve; });
     try {
       while (refreshRequested) {
         refreshRequested = false;
         data = await api.list();
+        dataLoaded = true; dashboardDirty = true;
         renderMetrics(); render();
         if (modalStack.includes('detailOverlay')) {
           const current = data.find(item => item.id === detailId);
           if (current) showDetails(current); else close('detailOverlay');
         }
       }
-    } catch (error) { notify(error.message); }
-    finally { refreshing = false; }
+      succeeded = true;
+      return true;
+    } catch (error) {
+      $('dashboardStatus').hidden = false;
+      $('dashboardStatus').textContent = dataLoaded ? 'Não foi possível atualizar. Exibindo a última consulta recebida.' : 'Não foi possível carregar os indicadores. Verifique a conexão.';
+      notify(error.message); return false;
+    }
+    finally { refreshing = false; complete(succeeded); }
   }
 
   function save(next) {
@@ -219,6 +241,7 @@ function gerarUUID() {
     try {
       localStorage.setItem(KEY, JSON.stringify(next));
       data = next;
+      dashboardDirty = true;
       storageState = 'ready';
       renderMetrics();
       return true;
@@ -232,17 +255,65 @@ function gerarUUID() {
 
   // 3 · Renderização: pesquisa instantânea; indicadores só mudam com os dados.
   function renderMetrics() {
-    const counts = { pendente: 0, andamento: 0, lancada: 0 };
-    for (const item of data) counts[item.status]++;
-    ui.total.textContent = data.length;
-    ui.pending.textContent = counts.pendente;
-    ui.working.textContent = counts.andamento;
-    ui.done.textContent = counts.lancada;
+    if (currentView !== 'dashboard' || !dataLoaded || !dashboardDirty) return;
+    dashboardDirty = false;
+    const summary = window.LivreEscolhaDashboard.summarize(data, dashboardPeriod);
+    const key = JSON.stringify(summary);
+    $('dashboardStatus').hidden = summary.total > 0;
+    $('dashboardStatus').textContent = 'Nenhuma demanda criada neste período.';
+    $('dashboardScope').textContent = `${summary.points[0].label} a ${summary.points.at(-1).label} · criação no horário de Brasília${api ? '' : ' · dados locais deste navegador'}`;
+    if (key === dashboardKey) return;
+    dashboardKey = key;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function animate(element, scale = false) {
+      if (!reduced && element.animate) element.animate([{ opacity: .35, transform: scale ? 'scaleY(.94)' : 'translateY(5px)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'ease-out' });
+    }
+    for (const [id, value] of [['total', summary.total], ['pending', summary.counts[0]], ['working', summary.counts[1]], ['done', summary.counts[2]], ['completionRate', summary.rate + '%']]) {
+      const element = $(id), text = String(value);
+      if (element.textContent !== text) { element.textContent = text; animate(element); }
+    }
+    for (const [id, method] of [['dailyChart', 'daily'], ['completionChart', 'completion'], ['evolutionChart', 'evolution'], ['statusChart', 'distribution'], ['dashboardTable', 'table']]) {
+      const element = $(id), html = window.LivreEscolhaDashboard[method](summary);
+      if (chartContents.get(id) !== html) {
+        element.innerHTML = html; chartContents.set(id, html);
+        if (id !== 'dashboardTable') animate(element, true);
+        if (!reduced) {
+          const ring = element.querySelector('.ring-progress');
+          if (ring?.animate) ring.animate([{ strokeDasharray: '0 377' }, { strokeDasharray: ring.getAttribute('stroke-dasharray') }], { duration: 420, easing: 'ease-out' });
+          for (const bar of element.querySelectorAll('.status-fill')) bar.animate?.([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 350, easing: 'ease-out' });
+        }
+      }
+    }
+    $('dashboardInsight').textContent = `${summary.counts[2]} de ${summary.total} demandas lançadas · ${summary.counts[1]} em andamento · ${summary.counts[0]} pendentes`;
   }
 
   function setTab(value) {
     if (value !== 'todos' && !Object.hasOwn(statuses, value)) return;
-    tab = value;
+    navigate(value);
+  }
+
+  function navigate(page) {
+    const labels = { dashboard: ['Dashboard', 'Visão geral da equipe e dos atendimentos.'], todos: ['Todas as demandas', 'Gerencie as solicitações da equipe.'], pendente: ['Pendentes', 'Solicitações aguardando responsável.'], andamento: ['Em andamento', 'Casos assumidos pela equipe.'], lancada: ['Lançadas', 'Atendimentos finalizados e registrados.'] };
+    if (!Object.hasOwn(labels, page)) return;
+    clearTimeout(searchTimer);
+    const changed = currentView !== page;
+    currentView = page;
+    $('dashboardView').hidden = page !== 'dashboard';
+    $('demandasView').hidden = page === 'dashboard';
+    ui.openModal.hidden = page === 'dashboard';
+    $('pageTitle').textContent = labels[page][0]; $('pageSubtitle').textContent = labels[page][1];
+    for (const button of document.querySelectorAll('[data-page]')) {
+      const active = button.dataset.page === page;
+      button.classList.toggle('active', active);
+      if (active) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
+      button.setAttribute('aria-label', button.title);
+    }
+    if (page === 'dashboard') {
+      dashboardDirty = true; renderMetrics();
+      return;
+    }
+    if (changed) boardKey = '';
+    tab = page;
     for (const button of tabButtons) {
       const active = button.dataset.tab === tab;
       button.classList.toggle('active', active);
@@ -257,6 +328,7 @@ function gerarUUID() {
   }
 
   function render() {
+    if (currentView === 'dashboard') return;
     const focusedAction = ui.board.contains(document.activeElement)
       ? document.activeElement.closest('[data-id]') : null;
     const focusedId = focusedAction?.dataset.id;
@@ -272,6 +344,10 @@ function gerarUUID() {
       : sort === 'priority' ? (b.priority === 'Alta') - (a.priority === 'Alta') || b.created - a.created
         : b.created - a.created);
     ui.showing.textContent = `${list.length} demanda${list.length === 1 ? '' : 's'}`;
+    const key = JSON.stringify(list.map(item => [item.id, item.client, item.clientId, item.category, item.requester,
+      item.priority, item.description, item.status, item.assignee, item.created, Boolean(item.image)]));
+    if (key === boardKey) return;
+    boardKey = key;
     ui.board.innerHTML = list.length ? list.map(ticket).join('')
       : '<div class="empty"><div class="empty-symbol">▤</div><h3>Nenhuma demanda encontrada</h3><p>Altere os filtros ou cadastre uma nova solicitação.</p></div>';
     if (focusedId) {
@@ -302,6 +378,7 @@ function gerarUUID() {
   }
 
   function close(id) {
+    if (editSaving && ['editOverlay', 'detailOverlay'].includes(id)) return;
     const index = modalStack.indexOf(id);
     if (index < 0) return;
     const wasTop = index === modalStack.length - 1;
@@ -309,6 +386,7 @@ function gerarUUID() {
     $(id).classList.remove('show');
     if (id === 'createOverlay') { createVersion++; hideSuggestions(); }
     if (id === 'zoomOverlay') ui.zoomImage.removeAttribute('src');
+    if (id === 'editOverlay') { editOriginal = null; $('editForm').reset(); }
     syncModalAccess();
     const previous = focusReturns.get(id);
     focusReturns.delete(id);
@@ -368,6 +446,7 @@ function gerarUUID() {
 
   function showDetails(item) {
     detailId = item.id;
+    $('editDemand').hidden = !api || !['admin', 'funcionario'].includes(api.user.papel);
     ui.detailId.textContent = `Demanda #${item.id} • Criada em ${date(item.created)}`;
     const lines = [
       ['Cliente', item.client], ['Tipo', item.category], ['Solicitado por', item.requester],
@@ -429,6 +508,79 @@ function gerarUUID() {
       event.target.style.visibility = 'hidden';
     }
   }, true);
+  function startEdit(item) {
+    if (!api || !item || editSaving) return;
+    editOriginal = { ...item };
+    $('editForm').reset();
+    for (const [field, key] of [['editClient', 'client'], ['editCategory', 'category'],
+      ['editRequester', 'requester'], ['editUrgency', 'priority'], ['editDescription', 'description']]) {
+      $(field).value = item[key];
+    }
+    editImageRemoved = false;
+    $('editImageState').textContent = item.image ? 'Print atual mantido.' : 'Nenhum print anexado.';
+    $('editRemoveImage').hidden = !item.image;
+    $('editConflict').hidden = true; $('editReload').hidden = true;
+    $('editForm').querySelector('[type="submit"]').disabled = false;
+    open('editOverlay');
+  }
+  $('editDemand').addEventListener('click', () => startEdit(data.find(item => item.id === detailId)));
+  $('editAttachment').addEventListener('change', () => {
+    editImageRemoved = false;
+    $('editImageState').textContent = $('editAttachment').files.length ? 'Novo print selecionado.' : (editOriginal?.image ? 'Print atual mantido.' : 'Nenhum print anexado.');
+    $('editRemoveImage').hidden = !editOriginal?.image && !$('editAttachment').files.length;
+  });
+  $('editRemoveImage').addEventListener('click', () => {
+    editImageRemoved = true; $('editAttachment').value = '';
+    $('editImageState').textContent = 'O print será removido ao salvar.';
+    $('editRemoveImage').hidden = true;
+  });
+  $('editReload').addEventListener('click', async () => {
+    if (editSaving) return;
+    const id = editOriginal?.id;
+    $('editReload').disabled = true;
+    try {
+      if (!await refresh()) return;
+      const current = data.find(item => item.id === id);
+      if (current) startEdit(current); else { close('editOverlay'); notify('Demanda indisponível.'); }
+    } finally { $('editReload').disabled = false; }
+  });
+  $('editForm').addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!api || editSaving || !editOriginal || !$('editConflict').hidden || !event.target.reportValidity()) return;
+    const original = editOriginal;
+    const values = { client: $('editClient').value.trim(), category: $('editCategory').value,
+      requester: $('editRequester').value.trim(), priority: $('editUrgency').value,
+      description: $('editDescription').value.trim() };
+    if (!values.client || !values.requester || !categories.includes(values.category)
+        || !['Normal', 'Alta'].includes(values.priority)) { notify('Preencha os campos obrigatórios.'); return; }
+    const file = $('editAttachment').files[0];
+    const imageAction = file ? 'substituir' : editImageRemoved && original.image ? 'remover' : 'manter';
+    if (Object.keys(values).every(key => values[key] === original[key]) && imageAction === 'manter') {
+      close('editOverlay'); return;
+    }
+    editSaving = true;
+    const controls = [...$('editOverlay').querySelectorAll('button,input,select,textarea')];
+    controls.forEach(control => { control.disabled = true; });
+    let conflict = false;
+    try {
+      const source = file ? await readImage(file) : '';
+      const result = await api.edit(original.id, original.version, values,
+        { action: imageAction, source, name: file?.name, key: gerarUUID() });
+      editSaving = false;
+      close('editOverlay');
+      const updated = await refresh();
+      notify(!updated ? 'Demanda salva. Não foi possível atualizar a tela; recarregue os dados.'
+        : result?.alterada === false ? 'Nenhuma alteração necessária.' : 'Demanda atualizada com sucesso.');
+    } catch (error) {
+      conflict = error.code === '40001';
+      if (conflict) { $('editConflict').hidden = false; $('editReload').hidden = false; }
+      notify(error.message || 'Não foi possível salvar. Tente novamente.');
+    } finally {
+      editSaving = false;
+      controls.forEach(control => { control.disabled = false; });
+      if (conflict) $('editForm').querySelector('[type="submit"]').disabled = true;
+    }
+  });
   ui.openModal.addEventListener('click', () => open('createOverlay'));
   for (const overlay of overlays) {
     overlay.addEventListener('click', event => {
@@ -461,11 +613,21 @@ function gerarUUID() {
     container.addEventListener('click', event => {
       const button = event.target.closest('[data-tab]');
       if (button) setTab(button.dataset.tab);
+      const page = event.target.closest('[data-page]');
+      if (page) navigate(page.dataset.page);
     });
   }
-  for (const id of ['search', 'typeFilter', 'sort']) {
-    ui[id].addEventListener(id === 'search' ? 'input' : 'change', render);
-  }
+  ui.search.addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(render, 140); });
+  for (const id of ['typeFilter', 'sort']) ui[id].addEventListener('change', () => { clearTimeout(searchTimer); render(); });
+  document.querySelector('.period-switch').addEventListener('click', event => {
+    const button = event.target.closest('[data-range]');
+    if (!button || dashboardPeriod === Number(button.dataset.range)) return;
+    dashboardPeriod = Number(button.dataset.range); dashboardDirty = true;
+    for (const control of document.querySelectorAll('[data-range]')) {
+      const active = control === button; control.classList.toggle('active', active); control.setAttribute('aria-pressed', String(active));
+    }
+    renderMetrics();
+  });
 
   ui.createForm.addEventListener('submit', async event => {
     event.preventDefault();
@@ -549,7 +711,19 @@ function gerarUUID() {
       try {
         const events = await api.history(id);
         if (detailId !== id) return;
-        $('demandHistory').innerHTML = events.map(entry => `<div class="detail-line">${escapeHtml(date(entry.criado_em))} · ${escapeHtml(entry.usuario)} · ${escapeHtml(entry.acao)}</div>`).join('') || '<p class="hint">Sem histórico.</p>';
+        const labels = { client: 'Cliente / empresa', category: 'Tipo de demanda', requester: 'Solicitado por', priority: 'Prioridade', description: 'Descrição' };
+        $('demandHistory').innerHTML = events.map(entry => {
+          const changes = (Array.isArray(entry.alteracoes) ? entry.alteracoes : []).map(change => {
+            if (change.campo === 'image') return `<div class="audit-change">${escapeHtml(change.evento)}</div>`;
+            const label = labels[change.campo] || change.campo;
+            const values = `<div class="audit-change"><b>Anterior:</b> ${escapeHtml(change.anterior || '(vazio)')}<br><b>Novo:</b> ${escapeHtml(change.novo || '(vazio)')}</div>`;
+            return change.campo === 'description' || String(change.anterior).length + String(change.novo).length > 180
+              ? `<details class="audit-change"><summary>${escapeHtml(label)}: conteúdo atualizado</summary>${values}</details>`
+              : `<div class="audit-change"><b>${escapeHtml(label)}:</b> ${escapeHtml(change.anterior || '(vazio)')} → ${escapeHtml(change.novo || '(vazio)')}</div>`;
+          }).join('');
+          const stamp = new Date(entry.criado_em).toLocaleString('pt-BR');
+          return `<div class="detail-line">${escapeHtml(stamp)} · ${escapeHtml(entry.usuario)} · ${escapeHtml(entry.acao)}${changes}</div>`;
+        }).join('') || '<p class="hint">Sem histórico.</p>';
       } catch (error) { notify(error.message); }
       return;
     }
@@ -599,7 +773,7 @@ function gerarUUID() {
     document.body.classList.toggle('sidebar-closed', hidden);
     ui.toggleSidebar.textContent = hidden ? '❯' : '❮';
     ui.toggleSidebar.setAttribute('aria-expanded', String(!hidden));
-    ui.toggleSidebar.setAttribute('aria-label', hidden ? 'Mostrar menu' : 'Recolher menu');
+    ui.toggleSidebar.setAttribute('aria-label', hidden ? 'Expandir menu' : 'Recolher menu');
   }
   ui.toggleSidebar.addEventListener('click', () => {
     const hidden = !document.body.classList.contains('sidebar-closed');
@@ -615,6 +789,6 @@ function gerarUUID() {
   } catch { /* O menu continua utilizável quando o armazenamento está bloqueado. */ }
   syncModalAccess();
   renderMetrics();
-  setTab('todos');
+  navigate('dashboard');
   if (api) { api.subscribe(refresh); await refresh(); }
 })();

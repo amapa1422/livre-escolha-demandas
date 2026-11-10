@@ -5,16 +5,16 @@
   const auth = window.LivreEscolhaAuth, config = window.LivreEscolhaSupabase;
   const listeners = new Set(), imageUrls = new Map();
   const catalog = Array.isArray(window.LivreEscolhaClientes) ? window.LivreEscolhaClientes : [];
-  const columns = 'id::text,client,cliente_id,category,requester,description,priority,status,criado_por,responsavel_id,criado_em,excluido_em,chave_criacao';
+  const columns = 'id::text,versao::text,client,cliente_id,category,requester,description,priority,status,criado_por,responsavel_id,criado_em,excluido_em,chave_criacao';
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   let client, operations, channel, invalidationChannel, timer, stopped = false;
   const app = document.querySelector('.app');
   if (app) app.style.display = 'none';
   function emit() { if (!stopped) listeners.forEach(fn => fn()); }
   function check(result) {
-    if (result.error) throw new Error(result.error.code === '42501'
+    if (result.error) throw Object.assign(new Error(result.error.code === '42501'
       ? 'Operação sem permissão. Consulte o administrador; as permissões do banco não foram alteradas.'
-      : result.error.message || 'Falha de conexão com o Supabase. Tente novamente.');
+      : result.error.message || 'Falha de conexão com o Supabase. Tente novamente.'), { code: result.error.code });
     return result.data;
   }
   function stop() {
@@ -57,7 +57,7 @@
     return { id: String(row.id), client: row.client, category: row.category, requester: row.requester,
       description: row.description, priority: row.priority, status: row.status,
       assignee: row.responsavel_id ? names.get(row.responsavel_id) || row.responsavel_id : '',
-      created: Date.parse(row.criado_em), clientId: logo?.id, image };
+      created: Date.parse(row.criado_em), version: row.versao, clientId: logo?.id, image };
   }
   async function signedImages(attachments) {
     const now = Date.now();
@@ -78,7 +78,7 @@
     }
     return new Map(attachments.map(row => [String(row.demanda_id), mapped.get(row.arquivo_path) || 'unavailable']));
   }
-  async function uploadPrint(row, body, user) {
+  async function uploadPrint(row, body, user, register = true) {
     if (!body.image) return;
     // Base64 existe só em memória. O banco recebe metadados, nunca a imagem.
     const match = /^data:(image\/(?:png|jpeg|webp));base64,([A-Za-z0-9+/]+={0,2})$/.exec(body.image);
@@ -95,8 +95,9 @@
     const uploaded = await client.storage.from('prints-demandas').upload(path, new Blob([bytes], { type: match[1] }),
       { contentType: match[1], upsert: false, cacheControl: '0' });
     if (uploaded.error && !['409', 'Duplicate'].includes(String(uploaded.error.statusCode || uploaded.error.code))) check(uploaded);
-    check(await client.rpc('registrar_anexo_demanda', { p_demanda_id: String(row.id), p_arquivo_path: path,
+    if (register) check(await client.rpc('registrar_anexo_demanda', { p_demanda_id: String(row.id), p_arquivo_path: path,
       p_nome_original: (body.imageName || 'print.' + extension).slice(0, 255) }));
+    return path;
   }
   const api = {
     user: null, users: [], clients: [],
@@ -140,12 +141,32 @@
       }
       emit(); return { id: String(row.id) };
     },
+    async edit(id, version, values, image = {}) {
+      await api.ready; const user = await authorize();
+      let path = null;
+      if (image.action === 'substituir') {
+        if (!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(image.key || '')) throw new Error('Chave de print inválida.');
+        path = await uploadPrint({ id }, { image: image.source, imageName: image.name,
+          chaveCriacao: image.key }, user, false);
+        if (!path) throw new Error('Selecione um print válido.');
+      }
+      const result = await operations.edit(id, version, values, { action: image.action, path, name: image.name });
+      emit(); return result;
+    },
     async action(id, action, body) { await api.ready; await authorize(); const data = await operations.action(id, action, body); emit(); return data; },
     async remove(id) { await api.ready; await authorize(); const data = await operations.remove(id); emit(); return data; },
     async history(id) {
       await api.ready; await authorize(); const names = await profiles();
-      return (await pages('historico', 'id::text,usuario_id,acao,criado_em', query => query.eq('demanda_id', id)))
-        .map(row => ({ ...row, usuario: names.get(row.usuario_id) || row.usuario_id }));
+      const existing = await pages('historico', 'id::text,usuario_id,acao,criado_em', query => query.eq('demanda_id', id));
+      let edits = [];
+      try { edits = await pages('edicoes_demandas', 'id,usuario_id,criado_em,alteracoes', query => query.eq('demanda_id', id)); }
+      catch (error) {
+        // Antes da implantação de 004, o histórico aprovado continua disponível.
+        if (!['42P01', 'PGRST205'].includes(error.code)) throw error;
+      }
+      return [...existing, ...edits.map(row => ({ ...row, acao: 'editou a demanda #' + id }))]
+        .map(row => ({ ...row, usuario: names.get(row.usuario_id) || row.usuario_id }))
+        .sort((a, b) => Date.parse(a.criado_em) - Date.parse(b.criado_em));
     },
     async logout() { await auth.logout(); redirect(); }
   };

@@ -18,7 +18,7 @@
     if (typeof client?.rpc !== 'function') throw new Error('Cliente Supabase indisponível.');
     async function invoke(name, args) {
       const { data, error } = await client.rpc(name, args);
-      if (error) throw new Error(error.message || 'Não foi possível concluir a operação.');
+      if (error) throw Object.assign(new Error(error.message || 'Não foi possível concluir a operação.'), { code: error.code });
       return data;
     }
     return Object.freeze({
@@ -32,7 +32,13 @@
         }
         return invoke('assumir_demanda', { p_id, p_responsavel: body.assigneeId });
       },
-      async remove(id) { return invoke('excluir_demanda', { p_id: demandId(id) }); }
+      async remove(id) { return invoke('excluir_demanda', { p_id: demandId(id) }); },
+      async edit(id, version, values, image = {}) {
+        if (!/^[0-9]+$/.test(String(version))) throw new Error('Versão inválida. Recarregue os dados.');
+        const fields = Object.fromEntries(['client', 'category', 'requester', 'priority', 'description'].map(key => [key, values[key]]));
+        return invoke('editar_demanda', { p_id: demandId(id), p_versao: String(version), p_valores: fields,
+          p_imagem_acao: image.action || 'manter', p_arquivo_path: image.path || null, p_nome_original: image.name || null });
+      }
     });
   };
 })();
